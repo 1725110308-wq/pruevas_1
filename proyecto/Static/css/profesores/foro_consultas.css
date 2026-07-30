@@ -299,3 +299,36 @@ html, body {
         text-align: center;
     }
 }
+/* ==========================================
+   AGREGADO PARA LA INTERACCIÓN DEL FORMULARIO
+   ========================================== */
+
+/* 1. Oculta el formulario por defecto */
+.oculto {
+  display: none !important;
+}
+
+/* 2. Cambia el cursor a puntero en botones clicables */
+.btn-interactivo {
+  cursor: pointer;
+  user-select: none; /* Evita que el texto se seleccione al hacer doble clic */
+  transition: opacity 0.2s ease;
+}
+
+/* Efecto hover suave al pasar el ratón sobre los botones */
+.btn-interactivo:hover {
+  opacity: 0.85;
+}
+
+/* Ajustes opcionales para que los inputs se puedan escribir bien */
+.text-input input,
+.text-area textarea {
+  font-family: inherit;
+  font-size: 14px;
+  color: #333;
+}
+
+.text-input input:focus,
+.text-area textarea:focus {
+  outline: none;
+}

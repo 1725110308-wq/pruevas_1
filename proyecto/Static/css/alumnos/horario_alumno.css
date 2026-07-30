@@ -1,0 +1,348 @@
+/* ==========================================
+   RESET Y BASE RESPONSIVA
+   ========================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f5efe4;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #2c1810;
+}
+
+.prototipo-sistema-gestin-educ,
+.detailscreen {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f5efe4;
+}
+
+/* ==========================================
+   HEADER RESPONSIVO
+   ========================================== */
+.header {
+  width: 100%;
+  height: 56px;
+  background-color: #5a1224;
+  box-shadow: 0px 4px 6px -4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  gap: 12px;
+  font-family: 'Playfair Display', serif;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.button {
+  height: 36px;
+  width: 36px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.icon {
+  height: 18px;
+  width: 18px;
+}
+
+.container {
+  height: 32px;
+  width: 32px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+}
+
+.heading-2 {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.horario-de-clases {
+  line-height: 20px;
+  font-weight: 600;
+  font-size: 16px;
+  color: #fff;
+  white-space: nowrap;
+}
+
+/* ==========================================
+   CONTENEDOR DE HORARIOS / DETALLES
+   ========================================== */
+.container2 {
+  width: 100%;
+  max-width: 720px; /* Ancho máximo adaptable para centrar contenido */
+  margin: 0 auto;
+  flex: 1; /* Ocupa el espacio vertical restante antes del footer */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px 16px;
+  font-size: 12px;
+  color: #2c1810;
+}
+
+.schedulescreen {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Tarjeta individual de clase / asignatura */
+.container3 {
+  width: 100%;
+  border-radius: 14px;
+  background-color: #e2cfa8;
+  border: 1px solid rgba(90, 18, 36, 0.1);
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  gap: 16px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.container4 {
+  height: 48px;
+  width: 48px;
+  border-radius: 10px;
+  background-color: #5a1224;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.container5 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0; /* Permite que el texto trunque si es necesario */
+}
+
+.paragraph {
+  width: 100%;
+  font-size: 15px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+}
+
+.paragraphmargin {
+  width: 100%;
+  padding-top: 2px;
+}
+
+.paragraph2 {
+  width: 100%;
+  opacity: 0.7;
+}
+
+.paragraph3 {
+  width: 100%;
+  padding-top: 2px;
+  color: #5a1224;
+}
+
+.prof-anthon-e {
+  line-height: 16px;
+  font-weight: 500;
+}
+
+.containermargin {
+  width: 100%;
+  padding-top: 12px;
+}
+
+/* ==========================================
+   FOOTER RESPONSIVO (GRID ADAPTABLE)
+   ========================================== */
+.footer {
+  width: 100%;
+  background-color: #22253f;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 10px;
+  margin-top: auto;
+}
+
+.container15 {
+  width: 100%;
+  max-width: 1000px;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Grilla adaptable: 3 columnas en escritorio, 1 columna en móvil */
+.container16 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.container17 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 12px;
+}
+
+.paragraph13 {
+  width: 100%;
+  opacity: 0.5;
+  font-size: 10px;
+}
+
+.contacto {
+  letter-spacing: 1px;
+  line-height: 15px;
+  text-transform: uppercase;
+}
+
+.containermargin4,
+.containermargin5,
+.containermargin7 {
+  width: 100%;
+  padding-top: 6px;
+}
+
+.containermargin4 {
+  padding-top: 16px;
+}
+
+.container18 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  opacity: 0.7;
+}
+
+.container22 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.paragraphmargin5 {
+  padding-bottom: 4px;
+  font-size: 20px;
+  color: #c9a84c;
+  font-family: 'Playfair Display', serif;
+}
+
+.ricardo-garibay {
+  line-height: 28px;
+  font-weight: 600;
+}
+
+.paragraph14 {
+  opacity: 0.4;
+}
+
+.paragraphmargin6 {
+  padding-top: 16px;
+}
+
+.paragraph15 {
+  opacity: 0.3;
+}
+
+.container23 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.paragraphmargin7 {
+  padding-bottom: 16px;
+}
+
+.paragraph16 {
+  opacity: 0.5;
+}
+
+.container24 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 12px;
+}
+
+.link {
+  border-radius: 20px;
+  background-color: #1877f2;
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  gap: 8px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.facebook {
+  line-height: 16px;
+  font-weight: 600;
+}
+
+.link2 {
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  background-color: #5a1224;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==========================================
+   MEDIA QUERIES (PANTALLAS MEDIANAS Y MÓVILES)
+   ========================================== */
+@media (max-width: 768px) {
+  /* En pantallas móviles el footer pasa a 1 sola columna centrada */
+  .container16 {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .container17,
+  .container23 {
+    align-items: center;
+    text-align: center;
+  }
+
+  .container24 {
+    justify-content: center;
+  }
+}

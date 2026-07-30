@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Avisos y Notificaciones</title>
+  
+  <link rel="stylesheet" href="./index.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+</head>
+<body>
+
+  <div class="prototipo-sistema-gestin-educ">
+    <div class="detailscreen">
+      
+      <!-- HEADER -->
+      <header class="header">
+        <div class="button" role="button" aria-label="Volver">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+        </div>
+        <div class="container">
+          <div class="text">
+            <svg class="icon2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+          </div>
+        </div>
+        <div class="heading-2">
+          <h1 class="avisos-y-notificaciones">Avisos y Notificaciones</h1>
+        </div>
+      </header>
+
+      <!-- CONTENIDO PRINCIPAL -->
+      <main class="container2">
+        
+        <!-- BARRA SUPERIOR -->
+        <div class="noticesscreen">
+          <div class="paragraph">
+            <div class="sin-leer" id="counter-text">3 sin leer</div>
+          </div>
+          <button class="button2" id="mark-all-btn">
+            <span class="marcar-todos-como">Marcar todos como leídos</span>
+          </button>
+        </div>
+
+        <!-- LISTA DE NOTIFICACIONES -->
+        <div class="noticesscreen2">
+          
+          <!-- Tarjeta 1 (No leída) -->
+          <article class="notice-card unread">
+            <div class="button3">
+              <div class="textmargin">
+                <div class="text2"></div> <!-- Punto de no leído -->
+              </div>
+              <div class="container4">
+                <div class="container5">
+                  <div class="text3">
+                    <b class="urgente">Urgente</b>
+                  </div>
+                  <div class="text4">
+                    <span class="jul-2026">18 Jul 2026 · Dirección General</span>
+                  </div>
+                </div>
+                <div class="paragraph2">
+                  <h2 class="entrega-de-uniformes">Entrega de uniformes para concierto fin de ciclo</h2>
+                </div>
+              </div>
+              <div class="textmargin">
+                <svg class="icon3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+              </div>
+            </div>
+            <!-- Detalle oculto que se despliega -->
+            <div class="notice-detail">
+              <p>Se solicita a todos los alumnos presentarse en la dirección escolar para recoger los uniformes correspondientes al concierto de clausura. Recuerden traer su comprobante de inscripción sellado.</p>
+            </div>
+          </article>
+
+          <!-- Tarjeta 2 (No leída) -->
+          <article class="notice-card unread">
+            <div class="button3">
+              <div class="textmargin">
+                <div class="text2"></div>
+              </div>
+              <div class="container4">
+                <div class="container5">
+                  <div class="text6">
+                    <b class="urgente">Aviso</b>
+                  </div>
+                  <div class="text4">
+                    <span class="jul-2026">15 Jul 2026 · Jefatura Académica</span>
+                  </div>
+                </div>
+                <div class="paragraph2">
+                  <h2 class="entrega-de-uniformes">Cambio de horario — semana del 22 al 26 de julio</h2>
+                </div>
+              </div>
+              <div class="textmargin">
+                <svg class="icon3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+              </div>
+            </div>
+            <div class="notice-detail">
+              <p>Por motivos de preparación de eventos, los ensayos generales de las agrupaciones de cuerdas y vientos se recorrerán 1 hora por la tarde durante la semana indicada.</p>
+            </div>
+          </article>
+
+          <!-- Tarjeta 3 (No leída) -->
+          <article class="notice-card unread">
+            <div class="button3">
+              <div class="textmargin">
+                <div class="text2"></div>
+              </div>
+              <div class="container4">
+                <div class="container5">
+                  <div class="text6">
+                    <b class="urgente">Aviso</b>
+                  </div>
+                  <div class="text4">
+                    <span class="jul-2026">10 Jul 2026 · Servicios Escolares</span>
+                  </div>
+                </div>
+                <div class="paragraph2">
+                  <h2 class="entrega-de-uniformes">Inscripciones ciclo 2026-B disponibles</h2>
+                </div>
+              </div>
+              <div class="textmargin">
+                <svg class="icon3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+              </div>
+            </div>
+            <div class="notice-detail">
+              <p>Las reinscripciones para el periodo 2026-B se encuentran oficialmente abiertas en la plataforma. Por favor revisen sus adeudos pendientes antes de realizar el pago.</p>
+            </div>
+          </article>
+
+          <!-- Tarjeta 4 (Leída previamente) -->
+          <article class="notice-card">
+            <div class="button3">
+              <div class="textmargin">
+                <div class="text2"></div>
+              </div>
+              <div class="container4">
+                <div class="container5">
+                  <div class="text11">
+                    <b class="urgente">Boletín</b>
+                  </div>
+                  <div class="text4">
+                    <span class="jul-2026">02 Jul 2026 · Coordinación Cultural</span>
+                  </div>
+                </div>
+                <div class="paragraph5">
+                  <h2 class="entrega-de-uniformes">Resultados del Festival Juvenil de Arte 2026</h2>
+                </div>
+              </div>
+              <div class="textmargin">
+                <svg class="icon3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+              </div>
+            </div>
+            <div class="notice-detail">
+              <p>Felicitamos a todos los participantes por su excelente desempeño en el festival. La lista completa de reconocimientos ya se encuentra publicada en el tablón principal.</p>
+            </div>
+          </article>
+
+        </div>
+      </main>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <div class="container18">
+          <div class="container19">
+            <div class="container20">
+              <div class="paragraph7">
+                <span class="contacto">Contacto</span>
+              </div>
+              <div class="containermargin5">
+                <div class="container21">
+                  <svg class="icon8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  <span class="sin-leer">(771) 123-4567</span>
+                </div>
+              </div>
+              <div class="containermargin6">
+                <div class="container21">
+                  <svg class="icon8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  <span class="sin-leer">contacto@ricardogaribay.edu.mx</span>
+                </div>
+              </div>
+              <div class="containermargin8">
+                <div class="container21">
+                  <svg class="icon8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  <span class="sin-leer">Tulancingo de Bravo, Hidalgo</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="container25">
+              <div class="paragraphmargin">
+                <i class="ricardo-garibay">Ricardo Garibay</i>
+              </div>
+              <div class="paragraph8">
+                <span class="contacto">Centro Cultural · Tulancingo</span>
+              </div>
+              <div class="paragraphmargin2">
+                <div class="paragraph9">
+                  <span class="todos-los-derechos">© 2026 Todos los derechos reservados</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="container26">
+              <div class="paragraphmargin3">
+                <div class="paragraph10">
+                  <span class="contacto">Redes Sociales</span>
+                </div>
+              </div>
+              <div class="container27">
+                <a href="#" class="link">
+                  <span class="facebook">Facebook</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+  </div>
+
+  <!-- SCRIPT LÓGICO -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const markAllBtn = document.getElementById('mark-all-btn');
+      const counterText = document.getElementById('counter-text');
+      const noticeCards = document.querySelectorAll('.notice-card');
+
+      // Actualizar contador
+      const updateUnreadCounter = () => {
+        const unreadCount = document.querySelectorAll('.notice-card.unread').length;
+        counterText.textContent = `${unreadCount} sin leer`;
+      };
+
+      // Inicializar contador al cargar
+      updateUnreadCounter();
+
+      // Expandir tarjeta y marcar como leída
+      noticeCards.forEach(card => {
+        const header = card.querySelector('.button3');
+        
+        header.addEventListener('click', () => {
+          // Desplegar / Colapsar
+          const isOpen = card.classList.contains('expanded');
+          
+          // Cerrar otras tarjetas opcionalmente (modo acordeón estricto):
+          // noticeCards.forEach(c => c.classList.remove('expanded'));
+          
+          if (!isOpen) {
+            card.classList.add('expanded');
+          } else {
+            card.classList.remove('expanded');
+          }
+
+          // Marcar como leída
+          if (card.classList.contains('unread')) {
+            card.classList.remove('unread');
+            updateUnreadCounter();
+          }
+        });
+      });
+
+      // Marcar todas como leídas
+      markAllBtn.addEventListener('click', () => {
+        noticeCards.forEach(card => {
+          card.classList.remove('unread');
+        });
+        updateUnreadCounter();
+      });
+    });
+  </script>
+</body>
+</html>

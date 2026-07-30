@@ -1,0 +1,464 @@
+/* ==========================================
+   RESET Y BASE RESPONSIVA
+   ========================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f5efe4;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #2c1810;
+}
+
+.prototipo-sistema-gestin-educ,
+.app,
+.detailscreen {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f5efe4;
+}
+
+/* ==========================================
+   HEADER RESPONSIVO
+   ========================================== */
+.header {
+  width: 100%;
+  height: 56px;
+  background-color: #5a1224;
+  box-shadow: 0px 4px 6px -4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  gap: 12px;
+  font-family: 'Playfair Display', serif;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.button {
+  height: 36px;
+  width: 36px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.icon, .icon2 {
+  height: 18px;
+  width: 18px;
+}
+
+.container {
+  height: 32px;
+  width: 32px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+}
+
+.heading-2 {
+  display: flex;
+  align-items: center;
+}
+
+.historial-de-pagos {
+  line-height: 20px;
+  font-weight: 600;
+  font-size: 16px;
+  color: #fff;
+}
+
+/* ==========================================
+   CONTENEDOR PRINCIPAL Y RESUMEN TARJETAS
+   ========================================== */
+.container2 {
+  width: 100%;
+  max-width: 720px; /* Centra y limita el contenido en pantallas grandes */
+  margin: 0 auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 16px;
+  gap: 24px;
+}
+
+/* Grilla superior de resumenes (Mensualidad, Estado, etc.) */
+.paymentsscreen {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.container3,
+.container4,
+.container5 {
+  border-radius: 14px;
+  background-color: #e2cfa8;
+  border: 1px solid rgba(90, 18, 36, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 16px 12px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.paragraph {
+  font-size: 20px;
+  font-family: 'Playfair Display', serif;
+  color: #5a1224;
+}
+
+.b {
+  line-height: 28px;
+  font-weight: 600;
+}
+
+.paragraphmargin {
+  padding-top: 4px;
+  font-size: 10px;
+  color: #2c1810;
+}
+
+.paragraph2 {
+  opacity: 0.65;
+}
+
+.mensualidad {
+  letter-spacing: 0.5px;
+  line-height: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* ==========================================
+   LISTADO DE TRANSACCIONES / HISTORIAL
+   ========================================== */
+.paymentsscreen2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Fila de transacción */
+.container6,
+.container12 {
+  width: 100%;
+  border-radius: 14px;
+  background-color: #e2cfa8;
+  border: 1px solid rgba(90, 18, 36, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  gap: 12px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.container7 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  min-width: 0; /* Evita que el texto se salga del contenedor */
+}
+
+.container8,
+.container32 {
+  height: 40px;
+  width: 40px;
+  border-radius: 10px;
+  background-color: #5a1224;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.container32 {
+  background-color: rgba(90, 18, 36, 0.12);
+}
+
+.container9,
+.container15,
+.container21,
+.container33 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.paragraph7 {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.paragraph8 {
+  opacity: 0.55;
+  font-size: 11px;
+}
+
+.sin-referencia-an {
+  line-height: 15px;
+}
+
+/* Bloque derecho: Monto y Badge de Estado */
+.container10,
+.container34 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  color: #5a1224;
+  flex-shrink: 0;
+}
+
+.b3 {
+  line-height: 20px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* Etiqueta de Estado (Pagado / Pendiente) con Flexbox limpio */
+.container11,
+.container35 {
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text2,
+.text6 {
+  border-radius: 20px;
+  padding: 2px 10px;
+  font-size: 10px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text2 {
+  background-color: rgba(90, 18, 36, 0.12);
+  color: #5a1224;
+}
+
+.text6 {
+  background-color: rgba(201, 168, 76, 0.25);
+  color: #8b6914;
+}
+
+.containermargin {
+  width: 100%;
+}
+
+/* ==========================================
+   FOOTER RESPONSIVO (GRID ADAPTABLE)
+   ========================================== */
+.footer {
+  width: 100%;
+  background-color: #22253f;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 10px;
+  margin-top: auto;
+}
+
+.container36 {
+  width: 100%;
+  max-width: 1000px;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.container37 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.container38 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 12px;
+}
+
+.paragraph22 {
+  opacity: 0.5;
+  font-size: 10px;
+}
+
+.contacto {
+  letter-spacing: 1px;
+  line-height: 15px;
+  text-transform: uppercase;
+}
+
+.containermargin5,
+.containermargin6,
+.containermargin8 {
+  width: 100%;
+  padding-top: 6px;
+}
+
+.containermargin5 {
+  padding-top: 16px;
+}
+
+.container39 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  opacity: 0.7;
+}
+
+.icon8 {
+  height: 13px;
+  width: 13px;
+}
+
+.div {
+  line-height: 16px;
+}
+
+.container43 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.paragraphmargin4 {
+  padding-bottom: 4px;
+  font-size: 20px;
+  color: #c9a84c;
+  font-family: 'Playfair Display', serif;
+}
+
+.ricardo-garibay {
+  line-height: 28px;
+  font-weight: 600;
+}
+
+.paragraph23 {
+  opacity: 0.4;
+}
+
+.paragraphmargin5 {
+  padding-top: 16px;
+}
+
+.paragraph24 {
+  opacity: 0.3;
+}
+
+.container44 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.paragraphmargin6 {
+  padding-bottom: 16px;
+}
+
+.paragraph25 {
+  opacity: 0.5;
+}
+
+.container45 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 12px;
+}
+
+.link {
+  border-radius: 20px;
+  background-color: #1877f2;
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  gap: 8px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.icon12, .icon13 {
+  height: 14px;
+  width: 14px;
+}
+
+.facebook {
+  line-height: 16px;
+  font-weight: 600;
+}
+
+.link2 {
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  background-color: #5a1224;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==========================================
+   MEDIA QUERIES (PANTALLAS PEQUEÑAS / MÓVILES)
+   ========================================== */
+@media (max-width: 640px) {
+  /* En móviles muy estrechos, las 3 tarjetas superiores se apilan */
+  .paymentsscreen {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  /* El footer pasa de 3 columnas a 1 sola columna centrada */
+  .container37 {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .container38,
+  .container44 {
+    align-items: center;
+    text-align: center;
+  }
+
+  .container45 {
+    justify-content: center;
+  }
+}
