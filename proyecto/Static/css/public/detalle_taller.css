@@ -1,0 +1,443 @@
+/* ==========================================================================
+   VARIABLES & DESIGN SYSTEM
+   ========================================================================== */
+:root {
+  /* Colors */
+  --bg-main: #f5efe4;
+  --bg-hero: #6e472b;
+  --bg-card: #e2cfa8;
+  --header-bg: #5a1224;
+  --footer-bg: #22253f;
+  --accent-gold: #c9a84c;
+  --accent-badge: #8b1a30;
+  --text-dark: #2c1810;
+  --text-body: #3d1f0f;
+  --text-light: #ffffff;
+  
+  /* Typography */
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Inter', sans-serif;
+
+  /* Layout */
+  --max-width: 1152px;
+  --card-max-width: 680px;
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-card: 0px 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --shadow-header: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+
+/* ==========================================================================
+   GLOBAL RESET & MAIN CONTAINERS
+   ========================================================================== */
+.prototipo-sistema-gestin-educ {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg-main);
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-sans);
+  color: var(--text-light);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.app {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.workshopdetailscreen {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg-hero);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.geometricpattern-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  opacity: 0.15;
+}
+
+/* ==========================================================================
+   HEADER / NAVIGATION
+   ========================================================================== */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--header-bg);
+  box-shadow: var(--shadow-header);
+  width: 100%;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.icon {
+  height: 16px;
+  width: 16px;
+}
+
+.heading-1margin {
+  display: flex;
+  align-items: center;
+}
+
+.heading-1 {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  color: var(--accent-gold);
+}
+
+.baile-danzn {
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   MAIN CONTENT & CARD DETAIL
+   ========================================================================== */
+.container2 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 40px 16px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;
+}
+
+.container3 {
+  width: 100%;
+  max-width: var(--card-max-width);
+  box-shadow: var(--shadow-card);
+  border-radius: var(--radius-lg);
+  background-color: var(--bg-card);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Banner Image Header */
+.container4 {
+  width: 100%;
+  height: 240px;
+  background-color: var(--accent-badge);
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+.image-baile-danzn {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container5 {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.75) 100%);
+  z-index: 1;
+}
+
+.container6 {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.text2 {
+  display: inline-block;
+  background-color: var(--accent-badge);
+  border-radius: var(--radius-full);
+  padding: 4px 12px;
+}
+
+.danza {
+  letter-spacing: 0.5px;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--text-light);
+}
+
+.heading-2 {
+  font-family: var(--font-serif);
+  font-size: 28px;
+  color: var(--text-light);
+  line-height: 1.2;
+}
+
+/* Card Information Body */
+.container8 {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: var(--text-dark);
+}
+
+.container9 {
+  border-radius: var(--radius-md);
+  background-color: rgba(90, 18, 36, 0.08);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  padding: 16px;
+}
+
+.container10, .container12, .container13 {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.instructor {
+  letter-spacing: 0.9px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+.container11, .container14 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.rodolfo-ramirez-flores, .mar-17-19-hrs {
+  line-height: 1.4;
+}
+
+/* Section "Qué aprenderás" */
+.container15 {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.heading-3 {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+.paragraphmargin {
+  font-size: 14px;
+  color: var(--text-body);
+  line-height: 1.6;
+}
+
+/* Action Buttons */
+.containermargin {
+  padding-top: 12px;
+}
+
+.container16 {
+  display: flex;
+  gap: 12px;
+}
+
+.button2, .button3 {
+  flex: 1;
+  border-radius: var(--radius-md);
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  border: none;
+  box-sizing: border-box;
+}
+
+.button2 {
+  border: 1.5px solid var(--header-bg);
+  color: var(--header-bg);
+  background: transparent;
+}
+
+.button2:hover {
+  background-color: rgba(90, 18, 36, 0.08);
+}
+
+.button3 {
+  background-color: var(--header-bg);
+  color: var(--text-light);
+}
+
+.button3:hover {
+  opacity: 0.9;
+}
+
+.inscribirme {
+  letter-spacing: 0.7px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.container17 {
+  width: 100%;
+  background-color: var(--footer-bg);
+  color: var(--text-light);
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.container18 {
+  width: 100%;
+  max-width: var(--max-width);
+  padding: 40px 24px;
+  box-sizing: border-box;
+}
+
+.container19 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+}
+
+.container20 {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 13px;
+}
+
+.contacto {
+  letter-spacing: 1px;
+  font-size: 11px;
+  font-weight: 700;
+  opacity: 0.6;
+  text-transform: uppercase;
+}
+
+.container21 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  opacity: 0.85;
+}
+
+.container25 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+}
+
+.ricardo-garibay {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  color: var(--accent-gold);
+}
+
+.todos-los-derechos {
+  opacity: 0.5;
+  font-size: 12px;
+}
+
+.container26 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 16px;
+}
+
+.container27 {
+  display: flex;
+  gap: 12px;
+}
+
+.link {
+  border-radius: var(--radius-full);
+  background-color: #1877f2;
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  gap: 8px;
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.link2 {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  background-color: var(--header-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==========================================================================
+   RESPONSIVE ADJUSTMENTS
+   ========================================================================== */
+@media (max-width: 640px) {
+  .container16 {
+    flex-direction: column;
+  }
+
+  .container26 {
+    align-items: center;
+  }
+
+  .container19 {
+    text-align: center;
+  }
+
+  .container21 {
+    justify-content: center;
+  }
+}

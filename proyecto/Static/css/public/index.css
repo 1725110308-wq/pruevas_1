@@ -1,0 +1,776 @@
+/* Reset básico para eliminar bordes blancos del navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.prototipo-sistema-gestin-educ {
+    width: 100%;
+    min-height: 100vh; /* Reemplaza la altura fija de 2788px */
+    position: relative;
+    background-color: #f5efe4;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    font-size: 10px;
+    color: #2c1810;
+    font-family: 'Playfair Display', serif;
+}
+
+.body {
+    width: 100%; /* Cambiado de 683px a 100% */
+    min-height: 100vh; /* Cambiado de 651px a min-height */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.container {
+    align-self: stretch;
+    width: 100%;
+    background-color: #f5efe4;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 584px;
+    flex-shrink: 0;
+}
+
+.header {
+    align-self: stretch;
+    height: 64px;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -4px rgba(0, 0, 0, 0.1);
+    background-color: #5a1224;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 24px;
+    box-sizing: border-box;
+    gap: 20px;
+    text-align: center;
+    font-size: 18px;
+    color: #c9a84c;
+}
+
+.button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ricardo-garibay {
+    position: relative;
+    letter-spacing: 0.45px;
+    line-height: 28px;
+    font-weight: 600;
+}
+
+.button2 {
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.12);
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+}
+
+.container2 {
+    height: 32px;
+    width: 32px;
+    border-radius: 33554400px;
+    background-color: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    height: 17px;
+    width: 17px;
+    position: relative;
+}
+
+.container3 {
+    align-self: stretch;
+    height: 36px;
+    background-color: #4a0e1c;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    padding: 10px 24px;
+    box-sizing: border-box;
+    gap: 16px;
+    text-align: center;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: Inter, sans-serif;
+}
+
+.button3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.servicios {
+    position: relative;
+    letter-spacing: 1.2px;
+    line-height: 16px;
+    font-weight: 500;
+}
+
+.section {
+    align-self: stretch;
+    height: 288px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    isolation: isolate;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+    font-family: Inter, sans-serif;
+}
+
+.image-plaza-de-tulancingo-con {
+    align-self: stretch;
+    width: 100%;
+    height: 288px;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    flex-shrink: 0;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.container4 {
+    width: 100%; /* Cambiado de 683px a 100% */
+    height: 288px;
+    margin: 0 !important;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: linear-gradient(180deg, rgba(90, 18, 36, 0.5), rgba(34, 37, 63, 0.75));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 16px;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.paragraphmargin {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px 0px 12px;
+}
+
+.hidalgo-mxico {
+    position: relative;
+    letter-spacing: 3.5px;
+    line-height: 15px;
+    text-transform: uppercase;
+}
+
+.heading-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 30px;
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+}
+
+.tulancingo {
+    position: relative;
+    line-height: 36px;
+}
+
+.heading-2margin {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px 0px 16px;
+    font-size: 20px;
+    color: #c9a84c;
+    font-family: 'Playfair Display', serif;
+}
+
+.ciudad-de-transformacin {
+    position: relative;
+    line-height: 28px;
+    font-weight: 500;
+}
+
+.centro-cultural-de {
+    position: relative;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.section2 {
+    width: 100%;
+    display: grid;
+    box-sizing: border-box;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Hace que se adapte al ancho */
+    gap: 40px;
+    padding: 48px 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: Inter, sans-serif;
+}
+
+.container5 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.paragraph {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #5a1224;
+}
+
+.acerca-de-nosotros {
+    position: relative;
+    letter-spacing: 1px;
+    line-height: 15px;
+    text-transform: uppercase;
+}
+
+.heading-3 {
+    width: 100%; /* Cambiado de 635px a 100% */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 0px 0px;
+    box-sizing: border-box;
+    font-size: 20px;
+    font-family: 'Playfair Display', serif;
+}
+
+.formando-artistas-desde {
+    position: relative;
+    line-height: 28px;
+    font-weight: 600;
+}
+
+.paragraphmargin2 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 0px 0px;
+    font-size: 14px;
+}
+
+.paragraph2 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    opacity: 0.7;
+}
+
+.el-centro-cultural {
+    width: 100%; /* Cambiado de 635px a 100% */
+    position: relative;
+    line-height: 22.75px;
+    display: inline-block;
+}
+
+.container6 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.section3 {
+    align-self: stretch;
+    width: 100%;
+    background-color: #e2cfa8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 0px;
+    font-size: 18px;
+    color: #5a1224;
+}
+
+.container7 {
+    width: 100%;
+    display: grid;
+    box-sizing: border-box;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Dinámico para pantalla completa */
+    gap: 40px;
+    padding-left: 24px;
+    padding-right: 24px;
+    max-width: 1200px;
+}
+
+.container8 {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.containermargin {
+    display: flex;
+    align-items: flex-start;
+    padding: 4px 0px 0px;
+}
+
+.container9 {
+    height: 48px;
+    width: 48px;
+    border-radius: 33554400px;
+    background-color: #5a1224;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.icon2 {
+    height: 22px;
+    width: 22px;
+    position: relative;
+}
+
+.container10 {
+    width: 100%; /* Cambiado de 567px a 100% */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.heading-4 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.historia {
+    position: relative;
+    letter-spacing: 0.9px;
+    line-height: 28px;
+    text-transform: uppercase;
+}
+
+.paragraph5 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 0px 0px;
+    font-size: 14px;
+    color: #3d1f0f;
+    font-family: Inter, sans-serif;
+}
+
+.fundado-en-honor {
+    width: 100%; /* Cambiado de 567px a 100% */
+    position: relative;
+    line-height: 22.75px;
+    display: inline-block;
+}
+
+.container11 {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.section4 {
+    width: 100%; /* Cambiado de 683px a 100% */
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 48px 24px;
+    box-sizing: border-box;
+    max-width: 1200px;
+    font-size: 20px;
+}
+
+.container14 {
+    align-self: stretch;
+    height: 28px;
+    position: relative;
+}
+
+.galera {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    line-height: 28px;
+    font-weight: 600;
+}
+
+.containermargin3 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px 0px 0px;
+}
+
+.container15 {
+    align-self: stretch;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Reemplaza el grid rígido */
+    gap: 16px;
+}
+
+.container16 {
+    border-radius: 10px;
+    background-color: #d4bc8f;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.image-concierto-de-cuerdas {
+    align-self: stretch;
+    height: 220px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.container-icon,
+.container-icon2,
+.container-icon3 {
+    border-radius: 10px;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.section5 {
+    align-self: stretch;
+    width: 100%;
+    background-color: #e2cfa8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 0px;
+    font-size: 20px;
+}
+
+.container17 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px 24px;
+    box-sizing: border-box;
+    max-width: 1200px;
+}
+
+.containermargin4 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px 0px 0px;
+    font-size: 18px;
+    color: #fff;
+    font-family: Inter, sans-serif;
+}
+
+.container18 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container19, .container22, .container25 {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 1px 2px -1px rgba(0, 0, 0, 0.1);
+    border-radius: 14px;
+    background-color: #fff;
+    border: 1px solid rgba(90, 18, 36, 0.1);
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.container20 {
+    height: 48px;
+    width: 48px;
+    border-radius: 10px;
+    background-color: #5a1224;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.b {
+    position: relative;
+    line-height: 18px;
+}
+
+.jul {
+    position: relative;
+    font-size: 9px;
+    letter-spacing: 0.22px;
+    line-height: 13.5px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.container21, .container24, .container27 {
+    align-self: stretch;
+    width: 100%; /* Cambiado de px fijos a 100% */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 14px;
+    color: #2c1810;
+    font-family: 'Playfair Display', serif;
+}
+
+.exhibicin-de-baile {
+    position: relative;
+    line-height: 20px;
+    font-weight: 600;
+}
+
+.paragraphmargin4 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 4px 0px 0px;
+    font-size: 12px;
+    font-family: Inter, sans-serif;
+}
+
+.paragraph7 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    opacity: 0.6;
+}
+
+.muestra-final-de {
+    position: relative;
+    line-height: 19.5px;
+}
+
+.footer {
+    align-self: stretch;
+    width: 100%;
+    background-color: #22253f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 24px;
+    color: #fff;
+    font-family: Inter, sans-serif;
+    box-sizing: border-box;
+}
+
+.container28 {
+    width: 100%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Footer responsivo en toda la pantalla */
+    gap: 32px;
+}
+
+.container29 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 12px;
+}
+
+.paragraph10 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    opacity: 0.5;
+    font-size: 10px;
+}
+
+.containermargin5 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 0px 0px;
+}
+
+.container30 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    opacity: 0.7;
+}
+
+.icon4 {
+    height: 13px;
+    width: 13px;
+    position: relative;
+}
+
+.div {
+    position: relative;
+    line-height: 16px;
+}
+
+.containermargin6 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 6px 0px 0px;
+}
+
+.containermargin8 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 6px 0px;
+}
+
+.container34 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.paragraphmargin7 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px 0px 4px;
+    font-size: 20px;
+    color: #c9a84c;
+    font-family: 'Playfair Display', serif;
+}
+
+.paragraph11 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.4;
+}
+
+.paragraphmargin8 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 0px 0px;
+}
+
+.paragraph12 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.3;
+}
+
+.todos-los-derechos {
+    position: relative;
+    line-height: 15px;
+}
+
+.container35 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.paragraphmargin9 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px 0px 16px;
+}
+
+.paragraph13 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    opacity: 0.5;
+}
+
+.container36 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-align: left;
+    font-size: 12px;
+}
+
+.link {
+    align-self: stretch;
+    border-radius: 33554400px;
+    background-color: #1877f2;
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    gap: 8px;
+}
+
+.icon8 {
+    height: 14px;
+    width: 14px;
+    position: relative;
+}
+
+.facebook {
+    position: relative;
+    line-height: 16px;
+    font-weight: 600;
+}
+
+.link2 {
+    height: 36px;
+    width: 36px;
+    border-radius: 33554400px;
+    background-color: #5a1224;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon9 {
+    height: 15px;
+    width: 15px;
+    position: relative;
+}

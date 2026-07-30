@@ -1,0 +1,454 @@
+/* ==========================================================================
+   VARIABLES & DESIGN SYSTEM
+   ========================================================================= */
+:root {
+  /* Colors */
+  --bg-main: #f5efe4;
+  --bg-card: #e2cfa8;
+  --bg-image-fallback: #d4bc8f;
+  --header-bg: #5a1224;
+  --sub-header-bg: #4a0e1c;
+  --footer-bg: #22253f;
+  --accent-gold: #c9a84c;
+  
+  /* Text Colors */
+  --text-dark: #2c1810;
+  --text-brand: #5a1224;
+  --text-light: #ffffff;
+  
+  /* Category Badges */
+  --badge-danza: #8b1a30;
+  --badge-musica: #1a3a5c;
+  --badge-teatro: #2e5939;
+  --badge-literatura: #7b3f00;
+  --badge-general: #5a1224;
+
+  /* Typography */
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Inter', sans-serif;
+
+  /* Layout & Shadows */
+  --max-width: 1024px;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-full: 9999px;
+  --shadow-card: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 1px 2px -1px rgba(0, 0, 0, 0.1);
+  --shadow-header: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+
+/* ==========================================================================
+   GLOBAL RESET & MAIN CONTAINERS
+   ========================================================================= */
+.prototipo-sistema-gestin-educ {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg-main);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  font-family: var(--font-sans);
+  color: var(--text-dark);
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+/* ==========================================================================
+   HEADER & CATEGORY SUB-HEADER
+   ========================================================================= */
+.header {
+  width: 100%;
+  height: 64px;
+  background-color: var(--header-bg);
+  box-shadow: var(--shadow-header);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.ricardo-garibay {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  letter-spacing: 0.45px;
+  font-weight: 600;
+  color: var(--accent-gold);
+}
+
+.button2 {
+  border-radius: var(--radius-sm);
+  background-color: rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.button2:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.container2 {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-full);
+  background-color: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  width: 17px;
+  height: 17px;
+}
+
+/* Secondary Navigation Bar */
+.container3 {
+  width: 100%;
+  background-color: var(--sub-header-bg);
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  gap: 20px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.8);
+  overflow-x: auto; /* Permite scroll horizontal en móviles si sobrepasa */
+  white-space: nowrap;
+}
+
+.button3, .button5 {
+  background: transparent;
+  border: none;
+  padding: 4px 8px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 12px;
+  transition: color 0.2s;
+}
+
+.button5 {
+  color: var(--accent-gold);
+  font-weight: 600;
+}
+
+.servicios {
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+   MAIN CONTENT / AGENDA CARDS
+   ========================================================================= */
+.container4 {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 20px;
+  box-sizing: border-box;
+}
+
+.container5 {
+  margin-bottom: 24px;
+}
+
+.agenda {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-brand);
+  font-weight: 700;
+  font-size: 11px;
+}
+
+.heading-2 {
+  font-family: var(--font-serif);
+  font-size: 28px;
+  color: var(--text-dark);
+  margin-top: 4px;
+}
+
+.cartelera-cultural-y {
+  line-height: 1.2;
+}
+
+.paragraph2 {
+  opacity: 0.65;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+/* Cards Grid Container */
+.container6 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+  width: 100%;
+}
+
+/* Individual Card Item */
+.button6, .button7, .button8, .button9, .button10, .button11 {
+  background-color: var(--bg-card);
+  border: 1px solid rgba(90, 18, 36, 0.1);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  text-decoration: none;
+  color: var(--text-dark);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.button6:hover, .button7:hover, .button8:hover, 
+.button9:hover, .button10:hover, .button11:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Card Header & Media */
+.container7 {
+  width: 100%;
+  height: 160px;
+  background-color: var(--bg-image-fallback);
+  position: relative;
+  overflow: hidden;
+}
+
+.image-exhibicin-de-baile-dan,
+.image-exposicin-colectiva-de {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container8 {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 30%, rgba(34, 37, 63, 0.75) 100%);
+  z-index: 1;
+}
+
+.container9 {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 2;
+}
+
+/* Badges de Categoría */
+.text, .text3, .text5, .text7, .text9 {
+  border-radius: var(--radius-full);
+  padding: 4px 10px;
+  color: var(--text-light);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.text { background-color: var(--badge-danza); }
+.text3 { background-color: var(--badge-musica); }
+.text5 { background-color: var(--badge-teatro); }
+.text7 { background-color: var(--badge-literatura); }
+.text9 { background-color: var(--badge-general); }
+
+.text2 {
+  color: var(--text-light);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Card Body Content */
+.container10 {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.heading-4 {
+  font-family: var(--font-serif);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1.3;
+}
+
+.paragraph3 {
+  opacity: 0.75;
+  font-size: 13px;
+  margin-top: 8px;
+  line-height: 1.4;
+}
+
+.container11 {
+  border-top: 1px solid rgba(90, 18, 36, 0.1);
+  margin-top: 16px;
+  padding-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container12, .container13 {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  opacity: 0.75;
+}
+
+.icon2, .icon4 {
+  width: 14px;
+  height: 14px;
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================= */
+.footer {
+  width: 100%;
+  background-color: var(--footer-bg);
+  color: var(--text-light);
+  padding: 40px 20px;
+  box-sizing: border-box;
+  margin-top: auto;
+}
+
+.container55 {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 32px;
+  align-items: start;
+}
+
+.container56 {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 12px;
+}
+
+.paragraph9 {
+  opacity: 0.5;
+  font-size: 11px;
+}
+
+.container57 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  opacity: 0.8;
+}
+
+.icon20 {
+  width: 14px;
+  height: 14px;
+}
+
+.container61 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 6px;
+}
+
+.paragraphmargin8 {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  color: var(--accent-gold);
+}
+
+.paragraph11 {
+  opacity: 0.4;
+  font-size: 12px;
+}
+
+.container62 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 16px;
+}
+
+.paragraph12 {
+  opacity: 0.5;
+  font-size: 12px;
+}
+
+.container63 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.link {
+  border-radius: var(--radius-full);
+  background-color: #1877f2;
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  gap: 8px;
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.link2 {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  background-color: var(--header-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.icon24, .icon25 {
+  width: 15px;
+  height: 15px;
+}
+
+/* ==========================================================================
+   RESPONSIVE ADJUSTMENTS
+   ========================================================================= */
+@media (max-width: 768px) {
+  .container62 {
+    align-items: center;
+  }
+  
+  .container55 {
+    text-align: center;
+  }
+
+  .container57 {
+    justify-content: center;
+  }
+}
