@@ -1,0 +1,548 @@
+/* --- ESTILOS GENERALES Y LAYOUT BASE --- */
+.prototipo-sistema-gestin-educ {
+	width: 100%;
+	min-height: 100vh;
+	position: relative;
+	background-color: #f5efe4;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: left;
+	font-size: 14px;
+	color: #fff;
+	font-family: 'Inter', sans-serif;
+}
+
+.detailscreen {
+	width: 100%;
+	min-height: 100vh;
+	background-color: #f5efe4;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
+
+/* --- HEADER --- */
+.header {
+	align-self: stretch;
+	height: 56px;
+	box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -4px rgba(0, 0, 0, 0.1);
+	background-color: #5a1224;
+	display: flex;
+	align-items: center;
+	padding: 0px 24px;
+	box-sizing: border-box;
+	gap: 12px;
+	font-family: 'Playfair Display', serif;
+}
+
+.button {
+	height: 36px;
+	width: 36px;
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.icon {
+	height: 18px;
+	width: 18px;
+	position: relative;
+}
+
+.container {
+	height: 32px;
+	width: 32px;
+	border-radius: 10px;
+	background-color: rgba(255, 255, 255, 0.15);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.text {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.icon2 {
+	width: 20px;
+	height: 20px;
+	position: relative;
+}
+
+.heading-2 {
+	height: 20px;
+	flex: 1;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.mdulo-de-materiales, .pase-de-lista {
+	position: relative;
+	line-height: 20px;
+	font-weight: 600;
+}
+
+/* --- CONTENEDOR PRINCIPAL --- */
+.container2 {
+	width: 100%;
+	max-width: 720px;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 24px 16px;
+	box-sizing: border-box;
+	color: #2c1810;
+	gap: 20px;
+}
+
+/* --- SECCIÓN Y FORMULARIO DE SUBIDA DE ARCHIVOS --- */
+.upload-section, .published-section {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.upload-card, .teachermaterialsscreen {
+	width: 100%;
+	border-radius: 16px;
+	background-color: #e2cfa8;
+	border: 1.6px dashed rgba(90, 18, 36, 0.3);
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 20px;
+	box-sizing: border-box;
+	gap: 16px;
+	font-size: 12px;
+}
+
+.form-group {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+
+.input-label {
+	font-size: 11px;
+	font-weight: 600;
+	letter-spacing: 0.45px;
+	text-transform: uppercase;
+	color: #3d1f0f;
+}
+
+.form-input {
+	width: 100%;
+	padding: 10px 12px;
+	border-radius: 10px;
+	border: 0.8px solid rgba(90, 18, 36, 0.2);
+	background-color: #f5efe4;
+	font-family: inherit;
+	font-size: 13px;
+	color: #2c1810;
+	box-sizing: border-box;
+	outline: none;
+	transition: border-color 0.2s ease;
+}
+
+.form-input:focus {
+	border-color: #5a1224;
+}
+
+.form-textarea {
+	resize: vertical;
+	min-height: 70px;
+}
+
+.file-dropzone {
+	width: 100%;
+	position: relative;
+	border: 1.5px dashed rgba(90, 18, 36, 0.4);
+	border-radius: 10px;
+	padding: 20px;
+	text-align: center;
+	background-color: rgba(245, 239, 228, 0.6);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	cursor: pointer;
+	box-sizing: border-box;
+}
+
+.file-input {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	cursor: pointer;
+}
+
+.file-label-text {
+	font-size: 12px;
+	color: #5a1224;
+	font-weight: 500;
+}
+
+.importar-nuevo-material, .taller {
+	position: relative;
+	letter-spacing: 1.2px;
+	line-height: 16px;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+/* Botón de Publicar / Guardar */
+.attendancescreen4 {
+	align-self: stretch;
+	height: 44px;
+	border-radius: 14px;
+	background-color: #5a1224;
+	border: none;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	font-family: inherit;
+	transition: background-color 0.2s ease;
+}
+
+.attendancescreen4:hover {
+	background-color: #400a18;
+}
+
+.guardar-lista-de {
+	line-height: 20px;
+	font-weight: 600;
+	font-size: 14px;
+}
+
+/* --- LISTA DE ARCHIVOS PUBLICADOS --- */
+.teachermaterialsscreen2 {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding-top: 12px;
+	box-sizing: border-box;
+	font-family: 'Playfair Display', serif;
+}
+
+.teachermaterialsscreen3 {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 12px;
+	box-sizing: border-box;
+}
+
+.container3, .container9 {
+	align-self: stretch;
+	border-radius: 14px;
+	background-color: #e2cfa8;
+	border: 0.8px solid rgba(90, 18, 36, 0.1);
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 16px;
+	box-sizing: border-box;
+	gap: 8px;
+}
+
+.container4, .container10 {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+}
+
+.container5 {
+	height: 40px;
+	width: 40px;
+	border-radius: 10px;
+	background-color: #5a1224;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+}
+
+.icon4, .icon3 {
+	height: 18px;
+	width: 18px;
+	position: relative;
+}
+
+.container6, .container11 {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.paragraph, .paragraph2 {
+	align-self: stretch;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.gua-nivel-bsico, .alexa-vzquez-hernndez {
+	position: relative;
+	line-height: 20px;
+	font-weight: 500;
+}
+
+.paragraph3 {
+	align-self: stretch;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	opacity: 0.5;
+	font-size: 10px;
+}
+
+.text2, .container6-status {
+	border-radius: 26843500px;
+	background-color: rgba(46, 89, 57, 0.15);
+	display: flex;
+	align-items: center;
+	padding: 4px 10px;
+	font-size: 10px;
+	color: #2e5939;
+}
+
+.text4, .container7 {
+	border-radius: 26843500px;
+	background-color: rgba(90, 18, 36, 0.12);
+	display: flex;
+	align-items: center;
+	padding: 4px 10px;
+	font-size: 10px;
+	color: #5a1224;
+}
+
+.publicado, .asistencia {
+	position: relative;
+	line-height: 15px;
+	font-weight: 600;
+}
+
+.containermargin, .paragraphmargin {
+	align-self: stretch;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	font-size: 11px;
+}
+
+.paragraph4 {
+	align-self: stretch;
+	opacity: 0.7;
+}
+
+.ejercicios-de-digitacin, .rg-2026-0847 {
+	position: relative;
+	line-height: 16px;
+}
+
+/* --- FOOTER --- */
+.footer {
+	align-self: stretch;
+	background-color: #22253f;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 10px;
+	width: 100%;
+}
+
+.container15, .container41 {
+	width: 100%;
+	max-width: 1152px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 32px 24px;
+	box-sizing: border-box;
+}
+
+.container16, .container42 {
+	align-self: stretch;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: 32px;
+}
+
+.container17, .container43 {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	font-size: 12px;
+}
+
+.paragraph10, .paragraph17 {
+	align-self: stretch;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	opacity: 0.5;
+	font-size: 10px;
+}
+
+.contacto {
+	position: relative;
+	letter-spacing: 1px;
+	line-height: 15px;
+	text-transform: uppercase;
+}
+
+.containermargin3, .containermargin4, .containermargin6, 
+.containermargin8, .containermargin9, .containermargin11 {
+	align-self: stretch;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding-top: 8px;
+}
+
+.container18, .container44 {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	opacity: 0.7;
+}
+
+.icon7 {
+	height: 13px;
+	width: 13px;
+	position: relative;
+}
+
+.div {
+	position: relative;
+	line-height: 16px;
+}
+
+.container22, .container48 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.paragraphmargin3, .paragraphmargin {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding-bottom: 4px;
+	font-size: 20px;
+	color: #c9a84c;
+	font-family: 'Playfair Display', serif;
+}
+
+.ricardo-garibay {
+	position: relative;
+	line-height: 28px;
+	font-weight: 600;
+}
+
+.paragraph11, .paragraph18, .paragraph12, .paragraph19 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	opacity: 0.4;
+}
+
+.paragraphmargin4, .paragraphmargin2 {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding-top: 16px;
+}
+
+.todos-los-derechos {
+	position: relative;
+	line-height: 15px;
+}
+
+.container23, .container49 {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.paragraphmargin5, .paragraphmargin3 {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding-bottom: 16px;
+}
+
+.paragraph13, .paragraph20 {
+	display: flex;
+	flex-direction: column;
+	opacity: 0.5;
+}
+
+.container24, .container50 {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	text-align: left;
+	font-size: 12px;
+}
+
+.link {
+	border-radius: 26843500px;
+	background-color: #1877f2;
+	display: flex;
+	align-items: center;
+	padding: 8px 16px;
+	gap: 8px;
+}
+
+.icon11, .icon7 {
+	height: 14px;
+	width: 14px;
+	position: relative;
+}
+
+.facebook {
+	position: relative;
+	line-height: 16px;
+	font-weight: 600;
+}
+
+.link2 {
+	height: 36px;
+	width: 36px;
+	border-radius: 26843500px;
+	background-color: #5a1224;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.icon12, .icon8 {
+	height: 15px;
+	width: 15px;
+	position: relative;
+}

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, width=device-width">
+  <title>Módulo de Materiales - Centro Cultural</title>
+  
+  <link rel="stylesheet" href="./index.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" />
+</head>
+<body>
+
+  <div class="prototipo-sistema-gestin-educ">
+    <div class="app">
+      <div class="detailscreen">
+        
+        <!-- Header -->
+        <header class="header">
+          <div class="button">
+            <img class="icon" alt="Volver" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='white'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M15 19l-7-7 7-7'/></svg>">
+          </div>
+          <div class="container">
+            <div class="text">
+              <img class="icon2" alt="Ícono Módulo" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='white'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z'/></svg>">
+            </div>
+          </div>
+          <div class="heading-2">
+            <div class="pase-de-lista">Módulo de Materiales de Trabajo</div>
+          </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="container2">
+          
+          <!-- Formulario de carga de archivos -->
+          <section class="upload-section">
+            <h2 class="taller">Importar nuevo material</h2>
+            
+            <form class="upload-card">
+              <div class="form-group">
+                <label for="title-input" class="input-label">Título del Material</label>
+                <input type="text" id="title-input" class="form-input" placeholder="Ej. Guía de Solfeo Básico" required>
+              </div>
+
+              <div class="form-group">
+                <label for="description-input" class="input-label">Descripción corta</label>
+                <textarea id="description-input" class="form-input form-textarea" placeholder="Indica instrucciones o detalles sobre este archivo..." rows="3"></textarea>
+              </div>
+
+              <div class="form-group">
+                <label class="input-label">Seleccionar Archivo</label>
+                <div class="file-dropzone">
+                  <input type="file" id="file-upload" class="file-input" />
+                  <img class="icon3" alt="Cargar" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%235a1224'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 16a4 4 0 01-.88-7.903A5 5 0 0115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12'/></svg>">
+                  <span class="file-label-text">Haz clic aquí o arrastra un archivo (PDF, PNG, JPG)</span>
+                </div>
+              </div>
+
+              <button type="submit" class="attendancescreen4">
+                <span class="guardar-lista-de">Publicar Material</span>
+              </button>
+            </form>
+          </section>
+
+          <!-- Listado de archivos publicados -->
+          <section class="published-section">
+            <h2 class="taller" style="margin-top: 24px;">Archivos publicados</h2>
+            
+            <div class="attendancescreen3">
+              
+              <!-- Archivo 1 -->
+              <div class="container9">
+                <div class="container10">
+                  <div class="container11">
+                    <div class="paragraph">
+                      <div class="alexa-vzquez-hernndez">Guía Nivel Básico — Teclado.pdf</div>
+                    </div>
+                    <div class="paragraph2">
+                      <div class="rg-2026-0847">2.1 MB · 10 Jul 2026</div>
+                    </div>
+                  </div>
+                  <div class="container6">
+                    <span class="text2"></span>
+                    <span class="asistencia">Publicado</span>
+                  </div>
+                </div>
+                <div class="containermargin">
+                  <div class="paragraph">
+                    <div class="rg-2026-0847">Ejercicios de digitación para alumnos nivel 1. Practicar 20 min diarios.</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Archivo 2 -->
+              <div class="container9">
+                <div class="container10">
+                  <div class="container11">
+                    <div class="paragraph">
+                      <div class="alexa-vzquez-hernndez">Manual de Teoría Musical.pdf</div>
+                    </div>
+                    <div class="paragraph2">
+                      <div class="rg-2026-0847">4.8 MB · 05 Jul 2026</div>
+                    </div>
+                  </div>
+                  <div class="container6">
+                    <span class="text2"></span>
+                    <span class="asistencia">Publicado</span>
+                  </div>
+                </div>
+                <div class="containermargin">
+                  <div class="paragraph">
+                    <div class="rg-2026-0847">Compendio de solfeo, figuras rítmicas y lectura de pentagrama.</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Archivo 3 -->
+              <div class="container9">
+                <div class="container10">
+                  <div class="container11">
+                    <div class="paragraph">
+                      <div class="alexa-vzquez-hernndez">Referencia Visual: Digitación.png</div>
+                    </div>
+                    <div class="paragraph2">
+                      <div class="rg-2026-0847">1.3 MB · 01 Jul 2026</div>
+                    </div>
+                  </div>
+                  <div class="container7">
+                    <span class="text4"></span>
+                    <span class="asistencia">Borrador</span>
+                  </div>
+                </div>
+                <div class="containermargin">
+                  <div class="paragraph">
+                    <div class="rg-2026-0847">Esquema gráfico de postura y posición de manos en el instrumento.</div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+          <div class="container41">
+            <div class="container42">
+              
+              <div class="container43">
+                <div class="paragraph17">
+                  <div class="contacto">Contacto</div>
+                </div>
+                <div class="containermargin8">
+                  <div class="container44">
+                    <span class="div">(771) 123-4567</span>
+                  </div>
+                </div>
+                <div class="containermargin9">
+                  <div class="container44">
+                    <span class="div">contacto@ricardogaribay.edu.mx</span>
+                  </div>
+                </div>
+                <div class="containermargin11">
+                  <div class="container44">
+                    <span class="div">Tulancingo de Bravo, Hidalgo</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="container48">
+                <div class="paragraphmargin">
+                  <i class="ricardo-garibay">Ricardo Garibay</i>
+                </div>
+                <div class="paragraph18">
+                  <div class="contacto">Centro Cultural · Tulancingo</div>
+                </div>
+                <div class="paragraphmargin2">
+                  <div class="paragraph19">
+                    <div class="div">© 2026 Todos los derechos reservados</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="container49">
+                <div class="paragraphmargin3">
+                  <div class="paragraph20">
+                    <div class="contacto">Redes Sociales</div>
+                  </div>
+                </div>
+                <div class="container50">
+                  <div class="link">
+                    <span class="facebook">Facebook</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </footer>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

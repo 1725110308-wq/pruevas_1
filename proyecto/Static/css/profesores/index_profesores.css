@@ -1,0 +1,553 @@
+/* ==========================================================================
+   VARIABLES & DESIGN SYSTEM
+   ========================================================================== */
+:root {
+  /* Colors */
+  --bg-main: #f5efe4;
+  --bg-hero: #6e472b;
+  --bg-card: #e2cfa8;
+  --header-bg: #5a1224;
+  --footer-bg: #22253f;
+  --accent-gold: #c9a84c;
+  
+  /* Text Colors */
+  --text-dark: #2c1810;
+  --text-light: #ffffff;
+  --text-muted: rgba(255, 255, 255, 0.6);
+
+  /* Typography */
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Inter', sans-serif;
+
+  /* Layout & Spacing */
+  --max-width: 1152px;
+  --card-max-width: 672px;
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-card: 0px 20px 25px -5px rgba(0, 0, 0, 0.1), 0px 8px 10px -6px rgba(0, 0, 0, 0.1);
+  --shadow-action: 0px 4px 16px rgba(0, 0, 0, 0.12);
+  --shadow-header: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+
+/* ==========================================================================
+   GLOBAL RESET & MAIN CONTAINERS
+   ========================================================================== */
+.prototipo-sistema-gestin-educ {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg-main);
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  color: var(--text-dark);
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+.app {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.teacherprofilescreen {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg-hero);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.geometricpattern-icon {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  opacity: 0.15;
+}
+
+/* ==========================================================================
+   HEADER / NAVIGATION
+   ========================================================================== */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--header-bg);
+  box-shadow: var(--shadow-header);
+  width: 100%;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+.button, .button2 {
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-muted);
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 12px;
+  transition: color 0.2s ease;
+}
+
+.button:hover, .button2:hover {
+  color: var(--text-light);
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+}
+
+.heading-1 {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  color: var(--accent-gold);
+}
+
+.ricardo-garibay {
+  font-weight: 600;
+  line-height: 28px;
+}
+
+.inicio, .salir {
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   MAIN PROFILE CONTENT
+   ========================================================================== */
+.container {
+  width: 100%;
+  max-width: var(--card-max-width);
+  margin: 0 auto;
+  padding: 32px 16px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Main Profile Card */
+.container2 {
+  width: 100%;
+  box-shadow: var(--shadow-card);
+  border-radius: var(--radius-lg);
+  background-color: var(--bg-card);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.container3 {
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(135deg, #22253f, #2e3a6e);
+}
+
+.containermargin {
+  padding: 0 24px 24px;
+  margin-top: -40px; /* Eleva el avatar sobre el banner superior */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.container-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-header);
+  object-fit: cover;
+  border: 4px solid var(--bg-card);
+}
+
+.container5 {
+  text-align: center;
+  margin-top: 12px;
+}
+
+.prof-anthon-e {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  color: var(--text-dark);
+  font-weight: 700;
+}
+
+.container6 {
+  margin-top: 6px;
+  display: flex;
+  justify-content: center;
+}
+
+.text2 {
+  background-color: var(--footer-bg);
+  color: var(--text-light);
+  border-radius: var(--radius-full);
+  padding: 3px 12px;
+  display: inline-block;
+}
+
+.profesor {
+  letter-spacing: 1px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Info Grid (Folio, Taller, etc.) */
+.containermargin3 {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.container7 {
+  border-radius: var(--radius-md);
+  background-color: rgba(34, 37, 63, 0.07);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.container8, .container9, .container10, .container11 {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.no-folio, .alumnos-inscritos, .gestin-docente, .pase-de-lista {
+  letter-spacing: 0.9px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  opacity: 0.65;
+}
+
+.paragraph2, .teclado {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+/* Section Inscritos / Progreso */
+.containermargin4 {
+  width: 100%;
+  margin-top: 16px;
+}
+
+.container12 {
+  border-radius: var(--radius-md);
+  background-color: rgba(34, 37, 63, 0.06);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-sizing: border-box;
+}
+
+.container13 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.paragraphmargin {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  color: var(--footer-bg);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.button3 {
+  border-radius: var(--radius-md);
+  background-color: var(--footer-bg);
+  color: var(--text-light);
+  border: none;
+  display: flex;
+  align-items: center;
+  padding: 8px 14px;
+  gap: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.button3:hover {
+  opacity: 0.9;
+}
+
+/* Progress Bar */
+.container15 {
+  width: 100%;
+  height: 6px;
+  border-radius: var(--radius-full);
+  background-color: rgba(34, 37, 63, 0.15);
+  overflow: hidden;
+}
+
+.container16 {
+  width: 65%; /* Representación porcentual dinámica */
+  height: 100%;
+  border-radius: var(--radius-full);
+  background-color: var(--footer-bg);
+}
+
+.paragraph11 {
+  opacity: 0.5;
+  font-size: 11px;
+}
+
+/* Subtitle "Gestión Docente" */
+.paragraph12 {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 11px;
+  margin-top: 8px;
+}
+
+/* Module Buttons Grid */
+.containermargin6 {
+  width: 100%;
+}
+
+.container17 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.button4, .button5, .button6, .button7 {
+  box-shadow: var(--shadow-action);
+  border-radius: var(--radius-lg);
+  background-color: var(--bg-card);
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  position: relative;
+  cursor: pointer;
+  text-align: left;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box;
+}
+
+.button4:hover, .button5:hover, .button6:hover, .button7:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.container18 {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background-color: var(--footer-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.icon3 {
+  width: 24px;
+  height: 24px;
+}
+
+.paragraph13, .paragraph19 {
+  color: var(--text-dark);
+  font-weight: 700;
+}
+
+.asistencia-en-tiempo {
+  opacity: 0.65;
+  font-size: 11px;
+  margin-top: 2px;
+}
+
+.icon4, .icon10 {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  width: 14px;
+  height: 14px;
+  opacity: 0.3;
+}
+
+/* Badge con contador de notificaciones */
+.text4 {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 22px;
+  height: 22px;
+  border-radius: var(--radius-full);
+  background-color: var(--header-bg);
+  color: var(--text-light);
+  font-size: 10px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.container22 {
+  width: 100%;
+  background-color: var(--footer-bg);
+  color: var(--text-light);
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.container23 {
+  width: 100%;
+  max-width: var(--max-width);
+  padding: 40px 24px;
+  box-sizing: border-box;
+}
+
+.container24 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+}
+
+.container25 {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 12px;
+}
+
+.paragraph21 {
+  opacity: 0.5;
+  font-size: 11px;
+}
+
+.container26 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  opacity: 0.8;
+}
+
+.icon11 {
+  width: 14px;
+  height: 14px;
+}
+
+.container30 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+}
+
+.paragraphmargin7 {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  color: var(--accent-gold);
+}
+
+.paragraph23 {
+  opacity: 0.4;
+  font-size: 12px;
+}
+
+.container31 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 16px;
+}
+
+.paragraph24 {
+  opacity: 0.5;
+  font-size: 12px;
+}
+
+.container32 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.link {
+  border-radius: var(--radius-full);
+  background-color: #1877f2;
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  gap: 8px;
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.link2 {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  background-color: var(--header-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+/* ==========================================================================
+   RESPONSIVE ADJUSTMENTS
+   ========================================================================== */
+@media (max-width: 640px) {
+  .container31 {
+    align-items: center;
+  }
+
+  .container24 {
+    text-align: center;
+  }
+
+  .container26 {
+    justify-content: center;
+  }
+
+  .container13 {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .button3 {
+    width: 100%;
+    justify-content: center;
+  }
+}

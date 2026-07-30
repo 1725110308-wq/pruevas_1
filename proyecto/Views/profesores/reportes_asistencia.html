@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte de Asistencia - Sistema de Gestión Educativa</title>
+    
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+</head>
+<body>
+
+    <div class="prototipo-sistema-gestin-educ">
+        <div class="app">
+            <main class="detailscreen">
+                
+                <!-- Encabezado -->
+                <header class="header">
+                    <button class="btn-back" aria-label="Regresar">
+                        <img class="icon" src="assets/arrow-left.svg" alt="Volver">
+                    </button>
+                    <div class="header-content">
+                        <img class="icon-logo" src="assets/logo.svg" alt="Logo">
+                        <h1 class="header-title">Reporte de Asistencia</h1>
+                    </div>
+                </header>
+
+                <div class="main-content">
+                    
+                    <!-- Filtros de Taller y Rango/Mes -->
+                    <section class="filters-section">
+                        <div class="filter-group">
+                            <label for="select-taller" class="label">Taller</label>
+                            <select id="select-taller" class="dropdown">
+                                <option value="">Selecciona un taller</option>
+                                <option value="1">Taller de Pintura</option>
+                                <option value="2">Taller de Música</option>
+                            </select>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <label for="select-mes" class="label">Mes / Período</label>
+                            <select id="select-mes" class="dropdown">
+                                <option value="2026-07">Julio 2026</option>
+                                <option value="2026-06">Junio 2026</option>
+                                <option value="2026-05">Mayo 2026</option>
+                            </select>
+                        </div>
+                    </section>
+
+                    <!-- Selector de Vista: Gráfica Mensual vs Lista Nominal -->
+                    <nav class="view-toggle" aria-label="Modo de visualización">
+                        <button class="btn-tab active" id="tab-grafica" onclick="switchView('grafica')">
+                            📊 Gráfica Mensual
+                        </button>
+                        <button class="btn-tab" id="tab-lista" onclick="switchView('lista')">
+                            📋 Lista Nominal
+                        </button>
+                    </nav>
+
+                    <!-- VISTA 1: Gráfica Mensual -->
+                    <section id="view-grafica" class="view-panel active">
+                        <div class="chart-container">
+                            <div class="chart-header">
+                                <h2 class="section-title">Resumen Estadístico Mensual</h2>
+                                <p class="section-subtitle">Porcentaje general de asistencia por categoría</p>
+                            </div>
+                            
+                            <!-- Área representativa para la gráfica (Canvas o SVG) -->
+                            <div class="chart-placeholder">
+                                <div class="bar-group">
+                                    <div class="bar bar-asistencia" style="height: 80%;">
+                                        <span class="bar-value">80%</span>
+                                    </div>
+                                    <span class="bar-label">Asistencias</span>
+                                </div>
+                                <div class="bar-group">
+                                    <div class="bar bar-falta" style="height: 12%;">
+                                        <span class="bar-value">12%</span>
+                                    </div>
+                                    <span class="bar-label">Faltas</span>
+                                </div>
+                                <div class="bar-group">
+                                    <div class="bar bar-retardo" style="height: 8%;">
+                                        <span class="bar-value">8%</span>
+                                    </div>
+                                    <span class="bar-label">Retardos</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- VISTA 2: Lista Nominal -->
+                    <section id="view-lista" class="view-panel">
+                        <div class="list-header">
+                            <h2 class="section-title">Lista Nominal de Alumnos</h2>
+                            <button class="btn-export">Exportar PDF</button>
+                        </div>
+
+                        <div class="table-container">
+                            <table class="nominal-table">
+                                <thead>
+                                    <tr>
+                                        <th>Alumno</th>
+                                        <th>Matrícula</th>
+                                        <th class="text-center">Asist.</th>
+                                        <th class="text-center">Faltas</th>
+                                        <th class="text-center">% Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <span class="student-name">Alexa Vázquez Hernández</span>
+                                        </td>
+                                        <td class="student-id">RG-2026-0847</td>
+                                        <td class="text-center text-success">18</td>
+                                        <td class="text-center text-danger">2</td>
+                                        <td class="text-center font-bold">90%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="student-name">Carlos Mendoza Torres</span>
+                                        </td>
+                                        <td class="student-id">RG-2026-0851</td>
+                                        <td class="text-center text-success">15</td>
+                                        <td class="text-center text-danger">5</td>
+                                        <td class="text-center font-bold">75%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="student-name">Daniela Ríos Sánchez</span>
+                                        </td>
+                                        <td class="student-id">RG-2026-0862</td>
+                                        <td class="text-center text-success">20</td>
+                                        <td class="text-center text-danger">0</td>
+                                        <td class="text-center font-bold">100%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="student-name">Emilio Fuentes Castillo</span>
+                                        </td>
+                                        <td class="student-id">RG-2026-0870</td>
+                                        <td class="text-center text-success">16</td>
+                                        <td class="text-center text-danger">4</td>
+                                        <td class="text-center font-bold">80%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                </div>
+
+                <!-- Pie de Página -->
+                <footer class="footer">
+                    <h4 class="contacto-title">Contacto</h4>
+                    <ul class="contact-list">
+                        <li>
+                            <img class="icon-contact" src="assets/phone.svg" alt="Teléfono">
+                            <span>(771) 123-4567</span>
+                        </li>
+                        <li>
+                            <img class="icon-contact" src="assets/phone.svg" alt="Teléfono">
+                            <span>(771) 234-5678</span>
+                        </li>
+                        <li>
+                            <img class="icon-contact" src="assets/email.svg" alt="Correo">
+                            <a href="mailto:contacto@ricardogaribay.edu.mx">contacto@ricardogaribay.edu.mx</a>
+                        </li>
+                    </ul>
+                </footer>
+
+            </main>
+        </div>
+    </div>
+
+    <!-- Script simple para alternar las pestañas -->
+    <script>
+        function switchView(view) {
+            // Ocultar ambas secciones
+            document.getElementById('view-grafica').classList.remove('active');
+            document.getElementById('view-lista').classList.remove('active');
+            
+            // Quitar estilo activo de los botones
+            document.getElementById('tab-grafica').classList.remove('active');
+            document.getElementById('tab-lista').classList.remove('active');
+
+            // Mostrar la sección seleccionada
+            if (view === 'grafica') {
+                document.getElementById('view-grafica').classList.add('active');
+                document.getElementById('tab-grafica').classList.add('active');
+            } else {
+                document.getElementById('view-lista').classList.add('active');
+                document.getElementById('tab-lista').classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>
