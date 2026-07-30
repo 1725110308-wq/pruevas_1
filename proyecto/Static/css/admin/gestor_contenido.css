@@ -1,0 +1,603 @@
+/* ==========================================
+   1. RESET Y ESTRUCTURA GENERAL
+   ========================================== */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.prototipo-sistema-gestin-educ {
+	width: 100%;
+	min-height: 100vh;
+	height: auto;
+	position: relative;
+	background-color: #f5efe4;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: left;
+	font-size: 14px;
+	color: #fff;
+	font-family: 'Inter', sans-serif;
+	overflow-x: hidden;
+}
+
+.app {
+	width: 100%;
+	max-width: 1200px;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.admindetail {
+	width: 100%;
+	min-height: 100vh;
+	position: relative;
+	background-color: #6e472b;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex-shrink: 0;
+}
+
+.geometricpattern-icon {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: 0;
+}
+
+/* ==========================================
+   2. HEADER
+   ========================================== */
+
+.header {
+	position: relative;
+	z-index: 10;
+	width: 100%;
+	height: 56px;
+	background-color: #5a1224;
+	box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -4px rgba(0, 0, 0, 0.1);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 24px;
+	gap: 20px;
+}
+
+.button {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	text-align: center;
+	color: rgba(255, 255, 255, 0.7);
+	cursor: pointer;
+}
+
+.icon, .icon2, .icon3, .icon5, .icon6, .icon9, .icon13 {
+	position: relative;
+	flex-shrink: 0;
+}
+
+.icon {
+	height: 16px;
+	width: 16px;
+}
+
+.text {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.panel-admin {
+	position: relative;
+	line-height: 20px;
+	font-weight: 500;
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	font-family: 'Playfair Display', serif;
+}
+
+.text2 {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.icon2 {
+	width: 18px;
+	height: 18px;
+}
+
+.heading-2 {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	max-width: 320px;
+}
+
+.gestor-de-contenido {
+	position: relative;
+	line-height: 20px;
+	font-weight: 600;
+}
+
+.container2 {
+	border-radius: 10px;
+	background-color: rgba(255, 255, 255, 0.12);
+	display: flex;
+	align-items: center;
+	padding: 4px 10px;
+	gap: 6px;
+	font-size: 10px;
+}
+
+.icon3 {
+	height: 12px;
+	width: 12px;
+	opacity: 0.6;
+}
+
+.text3 {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	opacity: 0.6;
+}
+
+.admin {
+	position: relative;
+	line-height: 15px;
+}
+
+/* ==========================================
+   3. CONTENIDO PRINCIPAL / FORMULARIO CMS
+   ========================================== */
+
+.admincmsscreen {
+	position: relative;
+	z-index: 5;
+	width: 100%;
+	max-width: 900px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 32px 20px;
+	font-family: 'Playfair Display', serif;
+	flex: 1;
+}
+
+/* CARDS DE FORMULARIO */
+
+.container3, .container11 {
+	align-self: stretch;
+	box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -4px rgba(0, 0, 0, 0.1);
+	border-radius: 16px;
+	background-color: #e2cfa8;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	height: auto;
+}
+
+.container4, .container12 {
+	align-self: stretch;
+	display: flex;
+	align-items: center;
+	padding: 14px 20px;
+	gap: 8px;
+}
+
+.container4 {
+	background-color: #5a1224;
+}
+
+.container12 {
+	background-color: #6e472b;
+}
+
+.container5 {
+	align-self: stretch;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 20px;
+	font-size: 10px;
+	color: #3d1f0f;
+	font-family: 'Inter', sans-serif;
+	gap: 16px;
+}
+
+.label {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding-bottom: 4px;
+}
+
+.texto-principal-del {
+	position: relative;
+	letter-spacing: 0.5px;
+	line-height: 15px;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+/* INPUTS Y ÁREAS DE TEXTO */
+
+.container7, .container8 {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	height: auto;
+}
+
+.text-input, .text-input2 {
+	width: 100%;
+	min-height: 46px;
+	border-radius: 10px;
+	background-color: #f5efe4;
+	border: 0.8px solid rgba(90, 18, 36, 0.2);
+	display: flex;
+	align-items: center;
+	padding: 12px 16px;
+	font-size: 14px;
+	color: #2c1810;
+	font-family: 'Playfair Display', serif;
+	outline: none;
+}
+
+.tulancingo-ciudad-de, .centro-cultural-de {
+	align-self: stretch;
+	position: relative;
+	line-height: 20px;
+}
+
+.tulancingo-ciudad-de {
+	letter-spacing: 0.7px;
+	text-transform: uppercase;
+}
+
+.container13 {
+	align-self: stretch;
+	padding: 20px;
+	display: flex;
+	width: 100%;
+}
+
+.text-area {
+	width: 100%;
+	min-height: 120px;
+	border-radius: 10px;
+	background-color: #f5efe4;
+	border: 0.8px solid rgba(90, 18, 36, 0.2);
+	padding: 12px 16px;
+	font-size: 14px;
+	color: #2c1810;
+	font-family: 'Playfair Display', serif;
+	resize: vertical;
+	outline: none;
+}
+
+/* ZONA DE DROPZONE / UPLOAD */
+
+.containermargin {
+	align-self: stretch;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	font-size: 12px;
+	color: #2c1810;
+}
+
+.container9 {
+	border-radius: 14px;
+	background-color: #f5efe4;
+	border: 1.6px dashed rgba(90, 18, 36, 0.3);
+	display: flex;
+	align-items: center;
+	padding: 20px;
+	gap: 12px;
+	cursor: pointer;
+}
+
+.icon5 {
+	height: 20px;
+	width: 20px;
+	opacity: 0.5;
+}
+
+.container10 {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.paragraph, .paragraph2 {
+	align-self: stretch;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.reemplazar-imagen-del {
+	position: relative;
+	line-height: 16px;
+	font-weight: 500;
+}
+
+.paragraph2 {
+	opacity: 0.5;
+	font-size: 10px;
+}
+
+.containermargin2 {
+	align-self: stretch;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding-top: 20px;
+}
+
+.icon6 {
+	height: 15px;
+	width: 15px;
+}
+
+/* BOTÓN DE ACCIÓN */
+
+.buttonmargin {
+	align-self: stretch;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 24px 0px;
+	text-align: center;
+	font-family: 'Inter', sans-serif;
+}
+
+.button2 {
+	width: 100%;
+	max-width: 100%;
+	height: 48px;
+	border-radius: 14px;
+	background-color: #5a1224;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 14px;
+	gap: 8px;
+	border: none;
+	cursor: pointer;
+	color: #fff;
+	transition: background-color 0.2s ease;
+}
+
+.button2:hover {
+	background-color: #420d1a;
+}
+
+.guardar-y-publicar {
+	position: relative;
+	letter-spacing: 0.35px;
+	line-height: 20px;
+	font-weight: 600;
+}
+
+/* ==========================================
+   4. FOOTER
+   ========================================== */
+
+.container17 {
+	position: relative;
+	z-index: 10;
+	background-color: #22253f;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 10px;
+	color: #fff;
+	margin-top: auto;
+}
+
+.container18 {
+	width: 100%;
+	max-width: 1152px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 32px 24px;
+}
+
+.container19 {
+	align-self: stretch;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: 32px;
+}
+
+.container20 {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	font-size: 12px;
+}
+
+.contacto {
+	position: relative;
+	letter-spacing: 1px;
+	line-height: 15px;
+	text-transform: uppercase;
+}
+
+.containermargin4, .containermargin5, .containermargin7 {
+	align-self: stretch;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding-top: 8px;
+}
+
+.container21 {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	opacity: 0.7;
+}
+
+.icon9 {
+	height: 13px;
+	width: 13px;
+}
+
+.div {
+	position: relative;
+	line-height: 16px;
+}
+
+.container25 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.paragraphmargin {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-bottom: 4px;
+	font-size: 20px;
+	color: #c9a84c;
+	font-family: 'Playfair Display', serif;
+}
+
+.ricardo-garibay {
+	position: relative;
+	line-height: 28px;
+	font-weight: 600;
+}
+
+.paragraph4, .paragraph5 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.paragraph4 { opacity: 0.4; }
+.paragraph5 { opacity: 0.3; }
+
+.paragraphmargin2 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 16px;
+}
+
+.container26 {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	text-align: right;
+}
+
+.paragraphmargin3 {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	padding-bottom: 16px;
+}
+
+.paragraph6 {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	opacity: 0.5;
+}
+
+.container27 {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	font-size: 12px;
+}
+
+.link {
+	border-radius: 20px;
+	background-color: #1877f2;
+	display: flex;
+	align-items: center;
+	padding: 8px 16px;
+	gap: 8px;
+	color: #fff;
+	text-decoration: none;
+}
+
+.icon13 {
+	height: 14px;
+	width: 14px;
+}
+
+.facebook {
+	position: relative;
+	line-height: 16px;
+	font-weight: 600;
+}
+
+.link2 {
+	height: 36px;
+	width: 36px;
+	border-radius: 50%;
+	background-color: #5a1224;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* ==========================================
+   5. MEDIA QUERIES (ADAPTACIÓN MÓVIL)
+   ========================================== */
+
+@media screen and (max-width: 768px) {
+	.header {
+		padding: 0 16px;
+	}
+
+	.heading-2 {
+		font-size: 14px;
+	}
+
+	.admincmsscreen {
+		padding: 20px 12px;
+	}
+
+	.container5 {
+		padding: 16px;
+	}
+
+	.container26 {
+		align-items: center;
+		text-align: center;
+	}
+
+	.paragraphmargin3, .paragraph6 {
+		align-items: center;
+	}
+}

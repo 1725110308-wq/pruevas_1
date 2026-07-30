@@ -1,0 +1,724 @@
+/* ==========================================
+   1. ESTRUCTURA Y PANTALLA PRINCIPAL
+   ========================================== */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.prototipo-sistema-gestin-educ {
+	width: 100%;
+	min-height: 100vh;
+	height: auto;
+	position: relative;
+	background-color: #f5efe4;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	font-size: 14px;
+	color: #fff;
+	font-family: Inter, sans-serif;
+	overflow-x: hidden;
+}
+
+.body {
+	width: 100%;
+	max-width: 683px;
+	min-height: 100vh;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0 auto;
+}
+
+.container {
+	width: 100%;
+	min-height: 100vh;
+	height: auto;
+	position: relative;
+	background-color: #6e472b;
+	flex-shrink: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.container-icon {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: 0;
+}
+
+/* ==========================================
+   2. HEADER
+   ========================================== */
+
+.header {
+	position: relative;
+	z-index: 10;
+	box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -4px rgba(0, 0, 0, 0.1);
+	background-color: #5a1224;
+	width: 100%;
+	max-width: 683px;
+	min-height: 56px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px 24px;
+	box-sizing: border-box;
+	gap: 15px;
+	color: rgba(255, 255, 255, 0.6);
+}
+
+.button {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.icon {
+	height: 16px;
+	width: 16px;
+	position: relative;
+	flex-shrink: 0;
+}
+
+.text {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.inicio {
+	position: relative;
+	line-height: 20px;
+	font-weight: 500;
+}
+
+.heading-1 {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	text-align: left;
+	font-size: 18px;
+	color: #c9a84c;
+	font-family: 'Playfair Display', serif;
+}
+
+.ricardo-garibay {
+	position: relative;
+	line-height: 28px;
+	font-weight: 600;
+}
+
+.container2 {
+	height: 0px;
+	width: 64px;
+	position: relative;
+}
+
+/* ==========================================
+   3. FORMULARIO Y CONTENEDOR CENTRAL
+   ========================================== */
+
+.container3 {
+	position: relative;
+	z-index: 5;
+	width: 100%;
+	max-width: 683px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 32px 16px;
+	box-sizing: border-box;
+	font-size: 12px;
+	flex: 1;
+}
+
+.container4 {
+	min-height: 496px;
+	height: auto;
+	width: 100%;
+	max-width: 448px;
+	box-shadow: 0px 25px 50px -12px rgba(0, 0, 0, 0.25);
+	border-radius: 16px;
+	background-color: #e2cfa8;
+	overflow: hidden;
+	flex-shrink: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.container5 {
+	align-self: stretch;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	min-height: 47px;
+}
+
+.button2, .button3, .button4 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 14px 4px;
+	cursor: pointer;
+	text-align: center;
+}
+
+.button2 {
+	background-color: #5a1224;
+	border-bottom: 3px solid #c9a84c;
+	grid-column: 1;
+	grid-row: 1;
+	color: #fff;
+}
+
+.alumno {
+	position: relative;
+	letter-spacing: 0.6px;
+	line-height: 16px;
+	text-transform: uppercase;
+}
+
+.button3 {
+	background-color: rgba(90, 18, 36, 0.07);
+	grid-column: 2;
+	grid-row: 1;
+	color: #5a1224;
+}
+
+.button4 {
+	background-color: rgba(90, 18, 36, 0.07);
+	grid-column: 3;
+	grid-row: 1;
+	color: #22253f;
+}
+
+.container6 {
+	align-self: stretch;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 24px 20px;
+	text-align: left;
+	font-size: 10px;
+	color: #3d1f0f;
+	width: 100%;
+}
+
+.container7 {
+	align-self: stretch;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	font-size: 20px;
+	color: #2c1810;
+	font-family: 'Playfair Display', serif;
+}
+
+.heading-2 {
+	align-self: stretch;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.paragraphmargin {
+	align-self: stretch;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 2px 0px 0px;
+	font-size: 12px;
+	font-family: Inter, sans-serif;
+}
+
+.paragraph {
+	align-self: stretch;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	opacity: 0.55;
+}
+
+.portal-estudiantil-del {
+	position: relative;
+	line-height: 16px;
+}
+
+.container8 {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 16px 0px 0px;
+	box-sizing: border-box;
+}
+
+.label {
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 0px 0px 6px;
+	box-sizing: border-box;
+}
+
+.usuario-o-correo {
+	position: relative;
+	letter-spacing: 0.5px;
+	line-height: 15px;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+.text-input {
+	width: 100%;
+	height: 46px;
+	border-radius: 10px;
+	background-color: #f5efe4;
+	border: 1px solid rgba(90, 18, 36, 0.2);
+	box-sizing: border-box;
+	overflow: hidden;
+	flex-shrink: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	padding: 12px 16px;
+	font-size: 14px;
+	color: rgba(44, 24, 16, 0.5);
+}
+
+.alexavazquezricardogaribaye {
+	align-self: stretch;
+	position: relative;
+}
+
+.containermargin {
+	align-self: stretch;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 6px 0px 0px;
+	font-size: 14px;
+	color: rgba(44, 24, 16, 0.5);
+}
+
+.container10 {
+	align-self: stretch;
+	height: 46px;
+	position: relative;
+	width: 100%;
+}
+
+.password-input {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	border-radius: 10px;
+	background-color: #f5efe4;
+	border: 1px solid rgba(90, 18, 36, 0.2);
+	box-sizing: border-box;
+	width: 100%;
+	height: 46px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	padding: 12px 44px 12px 16px;
+}
+
+.button5 {
+	position: absolute;
+	top: 15px;
+	right: 12px;
+	left: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	opacity: 0.4;
+	cursor: pointer;
+}
+
+.container11 {
+	width: 100%;
+	min-height: 32px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 16px 0px 0px;
+	box-sizing: border-box;
+	gap: 10px;
+	font-size: 12px;
+	flex-wrap: wrap;
+}
+
+.checkbox {
+	height: 16px;
+	width: 16px;
+	position: relative;
+	border-radius: 2px;
+	background-color: #fff;
+	border: 1px solid #767676;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+
+.container12 {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	border-radius: 2px;
+	background-color: #5a1224;
+	border: 1px solid #5a1224;
+	box-sizing: border-box;
+	width: 16px;
+	height: 16px;
+	display: none;
+	align-items: center;
+	justify-content: center;
+}
+
+.icon3 {
+	height: 14px;
+	width: 14px;
+	position: relative;
+}
+
+.text2 {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.recordar-sesin {
+	position: relative;
+	line-height: 16px;
+	font-weight: 500;
+}
+
+.button6 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	color: #5a1224;
+	cursor: pointer;
+}
+
+.olvid-su-contrasea {
+	position: relative;
+	text-decoration: underline;
+	line-height: 16px;
+	font-weight: 500;
+}
+
+.buttonmargin {
+	align-self: stretch;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 16px 0px 0px;
+	text-align: center;
+	font-size: 14px;
+	color: #fff;
+	width: 100%;
+}
+
+.button7 {
+	width: 100%;
+	height: 48px;
+	box-shadow: 0px 4px 16px rgba(90, 18, 36, 0.35);
+	border-radius: 10px;
+	background-color: #5a1224;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 14px 0px;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+
+.iniciar-sesin {
+	position: relative;
+	letter-spacing: 0.35px;
+	line-height: 20px;
+	font-weight: 600;
+}
+
+.container13 {
+	align-self: stretch;
+	height: 47px;
+	display: flex;
+	align-items: center;
+	padding: 16px 0px;
+	box-sizing: border-box;
+	gap: 12px;
+	color: #2c1810;
+}
+
+.container14 {
+	height: 1px;
+	flex: 1;
+	position: relative;
+	background-color: rgba(90, 18, 36, 0.15);
+}
+
+.text3 {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	opacity: 0.4;
+}
+
+.o {
+	position: relative;
+	line-height: 15px;
+}
+
+.button8 {
+	align-self: stretch;
+	height: 46px;
+	position: relative;
+	border-radius: 10px;
+	border: 1px solid #5a1224;
+	box-sizing: border-box;
+	text-align: center;
+	font-size: 14px;
+	color: #5a1224;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.registrarse-como-nuevo {
+	position: relative;
+	line-height: 20px;
+	font-weight: 500;
+}
+
+/* ==========================================
+   4. FOOTER (RESPONSIVO Y ALINEADO)
+   ========================================== */
+
+.footer {
+	position: relative;
+	z-index: 10;
+	background-color: #22253f;
+	width: 100%;
+	max-width: 683px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 32px 24px;
+	box-sizing: border-box;
+	text-align: left;
+	font-size: 10px;
+	margin-top: auto;
+}
+
+.container16 {
+	align-self: stretch;
+	display: flex;
+	flex-direction: column;
+	gap: 28px;
+}
+
+.container17 {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	font-size: 12px;
+}
+
+.paragraph2 {
+	align-self: stretch;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	opacity: 0.5;
+	font-size: 10px;
+}
+
+.contacto {
+	position: relative;
+	letter-spacing: 1px;
+	line-height: 15px;
+	text-transform: uppercase;
+}
+
+.containermargin2 {
+	align-self: stretch;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 16px 0px 0px;
+}
+
+.container18 {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	opacity: 0.7;
+}
+
+.icon4 {
+	height: 13px;
+	width: 13px;
+	position: relative;
+}
+
+.containermargin3, .containermargin5 {
+	align-self: stretch;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 6px 0px 0px;
+}
+
+.container22 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.paragraphmargin2 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0px 0px 4px;
+	font-size: 20px;
+	color: #c9a84c;
+	font-family: 'Playfair Display', serif;
+}
+
+.paragraph3, .paragraph4 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	opacity: 0.4;
+}
+
+.paragraphmargin3 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 16px 0px 0px;
+}
+
+.container23 {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.paragraphmargin4 {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 0px 0px 16px;
+}
+
+.paragraph5 {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	opacity: 0.5;
+}
+
+.container24 {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	text-align: left;
+	font-size: 12px;
+	flex-wrap: wrap;
+}
+
+.link {
+	border-radius: 33554400px;
+	background-color: #1877f2;
+	display: flex;
+	align-items: center;
+	padding: 8px 16px;
+	gap: 8px;
+	color: #fff;
+	text-decoration: none;
+}
+
+.facebook {
+	position: relative;
+	line-height: 16px;
+	font-weight: 600;
+}
+
+.link2 {
+	height: 36px;
+	width: 36px;
+	border-radius: 33554400px;
+	background-color: #5a1224;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.icon9 {
+	height: 15px;
+	width: 15px;
+	position: relative;
+}
+
+/* ==========================================
+   5. MEDIA QUERIES (PANTALLAS PEQUEÑAS / MÓVILES)
+   ========================================== */
+
+@media screen and (max-width: 480px) {
+	.header {
+		padding: 10px 12px;
+	}
+
+	.heading-1 {
+		font-size: 15px;
+	}
+
+	.container6 {
+		padding: 16px 12px;
+	}
+
+	.button2, .button3, .button4 {
+		font-size: 10px;
+		padding: 10px 2px;
+	}
+
+	.container23 {
+		align-items: center;
+		text-align: center;
+	}
+
+	.paragraph5 {
+		align-items: center;
+	}
+
+	.container24 {
+		justify-content: center;
+	}
+}

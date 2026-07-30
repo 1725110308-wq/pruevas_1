@@ -1,0 +1,601 @@
+/* ==========================================
+   1. RESET Y ESTRUCTURA GENERAL
+   ========================================== */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.prototipo-sistema-gestin-educ {
+	width: 100%;
+	min-height: 100vh;
+	height: auto;
+	position: relative;
+	background-color: #f5efe4;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: left;
+	font-size: 14px;
+	color: #fff;
+	font-family: 'Inter', sans-serif;
+	overflow-x: hidden;
+}
+
+.app {
+	width: 100%;
+	max-width: 1200px;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.admindetail {
+	width: 100%;
+	min-height: 100vh;
+	position: relative;
+	background-color: #6e472b;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex-shrink: 0;
+}
+
+.geometricpattern-icon {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: 0;
+}
+
+/* ==========================================
+   2. HEADER / BARRA SUPERIOR
+   ========================================== */
+
+.header {
+	position: relative;
+	z-index: 10;
+	width: 100%;
+	height: 56px;
+	background-color: #5a1224;
+	box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -4px rgba(0, 0, 0, 0.1);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 24px;
+	gap: 20px;
+}
+
+.button {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	text-align: center;
+	color: rgba(255, 255, 255, 0.7);
+	cursor: pointer;
+}
+
+.icon, .icon2, .icon3, .icon4, .icon5, .icon60 {
+	position: relative;
+	flex-shrink: 0;
+}
+
+.icon {
+	height: 16px;
+	width: 16px;
+}
+
+.text {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.panel-admin {
+	position: relative;
+	line-height: 20px;
+	font-weight: 500;
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	font-family: 'Playfair Display', serif;
+}
+
+.icon2 {
+	width: 18px;
+	height: 18px;
+}
+
+.heading-2 {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	max-width: 320px;
+}
+
+.gestin-de-talleres {
+	position: relative;
+	line-height: 20px;
+	font-weight: 600;
+}
+
+.container2 {
+	border-radius: 10px;
+	background-color: rgba(255, 255, 255, 0.12);
+	display: flex;
+	align-items: center;
+	padding: 4px 10px;
+	gap: 6px;
+	font-size: 10px;
+}
+
+.icon3 {
+	height: 12px;
+	width: 12px;
+	opacity: 0.6;
+}
+
+.text3 {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	opacity: 0.6;
+}
+
+.admin {
+	position: relative;
+	line-height: 15px;
+}
+
+/* ==========================================
+   3. CONTENEDOR PRINCIPAL Y PESTAÑAS (TALLERES)
+   ========================================== */
+
+.container3 {
+	position: relative;
+	z-index: 5;
+	width: 100%;
+	max-width: 900px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 32px 20px;
+	font-size: 12px;
+	flex: 1;
+}
+
+.adminworkshopsscreen {
+	align-self: stretch;
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	text-align: center;
+	flex-wrap: wrap;
+}
+
+.button2 {
+	border-radius: 14px;
+	background-color: #5a1224;
+	border: 0.8px solid #5a1224;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 8px 16px;
+	cursor: pointer;
+}
+
+.button3 {
+	border-radius: 14px;
+	background-color: rgba(255, 255, 255, 0.1);
+	border: 0.8px solid rgba(255, 255, 255, 0.15);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 8px 16px;
+	cursor: pointer;
+	transition: background-color 0.2s ease;
+}
+
+.button3:hover {
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+.visor-de-matrcula {
+	position: relative;
+	letter-spacing: 0.3px;
+	line-height: 16px;
+	text-transform: uppercase;
+}
+
+.adminworkshopsscreen2 {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 20px 0 12px 0;
+	gap: 16px;
+	color: rgba(255, 255, 255, 0.6);
+	flex-wrap: wrap;
+}
+
+.paragraph {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.talleres-registrados {
+	position: relative;
+	line-height: 16px;
+}
+
+.button4 {
+	border-radius: 14px;
+	background-color: #5a1224;
+	display: flex;
+	align-items: center;
+	padding: 8px 16px;
+	gap: 8px;
+	text-align: center;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+	transition: background-color 0.2s ease;
+}
+
+.button4:hover {
+	background-color: #420d1a;
+}
+
+.icon4 {
+	height: 14px;
+	width: 14px;
+}
+
+.agregar-taller {
+	position: relative;
+	line-height: 16px;
+	font-weight: 600;
+}
+
+/* ==========================================
+   4. LISTADO DE TARJETAS DE TALLERES
+   ========================================== */
+
+.adminworkshopsscreen3 {
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 16px 0 0 0;
+	font-size: 14px;
+	color: #2c1810;
+	gap: 12px;
+}
+
+.container4 {
+	align-self: stretch;
+	min-height: 60px;
+	border-radius: 14px;
+	background-color: #e2cfa8;
+	border: 0.8px solid rgba(90, 18, 36, 0.1);
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.container5 {
+	display: flex;
+	align-items: center;
+	padding: 12px 16px;
+	gap: 12px;
+	width: 100%;
+}
+
+/* Indicadores de color por categoría */
+.container6,
+.container14,
+.container38,
+.container42,
+.container46,
+.container54,
+.container78 {
+	height: 32px;
+	width: 32px;
+	position: relative;
+	border-radius: 10px;
+	flex-shrink: 0;
+}
+
+.container6  { background-color: #7b3f00; }
+.container14 { background-color: #2e5939; }
+.container38 { background-color: #4a235a; }
+.container42 { background-color: #1a3a5c; }
+.container46 { background-color: #8b1a30; }
+.container54 { background-color: #4d6a1a; }
+.container78 { background-color: #6b3fa0; }
+
+.container7 {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	min-width: 0; /* Permite truncar texto si es muy largo */
+}
+
+.paragraph2 {
+	align-self: stretch;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.paragraph3 {
+	align-self: stretch;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	opacity: 0.55;
+	font-size: 10px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.text4 {
+	border-radius: 20px;
+	background-color: rgba(90, 18, 36, 0.08);
+	display: flex;
+	align-items: center;
+	padding: 2px 10px;
+	font-size: 10px;
+	color: #5a1224;
+	font-weight: 500;
+}
+
+.button5, .button6 {
+	height: 32px;
+	width: 32px;
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: none;
+	cursor: pointer;
+	flex-shrink: 0;
+	transition: opacity 0.2s ease;
+}
+
+.button5 {
+	background-color: rgba(90, 18, 36, 0.1);
+}
+
+.button6 {
+	background-color: rgba(192, 57, 43, 0.1);
+}
+
+.button5:hover, .button6:hover {
+	opacity: 0.8;
+}
+
+.icon5 {
+	height: 14px;
+	width: 14px;
+}
+
+.containermargin {
+	align-self: stretch;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+/* ==========================================
+   5. FOOTER
+   ========================================== */
+
+.container104 {
+	position: relative;
+	z-index: 10;
+	background-color: #22253f;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 10px;
+	color: #fff;
+	margin-top: auto;
+}
+
+.container105 {
+	width: 100%;
+	max-width: 1152px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 32px 24px;
+}
+
+.container106 {
+	align-self: stretch;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: 32px;
+}
+
+.container107 {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	font-size: 12px;
+}
+
+.contacto {
+	position: relative;
+	letter-spacing: 1px;
+	line-height: 15px;
+	text-transform: uppercase;
+}
+
+.paragraph52 {
+	align-self: stretch;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	opacity: 0.5;
+	font-size: 10px;
+}
+
+.containermargin25, .containermargin26, .containermargin28 {
+	align-self: stretch;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding-top: 8px;
+}
+
+.container108 {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	opacity: 0.7;
+}
+
+.container112 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.paragraphmargin {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-bottom: 4px;
+	font-size: 20px;
+	color: #c9a84c;
+	font-family: 'Playfair Display', serif;
+}
+
+.ricardo-garibay {
+	position: relative;
+	line-height: 28px;
+	font-weight: 600;
+}
+
+.paragraph53, .paragraph54 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.paragraph53 { opacity: 0.4; }
+.paragraph54 { opacity: 0.3; }
+
+.paragraphmargin2 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 16px;
+}
+
+.container113 {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	text-align: right;
+}
+
+.paragraphmargin3 {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding-bottom: 16px;
+}
+
+.paragraph55 {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	opacity: 0.5;
+}
+
+.container114 {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	font-size: 12px;
+}
+
+.link {
+	border-radius: 20px;
+	background-color: #1877f2;
+	display: flex;
+	align-items: center;
+	padding: 8px 16px;
+	gap: 8px;
+	color: #fff;
+	text-decoration: none;
+}
+
+.link2 {
+	height: 36px;
+	width: 36px;
+	border-radius: 50%;
+	background-color: #5a1224;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.icon60 {
+	height: 15px;
+	width: 15px;
+}
+
+/* ==========================================
+   6. MEDIA QUERIES (ADAPTACIÓN MÓVIL)
+   ========================================== */
+
+@media screen and (max-width: 768px) {
+	.header {
+		padding: 0 16px;
+	}
+
+	.heading-2 {
+		font-size: 14px;
+	}
+
+	.container3 {
+		padding: 20px 12px;
+	}
+
+	.container5 {
+		padding: 10px;
+		gap: 8px;
+	}
+
+	.container113 {
+		align-items: center;
+		text-align: center;
+	}
+
+	.paragraphmargin3, .paragraph55 {
+		align-items: center;
+	}
+}
