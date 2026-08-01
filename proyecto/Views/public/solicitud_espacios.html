@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="initial-scale=1, width=device-width, initial-scale=1.0">
+  	
+  	<!-- Hojas de Estilo CSS Separdas -->
+  	<link rel="stylesheet" href="./index.css" />
+  	<link rel="stylesheet" href="./gestion_cartelera.css" />
+  	
+  	<!-- Fuentes -->
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" />
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+</head>
+<body>
+  	
+  	<div class="prototipo-sistema-gestin-educ">
+    		<div class="body">
+      			<div class="container">
+        				<div class="header">
+          					<div class="button" id="btnLogo">
+            						<i class="ricardo-garibay">RICARDO GARIBAY</i>
+          					</div>
+          					<div class="button2">
+            						<div class="container2">
+              							<img class="icon" alt="">
+            						</div>
+          					</div>
+        				</div>
+        				<div class="container3">
+          					<div class="button3" data-nav="servicios">
+            						<div class="servicios">SERVICIOS</div>
+          					</div>
+          					<div class="button4" data-nav="talleres">
+            						<div class="servicios">TALLERES</div>
+          					</div>
+          					<div class="button4" data-nav="cartelera">
+            						<div class="servicios">CARTELERA</div>
+          					</div>
+        				</div>
+        				<div class="container4">
+          					<div class="container5">
+            						<div class="paragraph">
+              							<div class="instalaciones">Instalaciones</div>
+            						</div>
+            						<div class="heading-2">
+              							<b class="servicios-e-instalaciones">Servicios e Instalaciones Culturales</b>
+            						</div>
+            						<div class="paragraphmargin">
+              							<div class="paragraph2">
+                								<div class="solicita-el-prstamo">Solicita el préstamo de nuestros espacios para eventos, ensayos y actividades culturales</div>
+              							</div>
+            						</div>
+          					</div>
+          					<div class="containermargin">
+            						<div class="container6">
+                          
+                          <!-- FORMULARIO 1: PRÉSTAMO DE AUDITORIO -->
+              							<div class="container7">
+                								<form class="form-solicitud" id="formAuditorio">
+                                    <div class="container8">
+                                        <img class="icon2" alt="">
+                                        <div class="text">
+                                            <div class="prstamo-de-auditorio">Préstamo de Auditorio</div>
+                                        </div>
+                                    </div>
+                                    <div class="container9">
+                                        <div class="paragraph3">
+                                            <b class="datos-del-solicitante">Datos del solicitante</b>
+                                        </div>
+                                        <div class="containermargin2">
+                                            <div class="container10">
+                                                <div class="container11">
+                                                    <div class="label">
+                                                        <div class="nombre-completo">Nombre completo</div>
+                                                    </div>
+                                                    <div class="text-input">
+                                                        <input type="text" class="input-field-real" placeholder="Nombre del responsable" required />
+                                                    </div>
+                                                </div>
+                                                <div class="container12">
+                                                    <div class="label">
+                                                        <div class="nombre-completo">Organización / Dependencia</div>
+                                                    </div>
+                                                    <div class="text-input">
+                                                        <input type="text" class="input-field-real" placeholder="Ej. Escuela Primaria, DIF, etc." required />
+                                                    </div>
+                                                </div>
+                                                <div class="container13">
+                                                    <div class="label3">
+                                                        <div class="nombre-completo">Teléfono de contacto</div>
+                                                    </div>
+                                                    <div class="phone-input">
+                                                        <input type="tel" class="input-field-real" placeholder="(771) 000-0000" required />
+                                                    </div>
+                                                </div>
+                                                <div class="container14">
+                                                    <div class="label3">
+                                                        <div class="nombre-completo">Correo electrónico</div>
+                                                    </div>
+                                                    <div class="phone-input">
+                                                        <input type="email" class="input-field-real" placeholder="correo@ejemplo.com" required />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="paragraphmargin2">
+                                            <div class="paragraph4">
+                                                <b class="datos-del-solicitante">Datos del evento</b>
+                                            </div>
+                                        </div>
+                                        <div class="containermargin2">
+                                            <div class="container15">
+                                                <div class="container11">
+                                                    <div class="label">
+                                                        <div class="nombre-completo">Tipo de evento</div>
+                                                    </div>
+                                                    <div class="text-input">
+                                                        <input type="text" class="input-field-real" placeholder="Concierto, exposición, reunión…" required />
+                                                    </div>
+                                                </div>
+                                                <div class="container12">
+                                                    <div class="label">
+                                                        <div class="nombre-completo">Fecha del evento</div>
+                                                    </div>
+                                                    <div class="date-picker">
+                                                        <input type="date" class="input-field-real" required />
+                                                    </div>
+                                                </div>
+                                                <div class="container13">
+                                                    <div class="label3">
+                                                        <div class="nombre-completo">Hora de inicio</div>
+                                                    </div>
+                                                    <div class="time-picker">
+                                                        <input type="time" class="input-field-real" required />
+                                                    </div>
+                                                </div>
+                                                <div class="container14">
+                                                    <div class="label3">
+                                                        <div class="nombre-completo">Hora de término</div>
+                                                    </div>
+                                                    <div class="time-picker">
+                                                        <input type="time" class="input-field-real" required />
+                                                    </div>
+                                                </div>
+                                                <div class="container20">
+                                                    <div class="label">
+                                                        <div class="nombre-completo">Número estimado de asistentes</div>
+                                                    </div>
+                                                    <div class="text-input">
+                                                        <input type="number" min="1" class="input-field-real" placeholder="Ej. 120" required />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="container21">
+                                            <div class="paragraph4">
+                                                <b class="datos-del-solicitante">Requerimientos técnicos / equipo</b>
+                                            </div>
+                                            <div class="containermargin4">
+                                                <div class="container22">
+                                                    <div class="button6" data-req="Sillas adicionales"><div class="sillas-adicionales">Sillas adicionales</div></div>
+                                                    <div class="button7" data-req="Proyector"><div class="sillas-adicionales">Proyector</div></div>
+                                                    <div class="button8" data-req="Sistema de audio"><div class="sillas-adicionales">Sistema de audio</div></div>
+                                                    <div class="button9" data-req="Micrófono"><div class="sillas-adicionales">Micrófono</div></div>
+                                                    <div class="button10" data-req="Pantalla"><div class="sillas-adicionales">Pantalla</div></div>
+                                                    <div class="button11" data-req="Podio"><div class="sillas-adicionales">Podio</div></div>
+                                                    <div class="button12" data-req="Iluminación especial"><div class="sillas-adicionales">Iluminación especial</div></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="buttonmargin">
+                                            <button type="submit" class="btn-submit-reset">
+                                                <div class="button13">
+                                                    <img class="icon3" alt="">
+                                                    <div class="prstamo-de-auditorio">Enviar solicitud</div>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+              							</div>
+
+                          <!-- FORMULARIO 2: SALONES CENTRO LEZAMA -->
+              							<div class="container23">
+                								<form class="form-solicitud" id="formLezama">
+                                    <div class="container24">
+                                        <img class="icon2" alt="">
+                                        <div class="text">
+                                            <div class="prstamo-de-auditorio">Salones — Centro Lezama</div>
+                                        </div>
+                                    </div>
+                                    <div class="container25">
+                                        <div class="paragraph3">
+                                            <b class="datos-del-solicitante">Datos del solicitante</b>
+                                        </div>
+                                        <div class="containermargin2">
+                                            <div class="container10">
+                                                <div class="container11">
+                                                    <div class="label">
+                                                        <div class="nombre-completo">Nombre completo</div>
+                                                    </div>
+                                                    <div class="text-input">
+                                                        <input type="text" class="input-field-real" placeholder="Nombre del responsable" required />
+                                                    </div>
+                                                </div>
+                                                <div class="container12">
+                                                    <div class="label">
+                                                        <div class="nombre-completo">Organización / Dependencia</div>
+                                                    </div>
+                                                    <div class="text-input">
+                                                        <input type="text" class="input-field-real" placeholder="Ej. Escuela Primaria, DIF, etc." required />
+                                                    </div>
+                                                </div>
+                                                <div class="container13">
+                                                    <div class="label3">
+                                                        <div class="nombre-completo">Teléfono de contacto</div>
+                                                    </div>
+                                                    <div class="phone-input">
+                                                        <input type="tel" class="input-field-real" placeholder="(771) 000-0000" required />
+                                                    </div>
+                                                </div>
+                                                <div class="container14">
+                                                    <div class="label3">
+                                                        <div class="nombre-completo">Correo electrónico</div>
+                                                    </div>
+                                                    <div class="phone-input">
+                                                        <input type="email" class="input-field-real" placeholder="correo@ejemplo.com" required />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="paragraphmargin2">
+                                            <div class="paragraph4">
+                                                <b class="datos-del-solicitante">Datos del evento</b>
+                                            </div>
+                                        </div>
+                                        <div class="containermargin2">
+                                            <div class="container15">
+                                                <div class="container11">
+                                                    <div class="label">
+                                                        <div class="nombre-completo">Tipo de evento</div>
+                                                    </div>
+                                                    <div class="text-input">
+                                                        <input type="text" class="input-field-real" placeholder="Concierto, exposición, reunión…" required />
+                                                    </div>
+                                                </div>
+                                                <div class="container12">
+                                                    <div class="label">
+                                                        <div class="nombre-completo">Fecha del evento</div>
+                                                    </div>
+                                                    <div class="date-picker">
+                                                        <input type="date" class="input-field-real" required />
+                                                    </div>
+                                                </div>
+                                                <div class="container13">
+                                                    <div class="label3">
+                                                        <div class="nombre-completo">Hora de inicio</div>
+                                                    </div>
+                                                    <div class="time-picker">
+                                                        <input type="time" class="input-field-real" required />
+                                                    </div>
+                                                </div>
+                                                <div class="container14">
+                                                    <div class="label3">
+                                                        <div class="nombre-completo">Hora de término</div>
+                                                    </div>
+                                                    <div class="time-picker">
+                                                        <input type="time" class="input-field-real" required />
+                                                    </div>
+                                                </div>
+                                                <div class="container20">
+                                                    <div class="label">
+                                                        <div class="nombre-completo">Número estimado de asistentes</div>
+                                                    </div>
+                                                    <div class="text-input">
+                                                        <input type="number" min="1" class="input-field-real" placeholder="Ej. 120" required />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="container21">
+                                            <div class="paragraph4">
+                                                <b class="datos-del-solicitante">Requerimientos técnicos / equipo</b>
+                                            </div>
+                                            <div class="containermargin4">
+                                                <div class="container22">
+                                                    <div class="button6" data-req="Sillas adicionales"><div class="sillas-adicionales">Sillas adicionales</div></div>
+                                                    <div class="button7" data-req="Proyector"><div class="sillas-adicionales">Proyector</div></div>
+                                                    <div class="button8" data-req="Sistema de audio"><div class="sillas-adicionales">Sistema de audio</div></div>
+                                                    <div class="button9" data-req="Micrófono"><div class="sillas-adicionales">Micrófono</div></div>
+                                                    <div class="button10" data-req="Pantalla"><div class="sillas-adicionales">Pantalla</div></div>
+                                                    <div class="button11" data-req="Podio"><div class="sillas-adicionales">Podio</div></div>
+                                                    <div class="button12" data-req="Iluminación especial"><div class="sillas-adicionales">Iluminación especial</div></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="buttonmargin">
+                                            <button type="submit" class="btn-submit-reset">
+                                                <div class="button21">
+                                                    <img class="icon3" alt="">
+                                                    <div class="prstamo-de-auditorio">Enviar solicitud</div>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+              							</div>
+            						</div>
+          					</div>
+        				</div>
+        				<div class="footer">
+          					<div class="container39">
+            						<div class="container40">
+              							<div class="paragraph9">
+                								<div class="instalaciones">Contacto</div>
+              							</div>
+              							<div class="containermargin8">
+                								<div class="container41">
+                  									<img class="icon6" alt="">
+                  									<div class="text">
+                    										<div class="contactoricardogaribayedumx">(771) 123-4567</div>
+                  									</div>
+                								</div>
+              							</div>
+              							<div class="containermargin9">
+                								<div class="container41">
+                  									<img class="icon6" alt="">
+                  									<div class="text">
+                    										<div class="contactoricardogaribayedumx">(771) 234-5678</div>
+                  									</div>
+                								</div>
+              							</div>
+              							<div class="containermargin9">
+                								<div class="container41">
+                  									<img class="icon6" alt="">
+                  									<div class="text">
+                    										<div class="contactoricardogaribayedumx">contacto@ricardogaribay.edu.mx</div>
+                  									</div>
+                								</div>
+              							</div>
+              							<div class="containermargin11">
+                								<div class="container41">
+                  									<img class="icon6" alt="">
+                  									<div class="text">
+                    										<div class="contactoricardogaribayedumx">Tulancingo de Bravo, Hidalgo</div>
+                  									</div>
+                								</div>
+              							</div>
+            						</div>
+            						<div class="container45">
+              							<div class="paragraphmargin4">
+                								<i class="ricardo-garibay2">Ricardo Garibay</i>
+              							</div>
+              							<div class="paragraph10">
+                								<div class="instalaciones">Centro Cultural · Tulancingo</div>
+              							</div>
+              							<div class="paragraphmargin5">
+                								<div class="paragraph11">
+                  									<div class="todos-los-derechos">© 2026 Todos los derechos reservados</div>
+                								</div>
+              							</div>
+            						</div>
+            						<div class="container46">
+              							<div class="paragraphmargin6">
+                								<div class="paragraph12">
+                  									<div class="instalaciones">Redes Sociales</div>
+                								</div>
+              							</div>
+              							<div class="container47">
+                								<div class="link" id="btnFacebook">
+                  									<img class="icon10" alt="">
+                  									<div class="facebook">Facebook</div>
+                								</div>
+                								<div class="link2">
+                  									<img class="icon3" alt="">
+                								</div>
+              							</div>
+            						</div>
+          					</div>
+        				</div>
+      			</div>
+    		</div>
+  	</div>
+
+    <!-- Script de interacción -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // 1. Selección múltiple de requerimientos (Efecto Checkbox)
+        document.querySelectorAll('.container22').forEach(container => {
+          container.querySelectorAll('[data-req]').forEach(button => {
+            button.addEventListener('click', () => {
+              button.classList.toggle('req-selected');
+            });
+          });
+        });
+
+        // 2. Procesamiento de envíos de formularios
+        const setupFormSubmission = (formId, espacioNombre) => {
+          const form = document.getElementById(formId);
+          if (!form) return;
+
+          form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const reqs = [];
+            form.querySelectorAll('.req-selected').forEach(btn => {
+              reqs.push(btn.getAttribute('data-req'));
+            });
+
+            const reqsTexto = reqs.length > 0 ? reqs.join(', ') : 'Ninguno';
+
+            alert(`¡Solicitud enviada para "${espacioNombre}"!\n\nRequerimientos seleccionados: ${reqsTexto}`);
+            
+            form.reset();
+            form.querySelectorAll('.req-selected').forEach(btn => btn.classList.remove('req-selected'));
+          });
+        };
+
+        setupFormSubmission('formAuditorio', 'Préstamo de Auditorio');
+        setupFormSubmission('formLezama', 'Salones — Centro Lezama');
+
+        // 3. Menú de navegación y enlace externo
+        document.querySelectorAll('[data-nav]').forEach(item => {
+          item.addEventListener('click', () => {
+            const seccion = item.getAttribute('data-nav');
+            alert(`Navegando a: ${seccion.toUpperCase()}`);
+          });
+        });
+
+        document.getElementById('btnFacebook')?.addEventListener('click', () => {
+          window.open('https://facebook.com', '_blank');
+        });
+      });
+    </script>
+</body>
+</html>

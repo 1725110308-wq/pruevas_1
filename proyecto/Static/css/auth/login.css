@@ -1,0 +1,680 @@
+/* ==========================================
+   VARIABLES Y ESTILOS GENERALES
+   ========================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f5efe4;
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+.prototipo-sistema-gestin-educ {
+    width: 100%;
+    min-height: 1040px;
+    position: relative;
+    background-color: #f5efe4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+}
+
+.body {
+    width: 100%;
+    max-width: 683px;
+    min-height: 584px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    min-height: 1040px;
+    position: relative;
+    background-color: #6e472b;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-icon {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 1040px;
+    object-fit: cover;
+    z-index: 0;
+}
+
+/* ==========================================
+   HEADER
+   ========================================== */
+.header {
+    position: relative;
+    z-index: 10;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -4px rgba(0, 0, 0, 0.1);
+    background-color: #5a1224;
+    width: 100%;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 24px;
+    gap: 20px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.icon {
+    height: 16px;
+    width: 16px;
+    position: relative;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inicio {
+    position: relative;
+    line-height: 20px;
+    font-weight: 500;
+}
+
+.heading-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    font-size: 18px;
+    color: #c9a84c;
+    font-family: 'Playfair Display', serif;
+}
+
+.ricardo-garibay {
+    position: relative;
+    line-height: 28px;
+    font-weight: 600;
+}
+
+.container2 {
+    height: 0px;
+    width: 64px;
+    position: relative;
+}
+
+/* ==========================================
+   CONTENIDO PRINCIPAL / FORMULARIO LOGIN
+   ========================================== */
+.container3 {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 16px;
+    font-size: 12px;
+}
+
+.container4 {
+    width: 100%;
+    max-width: 448px;
+    box-shadow: 0px 25px 50px -12px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    background-color: #e2cfa8;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Selector de Roles */
+.container5 {
+    align-self: stretch;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 47px;
+}
+
+.role-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 0px;
+    transition: all 0.2s ease;
+}
+
+.button2 {
+    background-color: #5a1224;
+    border-bottom: 3px solid #c9a84c;
+    color: #fff;
+    grid-column: 1;
+}
+
+.button3 {
+    background-color: rgba(90, 18, 36, 0.07);
+    color: #5a1224;
+    grid-column: 2;
+}
+
+.button4 {
+    background-color: rgba(90, 18, 36, 0.07);
+    color: #22253f;
+    grid-column: 3;
+}
+
+/* Estado activo alterno cuando cambia con JS */
+.role-btn.active-role {
+    background-color: #5a1224 !important;
+    border-bottom: 3px solid #c9a84c !important;
+    color: #ffffff !important;
+}
+
+.alumno {
+    position: relative;
+    letter-spacing: 0.6px;
+    line-height: 16px;
+    text-transform: uppercase;
+}
+
+/* Cuerpo del Formulario */
+.container6 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px 32px;
+    text-align: left;
+    font-size: 10px;
+    color: #3d1f0f;
+}
+
+.container7 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 20px;
+    color: #2c1810;
+    font-family: 'Playfair Display', serif;
+}
+
+.heading-2 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.paragraphmargin {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2px 0px 0px;
+    font-size: 12px;
+    font-family: 'Inter', sans-serif;
+}
+
+.paragraph {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    opacity: 0.55;
+}
+
+.portal-estudiantil-del {
+    position: relative;
+    line-height: 16px;
+}
+
+/* Campos de entrada */
+.container8 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 0px 0px;
+}
+
+.label {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px 0px 6px;
+}
+
+.usuario-o-correo {
+    position: relative;
+    letter-spacing: 0.5px;
+    line-height: 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.text-input {
+    width: 100%;
+    height: 46px;
+    border-radius: 10px;
+    background-color: #f5efe4;
+    border: 1px solid rgba(90, 18, 36, 0.2);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    font-size: 14px;
+    color: rgba(44, 24, 16, 0.5);
+}
+
+.alexavazquezricardogaribaye {
+    align-self: stretch;
+    position: relative;
+}
+
+.containermargin {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 6px 0px 0px;
+    font-size: 14px;
+    color: rgba(44, 24, 16, 0.5);
+}
+
+.container10 {
+    align-self: stretch;
+    height: 46px;
+    position: relative;
+}
+
+.password-input {
+    width: 100%;
+    height: 46px;
+    border-radius: 10px;
+    background-color: #f5efe4;
+    border: 1px solid rgba(90, 18, 36, 0.2);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 12px 44px 12px 16px;
+}
+
+.button5 {
+    position: absolute;
+    top: 50%;
+    right: 14px;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.4;
+}
+
+/* Controles adicionales */
+.container11 {
+    width: 100%;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0px 0px;
+    gap: 20px;
+    font-size: 12px;
+}
+
+.checkbox {
+    height: 16px;
+    width: 16px;
+    position: relative;
+    border-radius: 2px;
+    background-color: #fff;
+    border: 1px solid #767676;
+}
+
+.container12 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 2px;
+    background-color: #5a1224;
+    border: 1px solid #5a1224;
+    width: 16px;
+    height: 16px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon3 {
+    height: 14px;
+    width: 14px;
+    position: relative;
+}
+
+.text2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.recordar-sesin {
+    position: relative;
+    line-height: 16px;
+    font-weight: 500;
+}
+
+.button6 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #5a1224;
+}
+
+.olvid-su-contrasea {
+    position: relative;
+    text-decoration: underline;
+    line-height: 16px;
+    font-weight: 500;
+}
+
+/* Botones principales */
+.buttonmargin {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 0px 0px;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+}
+
+.button7 {
+    width: 100%;
+    height: 48px;
+    box-shadow: 0px 4px 16px rgba(90, 18, 36, 0.35);
+    border-radius: 10px;
+    background-color: #5a1224;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 0px;
+    color: #ffffff;
+    transition: background-color 0.2s ease;
+}
+
+.button7:hover {
+    background-color: #420c1a;
+}
+
+.iniciar-sesin {
+    position: relative;
+    letter-spacing: 0.35px;
+    line-height: 20px;
+    font-weight: 600;
+}
+
+/* Separador 'o' */
+.container13 {
+    align-self: stretch;
+    height: 47px;
+    display: flex;
+    align-items: center;
+    padding: 16px 0px;
+    gap: 12px;
+    color: #2c1810;
+}
+
+.container14 {
+    height: 1px;
+    flex: 1;
+    position: relative;
+    background-color: rgba(90, 18, 36, 0.15);
+}
+
+.text3 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    opacity: 0.4;
+}
+
+.o {
+    position: relative;
+    line-height: 15px;
+}
+
+.button8 {
+    align-self: stretch;
+    height: 46px;
+    border-radius: 10px;
+    border: 1px solid #5a1224;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 14px;
+    color: #5a1224;
+    transition: background-color 0.2s ease;
+}
+
+.button8:hover {
+    background-color: rgba(90, 18, 36, 0.05);
+}
+
+.registrarse-como-nuevo {
+    line-height: 20px;
+    font-weight: 500;
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+.footer {
+    position: relative;
+    z-index: 10;
+    margin-top: auto;
+    background-color: #22253f;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px 24px;
+    text-align: left;
+    font-size: 10px;
+}
+
+.container16 {
+    align-self: stretch;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+}
+
+.container17 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 12px;
+}
+
+.paragraph2 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    opacity: 0.5;
+    font-size: 10px;
+}
+
+.contacto {
+    position: relative;
+    letter-spacing: 1px;
+    line-height: 15px;
+    text-transform: uppercase;
+}
+
+.containermargin2 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px 0px 0px;
+}
+
+.container18 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    opacity: 0.7;
+}
+
+.icon4 {
+    height: 13px;
+    width: 13px;
+    position: relative;
+}
+
+.containermargin3 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6px 0px 0px;
+}
+
+.containermargin5 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6px 0px;
+}
+
+.container22 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.paragraphmargin2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px 0px 4px;
+    font-size: 20px;
+    color: #c9a84c;
+    font-family: 'Playfair Display', serif;
+}
+
+.paragraph3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.4;
+}
+
+.paragraphmargin3 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 0px 0px;
+}
+
+.paragraph4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.3;
+}
+
+.container23 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+}
+
+.paragraphmargin4 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px 0px 16px;
+}
+
+.paragraph5 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    opacity: 0.5;
+}
+
+.container24 {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    text-align: left;
+    font-size: 12px;
+}
+
+.link {
+    align-self: stretch;
+    border-radius: 33554400px;
+    background-color: #1877f2;
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    gap: 8px;
+    color: #fff;
+}
+
+.facebook {
+    position: relative;
+    line-height: 16px;
+    font-weight: 600;
+}
+
+.link2 {
+    height: 36px;
+    width: 36px;
+    border-radius: 33554400px;
+    background-color: #5a1224;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon9 {
+    height: 15px;
+    width: 15px;
+    position: relative;
+}

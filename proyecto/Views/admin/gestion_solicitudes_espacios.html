@@ -1,0 +1,66 @@
+<!-- 1. Tabla o Lista General de Solicitudes -->
+<div class="seccion-principal">
+  <h2>Gestión de Solicitudes de Espacios</h2>
+  
+  <table class="tabla-solicitudes">
+    <thead>
+      <tr>
+        <th>Folio</th>
+        <th>Solicitante</th>
+        <th>Espacio</th>
+        <th>Fecha</th>
+        <th>Acción</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>#SOL-001</td>
+        <td>Juan Pérez</td>
+        <td>Galería de Arte</td>
+        <td>15/10/2026</td>
+        <td>
+          <!-- Al hacer clic, ejecuta la función para abrir el detalle -->
+          <button class="btn-ver" onclick="abrirDetalle('SOL-001')">Ver Detalle</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- 2. Panel/Modal de Detalles de la Solicitud (Oculto por defecto) -->
+<div id="modal-detalle" class="modal-detalle" style="display: none;">
+  <div class="contenido-modal">
+    <button class="btn-cerrar" onclick="cerrarDetalle()">&times;</button>
+    
+    <h3>Detalles de la Solicitud <span id="folio-detalle">#SOL-001</span></h3>
+    <hr>
+    
+    <!-- Aquí va el contenido del segundo código que muestra la solicitud abierta -->
+    <div class="info-solicitud">
+      <p><strong>Solicitante:</strong> Juan Pérez</p>
+      <p><strong>Espacio:</strong> Galería de Arte</p>
+      <p><strong>Fecha y Hora:</strong> 15 de Octubre de 2026 - 10:00 AM</p>
+      <p><strong>Uso propuesto:</strong> Exposición de Pintura</p>
+      <!-- Agrega aquí el resto de tus campos de detalle -->
+    </div>
+
+    <!-- Botones de Acción -->
+    <div class="acciones-modal">
+      <button class="btn-aprobar">Aprobar</button>
+      <button class="btn-rechazar">Rechazar</button>
+    </div>
+  </div>
+</div>
+
+<!-- 3. Lógica para abrir y cerrar el panel -->
+<script>
+  function abrirDetalle(folio) {
+    // Muestra el panel de detalles
+    document.getElementById('modal-detalle').style.display = 'flex';
+  }
+
+  function cerrarDetalle() {
+    // Oculta el panel de detalles
+    document.getElementById('modal-detalle').style.display = 'none';
+  }
+</script>

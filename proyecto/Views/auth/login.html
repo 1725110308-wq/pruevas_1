@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="initial-scale=1, width=device-width, initial-scale=1.0">
+  	
+  	<!-- Hoja de Estilos CSS Separada -->
+  	<link rel="stylesheet" href="./index.css" />
+  	
+  	<!-- Fuentes -->
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&display=swap" />
+</head>
+<body>
+  	
+  	<div class="prototipo-sistema-gestin-educ">
+    		<div class="body">
+      			<div class="container">
+        				<img class="container-icon" alt="">
+        				
+        				<!-- HEADER -->
+        				<div class="header">
+          					<div class="button" id="btnInicio" style="cursor: pointer;">
+            						<img class="icon" alt="">
+            						<div class="text">
+              							<div class="inicio">Inicio</div>
+            						</div>
+          					</div>
+          					<div class="heading-1">
+            						<i class="ricardo-garibay">RICARDO GARIBAY</i>
+          					</div>
+          					<div class="container2"></div>
+        				</div>
+
+        				<!-- CONTENIDO PRINCIPAL DE LOGIN -->
+        				<div class="container3">
+          					<div class="container4">
+            						
+            						<!-- SELECCIÓN DE ROL DE USUARIO -->
+            						<div class="container5" id="contenedorRoles">
+              							<div class="button2 role-btn active-role" data-role="alumno" style="cursor: pointer;">
+                								<b class="alumno">👨‍🎓 Alumno</b>
+              							</div>
+              							<div class="button3 role-btn" data-role="profesor" style="cursor: pointer;">
+                								<b class="alumno">👨‍🏫 Profesor</b>
+              							</div>
+              							<div class="button4 role-btn" data-role="admin" style="cursor: pointer;">
+                								<b class="alumno">🛡️ Admin</b>
+              							</div>
+            						</div>
+
+            						<!-- FORMULARIO DE ACCESO -->
+            						<form id="loginForm" class="container6" style="width: 100%;">
+              							<div class="container7">
+                								<div class="heading-2">
+                  									<div class="ricardo-garibay" id="tituloAcceso">Acceso — Bienvenido</div>
+                								</div>
+                								<div class="paragraphmargin">
+                  									<div class="paragraph">
+                    										<div class="portal-estudiantil-del" id="subtituloAcceso">Portal estudiantil del Centro Cultural</div>
+                  									</div>
+                								</div>
+              							</div>
+
+              							<!-- CAMPO: USUARIO / CORREO -->
+              							<div class="container8">
+                								<div class="label">
+                  									<label for="inputUsuario" class="usuario-o-correo">Usuario o Correo Electrónico</label>
+                								</div>
+                								<div class="text-input" style="width: 100%;">
+                  									<input type="email" id="inputUsuario" required placeholder="alexa.vazquez@ricardogaribay.edu.mx" style="width: 100%; border: none; background: transparent; outline: none; font-size: 14px; font-family: inherit; color: inherit;" />
+                								</div>
+              							</div>
+
+              							<!-- CAMPO: CONTRASEÑA -->
+              							<div class="container8">
+                								<div class="heading-2">
+                  									<label for="inputPassword" class="usuario-o-correo">Contraseña</label>
+                								</div>
+                								<div class="containermargin">
+                  									<div class="container10" style="display: flex; align-items: center; justify-content: space-between;">
+                    										<div class="password-input" style="flex: 1;">
+                      											<input type="password" id="inputPassword" required placeholder="••••••••" style="width: 100%; border: none; background: transparent; outline: none; font-size: 14px; font-family: inherit; color: inherit;" />
+                    										</div>
+                    										<div class="button5" id="togglePassword" style="cursor: pointer;" title="Mostrar/Ocultar contraseña">
+                      											<img class="icon" alt="Ver">
+                    										</div>
+                  									</div>
+                								</div>
+              							</div>
+
+              							<!-- OPCIONES SECUNDARIAS -->
+              							<div class="container11">
+                								<div class="button" style="display: flex; align-items: center; gap: 8px;">
+                  									<input type="checkbox" id="checkRecordar" style="cursor: pointer;" />
+                  									<div class="text2">
+                    										<label for="checkRecordar" class="recordar-sesin" style="cursor: pointer;">Recordar sesión</label>
+                  									</div>
+                								</div>
+                								<div class="button6" id="btnOlvidoPass" style="cursor: pointer;">
+                  									<div class="olvid-su-contrasea">¿Olvidó su contraseña?</div>
+                								</div>
+              							</div>
+
+              							<!-- BOTÓN SUBMIT -->
+              							<div class="buttonmargin">
+                								<button type="submit" class="button7" style="width: 100%; border: none; background: transparent; cursor: pointer;">
+                  									<div class="iniciar-sesin">Iniciar sesión</div>
+                								</button>
+              							</div>
+
+              							<!-- DIVISOR -->
+              							<div class="container13">
+                								<div class="container14"></div>
+                								<div class="text3">
+                  									<div class="o">o</div>
+                								</div>
+                								<div class="container14"></div>
+              							</div>
+
+              							<!-- REGISTRO -->
+              							<div class="button8" id="btnRegistro" style="cursor: pointer;">
+                								<div class="registrarse-como-nuevo">Registrarse como nuevo estudiante</div>
+              							</div>
+            						</form>
+
+          					</div>
+        				</div>
+
+        				<!-- FOOTER -->
+        				<div class="footer">
+          					<div class="container16">
+            						<div class="container17">
+              							<div class="paragraph2">
+                								<div class="contacto">Contacto</div>
+              							</div>
+              							<div class="containermargin2">
+                								<div class="container18">
+                  									<img class="icon4" alt="">
+                  									<div class="text2">
+                    										<div class="portal-estudiantil-del">(771) 123-4567</div>
+                  									</div>
+                								</div>
+              							</div>
+              							<div class="containermargin3">
+                								<div class="container18">
+                  									<img class="icon4" alt="">
+                  									<div class="text2">
+                    										<div class="portal-estudiantil-del">(771) 234-5678</div>
+                  									</div>
+                								</div>
+              							</div>
+              							<div class="containermargin3">
+                								<div class="container18">
+                  									<img class="icon4" alt="">
+                  									<div class="text2">
+                    										<div class="portal-estudiantil-del">contacto@ricardogaribay.edu.mx</div>
+                  									</div>
+                								</div>
+              							</div>
+              							<div class="containermargin5">
+                								<div class="container18">
+                  									<img class="icon4" alt="">
+                  									<div class="text2">
+                    										<div class="portal-estudiantil-del">Tulancingo de Bravo, Hidalgo</div>
+                  									</div>
+                								</div>
+              							</div>
+            						</div>
+
+            						<div class="container22">
+              							<div class="paragraphmargin2">
+                								<i class="ricardo-garibay">Ricardo Garibay</i>
+              							</div>
+              							<div class="paragraph3">
+                								<div class="contacto">Centro Cultural · Tulancingo</div>
+              							</div>
+              							<div class="paragraphmargin3">
+                								<div class="paragraph4">
+                  									<div class="o">© 2026 Todos los derechos reservados</div>
+                								</div>
+              							</div>
+            						</div>
+
+            						<div class="container23">
+              							<div class="paragraphmargin4">
+                								<div class="paragraph5">
+                  									<div class="contacto">Redes Sociales</div>
+                								</div>
+              							</div>
+              							<div class="container24">
+                								<div class="link" id="btnFacebook" style="cursor: pointer;">
+                  									<img class="icon3" alt="">
+                  									<div class="facebook">Facebook</div>
+                								</div>
+                								<div class="link2">
+                  									<img class="icon9" alt="">
+                								</div>
+              							</div>
+            						</div>
+          					</div>
+        				</div>
+
+      			</div>
+    		</div>
+  	</div>
+
+  	<!-- LÓGICA DE INTERACCIÓN (JAVASCRIPT) -->
+  	<script>
+    	document.addEventListener('DOMContentLoaded', () => {
+      		let rolSeleccionado = 'alumno';
+      		const rolesButtons = document.querySelectorAll('.role-btn');
+      		const subtituloAcceso = document.getElementById('subtituloAcceso');
+      		const form = document.getElementById('loginForm');
+      		const inputPassword = document.getElementById('inputPassword');
+      		const togglePassword = document.getElementById('togglePassword');
+
+      		// 1. Selector de Rol (Alumno / Profesor / Admin)
+      		const textosPorRol = {
+        		alumno: 'Portal estudiantil del Centro Cultural',
+        		profesor: 'Portal docente del Centro Cultural',
+        		admin: 'Módulo de administración general'
+      		};
+
+      		rolesButtons.forEach(btn => {
+        		btn.addEventListener('click', () => {
+          			rolesButtons.forEach(b => b.classList.remove('active-role'));
+          			btn.classList.add('active-role');
+          			
+          			rolSeleccionado = btn.getAttribute('data-role');
+          			subtituloAcceso.textContent = textosPorRol[rolSeleccionado] || 'Portal del Centro Cultural';
+        		});
+      		});
+
+      		// 2. Ocultar / Mostrar Contraseña
+      		togglePassword.addEventListener('click', () => {
+        		const isPassword = inputPassword.getAttribute('type') === 'password';
+        		inputPassword.setAttribute('type', isPassword ? 'text' : 'password');
+      		});
+
+      		// 3. Envío del Formulario
+      		form.addEventListener('submit', (e) => {
+        		e.preventDefault();
+        		const usuario = document.getElementById('inputUsuario').value;
+        		alert(`Iniciando sesión como [${rolSeleccionado.toUpperCase()}]\nUsuario: ${usuario}`);
+      		});
+
+      		// 4. Navegación Secundaria
+      		document.getElementById('btnInicio').addEventListener('click', () => {
+        		alert('Regresando a la página principal...');
+      		});
+
+      		document.getElementById('btnOlvidoPass').addEventListener('click', () => {
+        		alert('Redirigiendo a recuperación de contraseña...');
+      		});
+
+      		document.getElementById('btnRegistro').addEventListener('click', () => {
+        		alert('Redirigiendo al formulario de registro de nuevos estudiantes...');
+      		});
+
+      		document.getElementById('btnFacebook')?.addEventListener('click', () => {
+        		window.open('https://facebook.com', '_blank');
+      		});
+    	});
+  	</script>
+</body>
+</html>

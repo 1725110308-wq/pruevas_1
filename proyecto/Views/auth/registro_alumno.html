@@ -1,203 +1,325 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  	<meta charset="utf-8">
-  	<meta name="viewport" content="initial-scale=1, width=device-width">
-  	
-  	<link rel="stylesheet"  href="./index.css" />
-  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
-  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair Display:ital,wght@0,600;1,600&display=swap" />
-  	
-  	
-  	
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, width=device-width">
+  <title>Registro de Nuevo Estudiante</title>
+  
+  <link rel="stylesheet" href="./index.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,600&display=swap" />
+  
+  <style>
+    /* Estilos para controlar los pasos */
+    .step-content {
+      display: none;
+    }
+    .step-content.active {
+      display: block;
+    }
+    .hidden-file-input {
+      display: none;
+    }
+  </style>
 </head>
 <body>
-  	
-  	<div class="prototipo-sistema-gestin-educ">
-    		<div class="body">
-      			<div class="container">
-        				<img class="container-icon" alt="">
-        				
-        				<div class="header">
-          					<div class="button">
-            						<img class="icon" alt="">
-            						
-            						<div class="text">
-              							<div class="inicio">Inicio</div>
-            						</div>
-          					</div>
-          					<div class="heading-1">
-            						<i class="ricardo-garibay">RICARDO GARIBAY</i>
-          					</div>
-          					<div class="container2">
-          					</div>
-        				</div>
-        				<div class="container3">
-          					<div class="container4">
-            						<div class="container5">
-              							<div class="button2">
-                								<b class="alumno">👨‍🎓 Alumno</b>
-              							</div>
-              							<div class="button3">
-                								<b class="alumno">👨‍🏫 Profesor</b>
-              							</div>
-              							<div class="button4">
-                								<b class="alumno">🛡️ Admin</b>
-              							</div>
-            						</div>
-            						<div class="container6">
-              							<div class="container7">
-                								<div class="heading-2">
-                  									<div class="ricardo-garibay">Acceso — Bienvenido</div>
-                								</div>
-                								<div class="paragraphmargin">
-                  									<div class="paragraph">
-                    										<div class="portal-estudiantil-del">Portal estudiantil del Centro Cultural</div>
-                  									</div>
-                								</div>
-              							</div>
-              							<div class="container8">
-                								<div class="label">
-                  									<div class="usuario-o-correo">Usuario o Correo Electrónico</div>
-                								</div>
-                								<div class="text-input">
-                  									<div class="alexavazquezricardogaribaye">alexa.vazquez@ricardogaribay.edu.mx</div>
-                								</div>
-              							</div>
-              							<div class="container8">
-                								<div class="heading-2">
-                  									<div class="usuario-o-correo">Contraseña</div>
-                								</div>
-                								<div class="containermargin">
-                  									<div class="container10">
-                    										<div class="password-input">
-                      											<div class="alexavazquezricardogaribaye">••••••••</div>
-                    										</div>
-                    										<div class="button5">
-                      											<img class="icon" alt="">
-                      											
-                    										</div>
-                  									</div>
-                								</div>
-              							</div>
-              							<div class="container11">
-                								<div class="button">
-                  									<div class="checkbox">
-                    										<div class="container12">
-                      											<img class="icon3" alt="">
-                      											
-                    										</div>
-                  									</div>
-                  									<div class="text2">
-                    										<div class="recordar-sesin">Recordar sesión</div>
-                  									</div>
-                								</div>
-                								<div class="button6">
-                  									<div class="olvid-su-contrasea">¿Olvidó su contraseña?</div>
-                								</div>
-              							</div>
-              							<div class="buttonmargin">
-                								<div class="button7">
-                  									<div class="iniciar-sesin">Iniciar sesión</div>
-                								</div>
-              							</div>
-              							<div class="container13">
-                								<div class="container14">
-                								</div>
-                								<div class="text3">
-                  									<div class="o">o</div>
-                								</div>
-                								<div class="container14">
-                								</div>
-              							</div>
-              							<div class="button8">
-                								<div class="registrarse-como-nuevo">Registrarse como nuevo estudiante</div>
-              							</div>
-            						</div>
-          					</div>
-        				</div>
-        				<div class="footer">
-          					<div class="container16">
-            						<div class="container17">
-              							<div class="paragraph2">
-                								<div class="contacto">Contacto</div>
-              							</div>
-              							<div class="containermargin2">
-                								<div class="container18">
-                  									<img class="icon4" alt="">
-                  									
-                  									<div class="text2">
-                    										<div class="portal-estudiantil-del">(771) 123-4567</div>
-                  									</div>
-                								</div>
-              							</div>
-              							<div class="containermargin3">
-                								<div class="container18">
-                  									<img class="icon4" alt="">
-                  									
-                  									<div class="text2">
-                    										<div class="portal-estudiantil-del">(771) 234-5678</div>
-                  									</div>
-                								</div>
-              							</div>
-              							<div class="containermargin3">
-                								<div class="container18">
-                  									<img class="icon4" alt="">
-                  									
-                  									<div class="text2">
-                    										<div class="portal-estudiantil-del">contacto@ricardogaribay.edu.mx</div>
-                  									</div>
-                								</div>
-              							</div>
-              							<div class="containermargin5">
-                								<div class="container18">
-                  									<img class="icon4" alt="">
-                  									
-                  									<div class="text2">
-                    										<div class="portal-estudiantil-del">Tulancingo de Bravo, Hidalgo</div>
-                  									</div>
-                								</div>
-              							</div>
-            						</div>
-            						<div class="container22">
-              							<div class="paragraphmargin2">
-                								<i class="ricardo-garibay">Ricardo Garibay</i>
-              							</div>
-              							<div class="paragraph3">
-                								<div class="contacto">Centro Cultural · Tulancingo</div>
-              							</div>
-              							<div class="paragraphmargin3">
-                								<div class="paragraph4">
-                  									<div class="o">© 2026 Todos los derechos reservados</div>
-                								</div>
-              							</div>
-            						</div>
-            						<div class="container23">
-              							<div class="paragraphmargin4">
-                								<div class="paragraph5">
-                  									<div class="contacto">Redes Sociales</div>
-                								</div>
-              							</div>
-              							<div class="container24">
-                								<div class="link">
-                  									<img class="icon3" alt="">
-                  									
-                  									<div class="facebook">Facebook</div>
-                								</div>
-                								<div class="link2">
-                  									<img class="icon9" alt="">
-                  									
-                								</div>
-              							</div>
-            						</div>
-          					</div>
-        				</div>
-      			</div>
-    		</div>
-  	</div>
-  	
-  	
-  	
-  	
+
+  <div class="prototipo-sistema-gestin-educ">
+    <div class="body">
+      <div class="container">
+        <img class="container-icon" alt="">
+        
+        <!-- HEADER COMÚN -->
+        <div class="header">
+          <div class="button">
+            <img class="icon" alt="">
+            <div class="text">
+              <div class="acceso">Acceso</div>
+            </div>
+          </div>
+          <div class="heading-1">
+            <i class="ricardo-garibay">RICARDO GARIBAY</i>
+          </div>
+          <div class="container2"></div>
+        </div>
+
+        <!-- CONTENIDO PRINCIPAL DE LOS PASOS -->
+        <div class="container3">
+          <div class="container4">
+            
+            <!-- BARRA DE PASOS (STEPPER) -->
+            <div class="container5">
+              <div class="container6">
+                <div class="button" id="step-tab-1">
+                  <div class="container8">
+                    <b class="b" id="step-1-badge">1</b>
+                  </div>
+                  <div class="text2">
+                    <div class="ficha-de-pago">Ficha de pago</div>
+                  </div>
+                  <div class="container9"></div>
+                </div>
+
+                <div class="container10" id="step-tab-2">
+                  <div class="container11">
+                    <b class="b">2</b>
+                  </div>
+                  <div class="text3">
+                    <div class="ficha-de-pago">Datos personales</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ENCABEZADO DINÁMICO -->
+              <div class="heading-2">
+                <b class="registro-de-nuevo" id="step-title">Registro de Nuevo Estudiante</b>
+              </div>
+              <div class="paragraphmargin">
+                <div class="paragraph">
+                  <div class="b" id="step-subtitle">Adjunta la ficha de pago sellada para continuar</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- FORMULARIO GENERAL -->
+            <form id="registration-form" onsubmit="event.preventDefault();">
+              
+              <!-- PASO 1: FICHA DE PAGO -->
+              <div id="step-1" class="step-content active">
+                <div class="container12">
+                  <div class="container13">
+                    <div class="iconmargin">
+                      <img class="icon" alt="">
+                    </div>
+                    <div class="label">
+                      <div class="para-registrarte-debes-container">
+                        <span class="para-registrarte-debes">Para registrarte debes presentar tu </span>
+                        <b class="para-registrarte-debes">ficha de pago sellada</b>
+                        <span class="para-registrarte-debes"> por la dirección del centro. Este paso es obligatorio para activar tu cuenta.</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="container14">
+                    <div class="label">
+                      <div class="subir-foto-de">Subir foto de la ficha de pago sellada</div>
+                    </div>
+                    <div class="containermargin">
+                      <label for="ficha-file" class="container15" style="cursor: pointer;">
+                        <img class="icon3" alt="">
+                        <div class="container16">
+                          <div class="label">
+                            <div class="seleccionar-archivo" id="file-label-text">Seleccionar archivo</div>
+                          </div>
+                          <div class="paragraph4">
+                            <div class="foto-clara-y">Foto clara y legible · JPG, PNG o PDF</div>
+                          </div>
+                        </div>
+                        <input type="file" id="ficha-file" class="hidden-file-input" accept=".jpg,.png,.pdf" required />
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="button2" id="btn-next-step" style="cursor: pointer;">
+                    <div class="continuar-con-mis">Continuar con mis datos →</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- PASO 2: DATOS PERSONALES -->
+              <div id="step-2" class="step-content">
+                <div class="container12">
+                  
+                  <div class="container13">
+                    <label class="label" for="fullname">
+                      <div class="nombre-completo">Nombre completo</div>
+                    </label>
+                    <input type="text" id="fullname" class="text-input" placeholder="Como aparecerá en tu cuenta" required />
+                  </div>
+
+                  <div class="container14">
+                    <label class="label" for="email">
+                      <div class="nombre-completo">Correo electrónico</div>
+                    </label>
+                    <input type="email" id="email" class="text-input" placeholder="tucorreo@ejemplo.com" required />
+                  </div>
+
+                  <div class="container14">
+                    <label class="label" for="phone">
+                      <div class="nombre-completo">Número de teléfono</div>
+                    </label>
+                    <input type="tel" id="phone" class="text-input" placeholder="(771) 000-0000" required />
+                  </div>
+
+                  <div class="container14">
+                    <div class="container13">
+                      <label class="nombre-completo" for="password">Contraseña</label>
+                    </div>
+                    <div class="containermargin">
+                      <div class="container17" style="display: flex; align-items: center;">
+                        <input type="password" id="password" class="password-input" placeholder="Mínimo 6 caracteres" minlength="6" required />
+                        <button type="button" class="button2" id="toggle-password" style="cursor: pointer; background: none; border: none;">
+                          <img class="icon" alt="Mostrar u Ocultar">
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="container14">
+                    <label class="label" for="confirm-password">
+                      <div class="nombre-completo">Confirmar contraseña</div>
+                    </label>
+                    <input type="password" id="confirm-password" class="text-input" placeholder="Repite tu contraseña" minlength="6" required />
+                  </div>
+
+                  <div class="container19" style="display: flex; gap: 10px;">
+                    <div class="button3" id="btn-prev-step" style="cursor: pointer;">
+                      <div class="acceso">← Regresar</div>
+                    </div>
+                    <button type="submit" class="button4" id="btn-submit" style="cursor: pointer; background: transparent; border: none;">
+                      <div class="crear-cuenta-de">Crear Cuenta de Alumno</div>
+                    </button>
+                  </div>
+
+                </div>
+              </div>
+
+            </form>
+
+          </div>
+        </div>
+
+        <!-- FOOTER COMÚN -->
+        <div class="footer">
+          <div class="container17">
+            <div class="container18">
+              <div class="paragraph4">
+                <div class="contacto">Contacto</div>
+              </div>
+              <div class="containermargin2">
+                <div class="container19">
+                  <img class="icon4" alt="">
+                  <div class="text4"><div class="b">(771) 123-4567</div></div>
+                </div>
+              </div>
+              <div class="containermargin3">
+                <div class="container19">
+                  <img class="icon4" alt="">
+                  <div class="text4"><div class="b">(771) 234-5678</div></div>
+                </div>
+              </div>
+              <div class="containermargin3">
+                <div class="container19">
+                  <img class="icon4" alt="">
+                  <div class="text4"><div class="b">contacto@ricardogaribay.edu.mx</div></div>
+                </div>
+              </div>
+              <div class="containermargin5">
+                <div class="container19">
+                  <img class="icon4" alt="">
+                  <div class="text4"><div class="b">Tulancingo de Bravo, Hidalgo</div></div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="container23">
+              <div class="paragraphmargin2">
+                <i class="ricardo-garibay">Ricardo Garibay</i>
+              </div>
+              <div class="paragraph6">
+                <div class="contacto">Centro Cultural · Tulancingo</div>
+              </div>
+              <div class="paragraphmargin3">
+                <div class="paragraph7">
+                  <div class="foto-clara-y">© 2026 Todos los derechos reservados</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="container24">
+              <div class="paragraphmargin4">
+                <div class="paragraph8">
+                  <div class="contacto">Redes Sociales</div>
+                </div>
+              </div>
+              <div class="container25">
+                <div class="link">
+                  <img class="icon8" alt="">
+                  <div class="facebook">Facebook</div>
+                </div>
+                <div class="link2">
+                  <img class="icon9" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPT LÓGICO DE INTERACCIÓN -->
+  <script>
+    const step1 = document.getElementById('step-1');
+    const step2 = document.getElementById('step-2');
+    const btnNext = document.getElementById('btn-next-step');
+    const btnPrev = document.getElementById('btn-prev-step');
+    const stepTitle = document.getElementById('step-title');
+    const stepSubtitle = document.getElementById('step-subtitle');
+    const fileInput = document.getElementById('ficha-file');
+    const fileLabelText = document.getElementById('file-label-text');
+    const togglePasswordBtn = document.getElementById('toggle-password');
+    const passwordInput = document.getElementById('password');
+
+    // Cambiar texto de archivo al cargar
+    fileInput.addEventListener('change', (e) => {
+      if (e.target.files.length > 0) {
+        fileLabelText.textContent = e.target.files[0].name;
+      }
+    });
+
+    // Siguiente Paso
+    btnNext.addEventListener('click', () => {
+      if (!fileInput.files.length) {
+        alert('Por favor, selecciona el archivo de la ficha de pago para continuar.');
+        return;
+      }
+      
+      step1.classList.remove('active');
+      step2.classList.add('active');
+      
+      stepTitle.textContent = "Datos de tu cuenta";
+      stepSubtitle.textContent = "Completa tu información personal";
+    });
+
+    // Regresar al Paso 1
+    btnPrev.addEventListener('click', () => {
+      step2.classList.remove('active');
+      step1.classList.add('active');
+      
+      stepTitle.textContent = "Registro de Nuevo Estudiante";
+      stepSubtitle.textContent = "Adjunta la ficha de pago sellada para continuar";
+    });
+
+    // Alternar visibilidad de contraseña
+    togglePasswordBtn.addEventListener('click', () => {
+      const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+      passwordInput.setAttribute('type', type);
+    });
+
+    // Envío del formulario
+    document.getElementById('registration-form').addEventListener('submit', (e) => {
+      const pass = document.getElementById('password').value;
+      const confirmPass = document.getElementById('confirm-password').value;
+
+      if (pass !== confirmPass) {
+        alert('Las contraseñas no coinciden');
+        return;
+      }
+
+      alert('¡Registro exitoso!');
+    });
+  </script>
 </body>
 </html>

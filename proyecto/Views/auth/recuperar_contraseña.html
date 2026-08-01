@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Centro Cultural Ricardo Garibay - Restablecer Contraseña</title>
+    
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,600&display=swap" />
+</head>
+<body class="prototipo-sistema-gestin-educ">
+
+    <!-- Encabezado Principal -->
+    <header class="header">
+        <a href="#acceso" class="button button-acceso">
+            <img class="icon" src="assets/icon-access.svg" alt="" aria-hidden="true">
+            <span>Acceso</span>
+        </a>
+        <h1 class="heading-1">
+            <em class="ricardo-garibay">RICARDO GARIBAY</em>
+        </h1>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="container-main">
+        
+        <!-- Indicador de Progreso por Pasos (Wizard) -->
+        <nav aria-label="Progreso del restablecimiento de contraseña">
+            <ol class="step-wizard">
+                <li class="step step-active" aria-current="step" id="wizard-step-1">
+                    <span class="step-number">1</span>
+                    <span class="step-title">Verificación</span>
+                </li>
+                <li class="step" id="wizard-step-2">
+                    <span class="step-number">2</span>
+                    <span class="step-title">Código</span>
+                </li>
+                <li class="step" id="wizard-step-3">
+                    <span class="step-number">3</span>
+                    <span class="step-title">Nueva contraseña</span>
+                </li>
+                <li class="step" id="wizard-step-4">
+                    <span class="step-number">4</span>
+                    <span class="step-title">Confirmación</span>
+                </li>
+            </ol>
+        </nav>
+
+        <!-- ==========================================
+             PASO 1: Identificación / Correo / Teléfono
+             ========================================== -->
+        <section id="step-1" class="step-container form-section">
+            <header class="form-header">
+                <h2>Recuperar Contraseña</h2>
+                <p>Ingresa tu correo electrónico o teléfono registrado para recibir un código de verificación.</p>
+            </header>
+
+            <form action="/solicitar-codigo" method="POST" class="reset-form">
+                <div class="form-group">
+                    <label for="user-identity">Correo Electrónico o Teléfono</label>
+                    <input type="text" id="user-identity" name="user-identity" required placeholder="ejemplo@correo.com o 7711234567">
+                </div>
+
+                <button type="submit" class="button button-primary">
+                    Enviar Código de Verificación
+                </button>
+            </form>
+        </section>
+
+        <!-- ==========================================
+             PASO 2: Ingreso del Código de Verificación
+             ========================================== -->
+        <section id="step-2" class="step-container form-section" hidden>
+            <header class="form-header">
+                <h2>Ingresa el Código</h2>
+                <p>Enviamos un código de 6 dígitos a tu medio de contacto.</p>
+            </header>
+
+            <form action="/verificar-codigo" method="POST" class="reset-form">
+                <div class="form-group">
+                    <label for="verification-code">Código de Verificación</label>
+                    <input type="text" id="verification-code" name="verification-code" maxlength="6" pattern="[0-9]{6}" inputmode="numeric" required placeholder="000000">
+                </div>
+
+                <button type="submit" class="button button-primary">
+                    Validar Código
+                </button>
+            </form>
+        </section>
+
+        <!-- ==========================================
+             PASO 3: Definir Nueva Contraseña
+             ========================================== -->
+        <section id="step-3" class="step-container form-section" hidden>
+            <header class="form-header">
+                <h2>Nueva contraseña</h2>
+                <p>Mínimo 8 caracteres. Usa letras y números.</p>
+            </header>
+
+            <form action="/restablecer-password" method="POST" class="reset-form">
+                <div class="form-group">
+                    <label for="new-password">Nueva Contraseña</label>
+                    <div class="password-input-wrapper">
+                        <input type="password" id="new-password" name="new-password" minlength="8" required placeholder="••••••••">
+                        <button type="button" class="btn-toggle-password" aria-label="Mostrar u ocultar contraseña">
+                            <img class="icon" src="assets/icon-eye.svg" alt="" aria-hidden="true">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm-password">Confirmar Nueva Contraseña</label>
+                    <input type="password" id="confirm-password" name="confirm-password" minlength="8" required placeholder="••••••••">
+                </div>
+
+                <button type="submit" class="button button-primary">
+                    Guardar y Restablecer Contraseña
+                </button>
+            </form>
+        </section>
+
+        <!-- ==========================================
+             PASO 4: Confirmación del Restablecimiento
+             ========================================== -->
+        <article id="step-4" class="step-container success-card" role="status" hidden>
+            <div class="success-icon-wrapper">
+                <img class="icon-success" src="assets/icon-success-check.svg" alt="Operación exitosa">
+            </div>
+            
+            <h2>¡Contraseña restablecida!</h2>
+            <p>Tu contraseña fue actualizada correctamente. Ya puedes iniciar sesión con tus nuevas credenciales.</p>
+
+            <a href="/login" class="button button-primary">Volver a Iniciar Sesión</a>
+        </article>
+
+    </main>
+
+    <!-- Pie de Página -->
+    <footer class="footer">
+        <section class="footer-contact">
+            <h3>Contacto</h3>
+            <ul>
+                <li>
+                    <img class="icon" src="assets/icon-phone.svg" alt="" aria-hidden="true">
+                    <a href="tel:7711234567">(771) 123-4567</a>
+                </li>
+                <li>
+                    <img class="icon" src="assets/icon-phone.svg" alt="" aria-hidden="true">
+                    <a href="tel:7712345678">(771) 234-5678</a>
+                </li>
+                <li>
+                    <img class="icon" src="assets/icon-email.svg" alt="" aria-hidden="true">
+                    <a href="mailto:contacto@ricardogaribay.edu.mx">contacto@ricardogaribay.edu.mx</a>
+                </li>
+                <li>
+                    <img class="icon" src="assets/icon-location.svg" alt="" aria-hidden="true">
+                    <span>Tulancingo de Bravo, Hidalgo</span>
+                </li>
+            </ul>
+        </section>
+
+        <section class="footer-branding">
+            <p class="brand-title"><em>Ricardo Garibay</em></p>
+            <p>Centro Cultural · Tulancingo</p>
+            <p class="copyright">&copy; 2026 Todos los derechos reservados</p>
+        </section>
+
+        <section class="footer-social">
+            <h3>Redes Sociales</h3>
+            <div class="social-links">
+                <a href="https://facebook.com" class="link-social" target="_blank" rel="noopener noreferrer">
+                    <img class="icon" src="assets/icon-facebook.svg" alt="" aria-hidden="true">
+                    <span>Facebook</span>
+                </a>
+            </div>
+        </section>
+    </footer>
+
+</body>
+</html>

@@ -2,46 +2,58 @@
 <html lang="es">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil de Profesor — Sistema Escolar</title>
     
     <link rel="stylesheet" href="./index.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,600&display=swap" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Consolas:wght@400&display=swap" />
 </head>
 <body>
     
     <div class="prototipo-sistema-gestin-educ">
         <div class="app">
             <div class="teacherprofilescreen">
-                <img class="geometricpattern-icon" alt="">
+                <!-- Capa de fondo decorativa -->
+                <div class="geometricpattern-icon"></div>
                 
-                <!-- HEADER -->
-                <div class="header">
-                    <div class="button">
-                        <img class="icon" alt="">
-                        <div class="text">
-                            <div class="inicio">Inicio</div>
-                        </div>
-                    </div>
+                <!-- HEADER SUPERIOR -->
+                <header class="header">
+                    <button class="button" id="btn-inicio" aria-label="Inicio">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                        </svg>
+                        <span class="text">
+                            <span class="inicio">Inicio</span>
+                        </span>
+                    </button>
+
                     <div class="heading-1">
                         <i class="ricardo-garibay">RICARDO GARIBAY</i>
                     </div>
-                    <div class="button2">
-                        <div class="salir">Salir</div>
-                    </div>
-                </div>
+
+                    <button class="button2" id="btn-salir" aria-label="Cerrar sesión">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                            <polyline points="16 17 21 12 16 7"></polyline>
+                            <line x1="21" y1="12" x2="9" y2="12"></line>
+                        </svg>
+                        <span class="salir">Salir</span>
+                    </button>
+                </header>
 
                 <!-- CONTENIDO PRINCIPAL -->
-                <div class="container">
+                <main class="container">
                     <div class="container2">
-                        <div class="container3"></div>
-                        <div class="containermargin">
+                        <section class="containermargin">
                             <div class="container4">
+                                
+                                <!-- AVATAR DOCENTE -->
                                 <div class="containermargin2">
-                                    <img class="container-icon" alt="">
+                                    <div class="avatar-placeholder">AE</div>
                                 </div>
+
                                 <div class="container5">
                                     <div class="heading-2">
                                         <b class="prof-anthon-e">Prof. Anthon E. Escorcia Yáñez</b>
@@ -52,257 +64,263 @@
                                         </div>
                                     </div>
                                 </div>
+
+                                <!-- DATOS TÉCNICOS DOCENTE -->
                                 <div class="containermargin3">
                                     <div class="container7">
                                         <div class="container8">
-                                            <div class="paragraph">
-                                                <div class="no-folio">No. Folio</div>
-                                            </div>
-                                            <div class="paragraph2">
-                                                <div class="teclado">DOC-2026-012</div>
-                                            </div>
+                                            <span class="no-folio">No. Folio</span>
+                                            <div class="teclado">DOC-2026-012</div>
                                         </div>
                                         <div class="container9">
-                                            <div class="paragraph">
-                                                <div class="no-folio">Taller a cargo</div>
-                                            </div>
-                                            <div class="paragraph2">
-                                                <div class="teclado">Teclado</div>
-                                            </div>
+                                            <span class="no-folio">Taller a cargo</span>
+                                            <div class="teclado">Teclado</div>
                                         </div>
                                         <div class="container10">
-                                            <div class="paragraph">
-                                                <div class="no-folio">Turnos</div>
-                                            </div>
-                                            <div class="paragraph2">
-                                                <div class="teclado">Tarde / Noche</div>
-                                            </div>
+                                            <span class="no-folio">Turnos</span>
+                                            <div class="teclado">Tarde / Noche</div>
                                         </div>
                                         <div class="container11">
-                                            <div class="paragraph">
-                                                <div class="no-folio">Ciclo</div>
-                                            </div>
-                                            <div class="paragraph2">
-                                                <div class="teclado">2026</div>
-                                            </div>
+                                            <span class="no-folio">Ciclo</span>
+                                            <div class="teclado">2026</div>
                                         </div>
                                     </div>
                                 </div>
                                 
-                                <!-- TARJETA DE CUPO Y BOTÓN ACCIONADOR -->
+                                <!-- TARJETA DE CUPO Y BOTÓN DESPLEGABLE -->
                                 <div class="containermargin4">
                                     <div class="container12">
                                         <div class="container13">
                                             <div class="container14">
-                                                <div class="paragraph">
-                                                    <div class="alumnos-inscritos">Alumnos inscritos</div>
-                                                </div>
+                                                <span class="alumnos-inscritos">Alumnos inscritos</span>
                                                 <div class="paragraphmargin">
                                                     <div class="paragraph10">
                                                         <b class="b">8</b>
-                                                        <div class="text3">
-                                                            <div class="div2">/20</div>
-                                                        </div>
+                                                        <span class="div2">/20</span>
                                                     </div>
                                                 </div>
                                             </div>
                                             
-                                            <!-- Botón con id e evento onclick -->
-                                            <div class="button3" id="btnToggleGrupo" style="cursor: pointer;" onclick="toggleGrupo()">
-                                                <img class="icon2" alt="">
-                                                <div class="ver-grupo" id="textoBtnGrupo">Ver grupo</div>
-                                            </div>
+                                            <button class="button3" id="btnToggleGrupo" onclick="toggleGrupo()" aria-expanded="false">
+                                                <svg class="icon2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                                    <circle cx="9" cy="7" r="4"></circle>
+                                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                                </svg>
+                                                <span class="ver-grupo" id="textoBtnGrupo">Ver grupo</span>
+                                            </button>
                                         </div>
                                         
+                                        <!-- BARRA DE PROGRESO DE CUPO (40%) -->
                                         <div class="containermargin5">
                                             <div class="container15">
-                                                <div class="container16"></div>
+                                                <div class="container16" style="width: 40%;"></div>
                                             </div>
                                         </div>
                                         <div class="paragraphmargin2">
-                                            <div class="paragraph11">
-                                                <div class="del-cupo">40% del cupo · 12 lugares disponibles</div>
-                                            </div>
+                                            <p class="del-cupo">40% del cupo · 12 lugares disponibles</p>
                                         </div>
                                     </div>
                                 </div>
+
                             </div>
-                        </div>
+                        </section>
                     </div>
 
-                    <!-- PANEL DE TABLA DE ALUMNOS (Oculto por defecto) -->
-                    <div id="seccionListaAlumnos" style="display: none;">
+                    <!-- TABLA DE ALUMNOS (Oculta por defecto) -->
+                    <section id="seccionListaAlumnos" style="display: none;">
                         <div class="containermargin6">
                             <div class="container17">
                                 <div class="container18">
-                                    <img class="icon" alt="">
-                                    <div class="heading-3">
-                                        <div class="teclado">Lista de Alumnos — Teclado</div>
-                                    </div>
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                        <polyline points="14 2 14 8 20 8"></polyline>
+                                    </svg>
+                                    <h3 class="heading-3">Lista de Alumnos — Teclado</h3>
                                 </div>
+                                
                                 <div class="container19">
-                                    <div class="table-header">
-                                        <b class="nombre">Nombre</b>
-                                        <b class="folio">Folio</b>
-                                        <b class="asistencia">Asistencia</b>
-                                        <b class="pago">Pago</b>
-                                    </div>
-                                    <div class="table-row">
-                                        <div class="alexa-vzquez-hernndez">Alexa Vázquez Hernández</div>
-                                        <div class="table-cell"><div class="rg-2026-0847">RG-2026-0847</div></div>
-                                        <div class="text4"><b class="presente">Presente</b></div>
-                                        <div class="text5"><b class="presente">Aprobado</b></div>
-                                        <div class="button4"><div class="ver-datos">Ver datos</div></div>
-                                    </div>
-                                    <div class="table-row2">
-                                        <div class="alexa-vzquez-hernndez">Carlos Mendoza Torres</div>
-                                        <div class="table-cell"><div class="rg-2026-0847">RG-2026-0851</div></div>
-                                        <div class="text4"><b class="presente">Presente</b></div>
-                                        <div class="text5"><b class="presente">Aprobado</b></div>
-                                        <div class="button4"><div class="ver-datos">Ver datos</div></div>
-                                    </div>
-                                    <div class="table-row3">
-                                        <div class="alexa-vzquez-hernndez">Daniela Ríos Sánchez</div>
-                                        <div class="table-cell"><div class="rg-2026-0847">RG-2026-0862</div></div>
-                                        <div class="text8"><b class="presente">Retardo</b></div>
-                                        <div class="text5"><b class="presente">Aprobado</b></div>
-                                        <div class="button4"><div class="ver-datos">Ver datos</div></div>
-                                    </div>
-                                    <div class="table-row4">
-                                        <div class="alexa-vzquez-hernndez">Emilio Fuentes Castillo</div>
-                                        <div class="table-cell"><div class="rg-2026-0847">RG-2026-0870</div></div>
-                                        <div class="text10"><b class="presente">Ausente</b></div>
-                                        <div class="text11"><b class="presente">Pendiente</b></div>
-                                        <div class="button4"><div class="ver-datos">Ver datos</div></div>
-                                    </div>
-                                    <div class="table-row5">
-                                        <div class="alexa-vzquez-hernndez">Fernanda López Herrera</div>
-                                        <div class="table-cell"><div class="rg-2026-0847">RG-2026-0878</div></div>
-                                        <div class="text4"><b class="presente">Presente</b></div>
-                                        <div class="text5"><b class="presente">Aprobado</b></div>
-                                        <div class="button4"><div class="ver-datos">Ver datos</div></div>
-                                    </div>
-                                    <div class="table-row6">
-                                        <div class="alexa-vzquez-hernndez">Gerardo Núñez Blanco</div>
-                                        <div class="table-cell"><div class="rg-2026-0847">RG-2026-0883</div></div>
-                                        <div class="text4"><b class="presente">Presente</b></div>
-                                        <div class="text5"><b class="presente">Aprobado</b></div>
-                                        <div class="button4"><div class="ver-datos">Ver datos</div></div>
-                                    </div>
-                                    <div class="table-row7">
-                                        <div class="alexa-vzquez-hernndez">Hilda Romero Aguirre</div>
-                                        <div class="table-cell"><div class="rg-2026-0847">RG-2026-0890</div></div>
-                                        <div class="text4"><b class="presente">Presente</b></div>
-                                        <div class="text5"><b class="presente">Aprobado</b></div>
-                                        <div class="button4"><div class="ver-datos">Ver datos</div></div>
-                                    </div>
-                                    <div class="table-row8">
-                                        <div class="alexa-vzquez-hernndez">Iván Ortega Peña</div>
-                                        <div class="table-cell8"><div class="rg-2026-0847">RG-2026-0901</div></div>
-                                        <div class="text10"><b class="presente">Ausente</b></div>
-                                        <div class="text5"><b class="presente">Aprobado</b></div>
-                                        <div class="button4"><div class="ver-datos">Ver datos</div></div>
+                                    <div class="table-responsive">
+                                        <table class="tabla-alumnos">
+                                            <thead>
+                                                <tr>
+                                                    <th>Nombre</th>
+                                                    <th>Folio</th>
+                                                    <th>Asistencia</th>
+                                                    <th>Pago</th>
+                                                    <th>Acción</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><strong>Alexa Vázquez Hernández</strong></td>
+                                                    <td><code class="rg-2026-0847">RG-2026-0847</code></td>
+                                                    <td><span class="badge badge-success">Presente</span></td>
+                                                    <td><span class="badge badge-success">Aprobado</span></td>
+                                                    <td><button class="button4-small" onclick="verDatosAlumno('RG-2026-0847')">Ver datos</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Carlos Mendoza Torres</strong></td>
+                                                    <td><code class="rg-2026-0847">RG-2026-0851</code></td>
+                                                    <td><span class="badge badge-success">Presente</span></td>
+                                                    <td><span class="badge badge-success">Aprobado</span></td>
+                                                    <td><button class="button4-small" onclick="verDatosAlumno('RG-2026-0851')">Ver datos</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Daniela Ríos Sánchez</strong></td>
+                                                    <td><code class="rg-2026-0847">RG-2026-0862</code></td>
+                                                    <td><span class="badge badge-warning">Retardo</span></td>
+                                                    <td><span class="badge badge-success">Aprobado</span></td>
+                                                    <td><button class="button4-small" onclick="verDatosAlumno('RG-2026-0862')">Ver datos</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Emilio Fuentes Castillo</strong></td>
+                                                    <td><code class="rg-2026-0847">RG-2026-0870</code></td>
+                                                    <td><span class="badge badge-danger">Ausente</span></td>
+                                                    <td><span class="badge badge-pending">Pendiente</span></td>
+                                                    <td><button class="button4-small" onclick="verDatosAlumno('RG-2026-0870')">Ver datos</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Fernanda López Herrera</strong></td>
+                                                    <td><code class="rg-2026-0847">RG-2026-0878</code></td>
+                                                    <td><span class="badge badge-success">Presente</span></td>
+                                                    <td><span class="badge badge-success">Aprobado</span></td>
+                                                    <td><button class="button4-small" onclick="verDatosAlumno('RG-2026-0878')">Ver datos</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Gerardo Núñez Blanco</strong></td>
+                                                    <td><code class="rg-2026-0847">RG-2026-0883</code></td>
+                                                    <td><span class="badge badge-success">Presente</span></td>
+                                                    <td><span class="badge badge-success">Aprobado</span></td>
+                                                    <td><button class="button4-small" onclick="verDatosAlumno('RG-2026-0883')">Ver datos</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Hilda Romero Aguirre</strong></td>
+                                                    <td><code class="rg-2026-0847">RG-2026-0890</code></td>
+                                                    <td><span class="badge badge-success">Presente</span></td>
+                                                    <td><span class="badge badge-success">Aprobado</span></td>
+                                                    <td><button class="button4-small" onclick="verDatosAlumno('RG-2026-0890')">Ver datos</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Iván Ortega Peña</strong></td>
+                                                    <td><code class="rg-2026-0847">RG-2026-0901</code></td>
+                                                    <td><span class="badge badge-danger">Ausente</span></td>
+                                                    <td><span class="badge badge-success">Aprobado</span></td>
+                                                    <td><button class="button4-small" onclick="verDatosAlumno('RG-2026-0901')">Ver datos</button></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </section>
 
                     <!-- MÓDULOS DE GESTIÓN DOCENTE -->
-                    <div class="paragraph12">
-                        <div class="gestin-docente">Gestión docente</div>
-                    </div>
-                    <div class="containermargin6">
-                        <div class="container17">
-                            <div class="button4">
-                                <div class="container18"><img class="icon3" alt=""></div>
+                    <section class="paragraph12">
+                        <h2 class="gestin-docente">Gestión docente</h2>
+                    </section>
+
+                    <nav class="containermargin6">
+                        <div class="container17-grid">
+                            
+                            <button class="button4" onclick="abrirModulo('Pase de Lista')">
+                                <div class="container18">
+                                    <svg class="icon3" viewBox="0 0 24 24" fill="none" stroke="#5a1224" stroke-width="2">
+                                        <path d="M9 11l3 3L22 4"></path>
+                                        <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                                    </svg>
+                                </div>
                                 <div class="paragraph13"><b class="pase-de-lista">PASE DE LISTA</b></div>
                                 <div class="paragraphmargin3">
-                                    <div class="paragraph"><div class="asistencia-en-tiempo">Asistencia en tiempo real</div></div>
+                                    <span class="asistencia-en-tiempo">Asistencia en tiempo real</span>
                                 </div>
-                                <img class="icon4" alt="">
-                            </div>
-                            <div class="button5">
-                                <div class="container18"><img class="icon3" alt=""></div>
+                            </button>
+
+                            <button class="button5" onclick="abrirModulo('Reportes')">
+                                <div class="container18">
+                                    <svg class="icon3" viewBox="0 0 24 24" fill="none" stroke="#5a1224" stroke-width="2">
+                                        <line x1="18" y1="20" x2="18" y2="10"></line>
+                                        <line x1="12" y1="20" x2="12" y2="4"></line>
+                                        <line x1="6" y1="20" x2="6" y2="14"></line>
+                                    </svg>
+                                </div>
                                 <div class="paragraph13"><b class="pase-de-lista">REPORTES</b></div>
                                 <div class="paragraphmargin3">
-                                    <div class="paragraph"><div class="asistencia-en-tiempo">Asistencia y deserción</div></div>
+                                    <span class="asistencia-en-tiempo">Asistencia y deserción</span>
                                 </div>
-                                <img class="icon4" alt="">
-                            </div>
-                            <div class="button6">
-                                <div class="container18"><img class="icon3" alt=""></div>
+                            </button>
+
+                            <button class="button6" onclick="abrirModulo('Materiales')">
+                                <div class="container18">
+                                    <svg class="icon3" viewBox="0 0 24 24" fill="none" stroke="#5a1224" stroke-width="2">
+                                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                                    </svg>
+                                </div>
                                 <div class="paragraph13"><b class="pase-de-lista">MATERIALES</b></div>
                                 <div class="paragraphmargin3">
-                                    <div class="paragraph"><div class="asistencia-en-tiempo">Guías y recursos</div></div>
+                                    <span class="asistencia-en-tiempo">Guías y recursos</span>
                                 </div>
-                                <img class="icon4" alt="">
-                            </div>
-                            <div class="button7">
-                                <div class="container18"><img class="icon3" alt=""></div>
+                            </button>
+
+                            <button class="button7" onclick="abrirModulo('Foro de Insumos')">
+                                <div class="container18">
+                                    <svg class="icon3" viewBox="0 0 24 24" fill="none" stroke="#5a1224" stroke-width="2">
+                                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                    </svg>
+                                </div>
                                 <div class="paragraph19"><b class="pase-de-lista">FORO DE INSUMOS</b></div>
                                 <div class="paragraphmargin6">
-                                    <div class="paragraph"><div class="asistencia-en-tiempo">Consultas operativas</div></div>
+                                    <span class="asistencia-en-tiempo">Consultas operativas</span>
                                 </div>
-                                <div class="text4"><b class="todos-los-derechos">2</b></div>
-                                <img class="icon10" alt="">
-                            </div>
+                                <div class="text4-badge">
+                                    <b class="todos-los-derechos">2</b>
+                                </div>
+                            </button>
+
                         </div>
-                    </div>
-                </div>
+                    </nav>
+                </main>
 
                 <!-- FOOTER -->
-                <div class="container22">
+                <footer class="container22">
                     <div class="container23">
                         <div class="container24">
                             <div class="container25">
-                                <div class="paragraph21"><div class="gestin-docente">Contacto</div></div>
+                                <h4 class="gestin-docente">Contacto</h4>
                                 <div class="containermargin7">
-                                    <div class="container26">
-                                        <img class="icon11" alt="">
-                                        <div class="text5"><div class="contactoricardogaribayedumx">(771) 123-4567</div></div>
-                                    </div>
+                                    <p class="contactoricardogaribayedumx">📞 (771) 123-4567</p>
                                 </div>
                                 <div class="containermargin8">
-                                    <div class="container26">
-                                        <img class="icon11" alt="">
-                                        <div class="text5"><div class="contactoricardogaribayedumx">(771) 234-5678</div></div>
-                                    </div>
+                                    <p class="contactoricardogaribayedumx">📞 (771) 234-5678</p>
                                 </div>
                                 <div class="containermargin8">
-                                    <div class="container26">
-                                        <img class="icon11" alt="">
-                                        <div class="text5"><div class="contactoricardogaribayedumx">contacto@ricardogaribay.edu.mx</div></div>
-                                    </div>
+                                    <p class="contactoricardogaribayedumx">✉️ contacto@ricardogaribay.edu.mx</p>
                                 </div>
                                 <div class="containermargin10">
-                                    <div class="container26">
-                                        <img class="icon11" alt="">
-                                        <div class="text5"><div class="contactoricardogaribayedumx">Tulancingo de Bravo, Hidalgo</div></div>
-                                    </div>
+                                    <p class="contactoricardogaribayedumx">📍 Tulancingo de Bravo, Hidalgo</p>
                                 </div>
+                                
                                 <div class="container30">
-                                    <div class="paragraphmargin7"><i class="ricardo-garibay">Ricardo Garibay</i></div>
-                                    <div class="paragraph22"><div class="gestin-docente">Centro Cultural · Tulancingo</div></div>
-                                    <div class="paragraphmargin8">
-                                        <div class="paragraph23"><div class="todos-los-derechos">© 2026 Todos los derechos reservados</div></div>
-                                    </div>
+                                    <i class="ricardo-garibay">Ricardo Garibay</i>
+                                    <p class="gestin-docente">Centro Cultural · Tulancingo</p>
+                                    <p class="todos-los-derechos">© 2026 Todos los derechos reservados</p>
                                 </div>
+
                                 <div class="container31">
-                                    <div class="paragraphmargin9">
-                                        <div class="paragraph24"><div class="gestin-docente">Redes Sociales</div></div>
-                                    </div>
+                                    <span class="gestin-docente">Redes Sociales</span>
                                     <div class="container32">
-                                        <div class="link">
-                                            <img class="icon2" alt="">
-                                            <div class="ver-grupo">Facebook</div>
-                                        </div>
+                                        <a href="https://facebook.com" target="_blank" class="link">
+                                            <span class="ver-grupo">Facebook</span>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </footer>
 
             </div>
         </div>
@@ -313,15 +331,32 @@
         function toggleGrupo() {
             const lista = document.getElementById('seccionListaAlumnos');
             const textoBtn = document.getElementById('textoBtnGrupo');
+            const btn = document.getElementById('btnToggleGrupo');
 
             if (lista.style.display === 'none' || lista.style.display === '') {
                 lista.style.display = 'block';
                 textoBtn.innerText = 'Ocultar grupo';
+                btn.setAttribute('aria-expanded', 'true');
             } else {
                 lista.style.display = 'none';
                 textoBtn.innerText = 'Ver grupo';
+                btn.setAttribute('aria-expanded', 'false');
             }
         }
+
+        function verDatosAlumno(folio) {
+            alert(`Cargando información detallada del alumno con folio: ${folio}`);
+        }
+
+        function abrirModulo(modulo) {
+            alert(`Accediendo al módulo de docente: ${modulo}`);
+        }
+
+        document.getElementById('btn-salir').addEventListener('click', () => {
+            if (confirm('¿Cerrar sesión de docente?')) {
+                alert('Sesión finalizada.');
+            }
+        });
     </script>
 </body>
 </html>

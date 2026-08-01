@@ -1,6 +1,4 @@
-/* ==========================================
-   RESET Y BASE RESPONSIVA
-   ========================================== */
+/* RESETEO Y CONFIGURACIÓN BASE */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,46 +6,57 @@
 }
 
 body {
-  width: 100%;
-  min-height: 100vh;
-  background-color: #6e472b; /* Color de fondo principal */
+  margin: 0;
   font-family: 'Inter', sans-serif;
-  font-size: 14px;
+  background-color: #f5efe4;
   color: #2c1810;
 }
 
+/* ESTRUCTURA GENERAL DEL PROTOTIPO */
 .prototipo-sistema-gestin-educ {
   width: 100%;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   background-color: #f5efe4;
 }
 
 .body {
   width: 100%;
+  max-width: 683px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  flex: 1; /* Ocupa el espacio disponible antes del footer */
 }
 
-/* ==========================================
-   HEADER RESPONSIVO
-   ========================================== */
-.header {
+.container {
   width: 100%;
-  height: 60px;
-  background-color: #5a1224;
-  box-shadow: 0px 4px 6px -4px rgba(0, 0, 0, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
+  min-height: 100vh;
+  position: relative;
+  background-color: #6e472b;
+}
+
+.container-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.15; /* Suaviza la imagen de fondo si existe */
+}
+
+/* HEADER SUPERIOR */
+.header {
   position: sticky;
   top: 0;
   z-index: 100;
-  color: rgba(255, 255, 255, 0.8);
+  background-color: #5a1224;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .button, .button2 {
@@ -55,299 +64,213 @@ body {
   align-items: center;
   gap: 8px;
   cursor: pointer;
-}
-
-.icon {
-  height: 16px;
-  width: 16px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .heading-1 {
+  font-family: 'Playfair Display', serif;
   font-size: 18px;
   color: #c9a84c;
-  font-family: 'Playfair Display', serif;
-  text-align: center;
 }
 
 .ricardo-garibay {
-  line-height: 28px;
+  font-style: italic;
   font-weight: 600;
 }
 
-.salir {
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.7);
-}
-
-/* ==========================================
-   CONTENEDOR PRINCIPAL Y TARJETAS
-   ========================================== */
+/* CONTENIDO PRINCIPAL */
 .container2 {
-  width: 100%;
-  max-width: 600px; /* Ancho máximo adaptable */
-  margin: 0 auto;
-  padding: 24px 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+  padding: 24px 16px 140px 16px;
+  position: relative;
+  z-index: 10;
 }
 
+/* TARJETA DE PERFIL DE ALUMNO */
 .container3 {
-  width: 100%;
-  border-radius: 16px;
   background-color: #e2cfa8;
-  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
-
-.container4 {
-  width: 100%;
-  height: 70px;
-  background: linear-gradient(135deg, #5a1224, #8b1a30);
-}
-
-.containermargin {
-  width: 100%;
-  padding: 0 20px 20px;
-  margin-top: -35px; /* Eleva el avatar sobre el banner gradiente */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+  margin-bottom: 28px;
 }
 
 .container5 {
-  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-}
-
-.container-icon2 {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #e2cfa8;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  gap: 16px;
 }
 
 .container6 {
-  text-align: center;
-  margin-top: 8px;
-  font-family: 'Playfair Display', serif;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .alexa-vzquez-hernndez {
-  font-size: 18px;
-  font-weight: 600;
-}
-
-.text2 {
-  margin-top: 6px;
-  border-radius: 20px;
-  background-color: #5a1224;
-  padding: 4px 12px;
-  display: inline-block;
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  color: #3d1f0f;
 }
 
 .alumno {
-  font-size: 10px;
-  color: #fff;
-  letter-spacing: 1px;
+  display: inline-block;
+  background-color: #5a1224;
+  color: #ffffff;
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 12px;
   text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
-/* Grilla de datos (Folio, Teclado, etc.) */
-.containermargin3 {
-  width: 100%;
-  margin-top: 16px;
-}
-
+/* DETALLES DE FICHA DEL ALUMNO (TABLA DE DATOS) */
 .container8 {
-  width: 100%;
-  border-radius: 14px;
-  background-color: rgba(90, 18, 36, 0.06);
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columnas adaptables */
-  gap: 12px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  background-color: rgba(255, 255, 255, 0.4);
   padding: 16px;
+  border-radius: 12px;
 }
 
-.paragraph {
-  opacity: 0.6;
+.no-folio {
   font-size: 10px;
   text-transform: uppercase;
-  letter-spacing: 0.8px;
+  letter-spacing: 0.5px;
+  color: #6e472b;
+  font-weight: 600;
 }
 
 .teclado {
+  font-size: 14px;
   font-weight: 600;
-  font-size: 13px;
+  color: #2c1810;
+  margin-top: 2px;
 }
 
-/* ==========================================
-   ACCESO RÁPIDO (GRID BOTONES)
-   ========================================== */
-.paragraph9 {
-  width: 100%;
-  padding: 16px 4px 8px;
-  font-size: 11px;
-  color: rgba(44, 24, 16, 0.6);
-  letter-spacing: 1px;
+/* SECCIÓN ACCESO RÁPIDO */
+.acceso-rpido {
+  font-size: 14px;
+  font-weight: 700;
   text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ffffff;
+  margin-bottom: 12px;
 }
 
-.containermargin4 {
-  width: 100%;
-}
-
+/* BOTONERA DE ACCESO RÁPIDO */
 .container13 {
-  width: 100%;
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Dos columnas fluidas */
-  gap: 12px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
 }
 
 .button3, .button4, .button5, .button6 {
-  background-color: #e2cfa8;
-  border-radius: 16px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
-  padding: 16px;
+  background-color: #f5efe4;
+  border-radius: 14px;
+  padding: 20px 16px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  min-height: 110px;
   position: relative;
   cursor: pointer;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .button3:hover, .button4:hover, .button5:hover, .button6:hover {
-  transform: translateY(-2px);
-}
-
-.container14 {
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
-  background-color: #5a1224;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  transform: translateY(-3px);
+  box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.15);
 }
 
 .horario {
-  font-size: 11px;
-  font-weight: 600;
-  text-transform: uppercase;
-  margin-top: 10px;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  color: #5a1224;
 }
 
 .ver-clases-y {
-  font-size: 10px;
-  opacity: 0.7;
+  font-size: 11px;
+  color: rgba(44, 24, 16, 0.65);
+  margin-top: 4px;
 }
 
+/* BADGE DE NOTIFICACIONES (AVISOS) */
 .text3 {
   position: absolute;
   top: 12px;
   right: 12px;
+  background-color: #d32f2f;
+  color: #ffffff;
+  font-size: 10px;
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: #5a1224;
-  color: #fff;
-  font-size: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* ==========================================
-   FOOTER RESPONSIVO
-   ========================================== */
+/* FOOTER */
 .footer {
-  width: 100%;
   background-color: #22253f;
-  color: #fff;
-  padding: 32px 20px;
-  margin-top: auto;
+  color: #ffffff;
+  padding: 32px 24px;
+  position: relative;
+  z-index: 10;
 }
 
 .container18 {
-  max-width: 600px;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 28px;
 }
 
-.container19 {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.container20 {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+.contactoricardogaribayedumx {
+  font-size: 12px;
   opacity: 0.8;
+  margin-top: 4px;
 }
 
 .container24 {
-  text-align: center;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 16px 0;
+  padding-top: 20px;
 }
 
-.paragraphmargin5 {
-  font-size: 18px;
-  color: #c9a84c;
-  font-family: 'Playfair Display', serif;
+.b {
+  font-size: 11px;
+  opacity: 0.5;
 }
 
-.container25 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-}
-
+/* REDES SOCIALES */
 .container26 {
   display: flex;
+  align-items: center;
   gap: 12px;
+  margin-top: 10px;
 }
 
 .link {
-  border-radius: 20px;
   background-color: #1877f2;
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
   display: flex;
   align-items: center;
-  padding: 8px 16px;
   gap: 8px;
-  color: #fff;
-  text-decoration: none;
+  cursor: pointer;
 }
 
 .link2 {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
+  width: 34px;
+  height: 34px;
   background-color: #5a1224;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-/* ==========================================
-   MEDIA QUERIES (Ajuste para móviles muy pequeños)
-   ========================================== */
-@media (max-width: 400px) {
-  .container13 {
-    grid-template-columns: 1fr; /* Cambia a 1 sola columna en pantallas muy estrechas */
-  }
+  cursor: pointer;
 }

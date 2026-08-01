@@ -1,0 +1,531 @@
+/* ==========================================================================
+   ESTILOS GENERALES Y ESTRUCTURA BASE
+   ========================================================================== */
+
+.prototipo-sistema-gestin-educ {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background-color: #f5efe4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  font-size: 14px;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+}
+
+.app {
+  width: 100%;
+  max-width: 1166px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+.admindetail {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background-color: #6e472b;
+  flex-shrink: 0;
+}
+
+.geometricpattern-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   HEADER / ENCABEZADO
+   ========================================================================== */
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 56px;
+  background-color: #5a1224;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  box-sizing: border-box;
+  gap: 20px;
+  z-index: 10;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+
+.icon, .icon2, .icon3, .icon6, .icon9, .icon21 {
+  position: relative;
+  object-fit: contain;
+}
+
+.icon { height: 16px; width: 16px; }
+.icon2 { height: 18px; width: 18px; }
+.icon3 { height: 12px; width: 12px; opacity: 0.6; }
+
+.text, .text2, .text3 {
+  display: flex;
+  flex-direction: column;
+}
+
+.panel-admin {
+  position: relative;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Playfair Display', serif;
+}
+
+.heading-2 {
+  height: 20px;
+  max-width: 320px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.gestin-de-solicitudes {
+  position: relative;
+  line-height: 20px;
+  font-weight: 600;
+}
+
+.container2 {
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  padding: 4px 10px;
+  gap: 6px;
+  font-size: 10px;
+}
+
+.admin {
+  position: relative;
+  line-height: 15px;
+}
+
+/* ==========================================================================
+   PANEL CONTENEDOR PRINCIPAL
+   ========================================================================== */
+
+.container3 {
+  position: relative;
+  margin-top: 56px;
+  width: 100%;
+  max-width: 896px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 16px;
+  box-sizing: border-box;
+  font-size: 20px;
+  color: #5a1224;
+  z-index: 2;
+}
+
+/* Tarjetas resumen de métricas */
+.adminteachersscreen {
+  align-self: stretch;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 12px;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+}
+
+.container4, .container5, .container6 {
+  border-radius: 14px;
+  background-color: #e2cfa8;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.container5 { color: #2e5939; }
+.container6 { color: #c0392b; }
+
+.paragraph, .paragraph2 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.b {
+  position: relative;
+  line-height: 28px;
+  font-weight: bold;
+}
+
+.paragraph2 {
+  opacity: 0.75;
+  font-size: 10px;
+  color: #2c1810;
+  font-family: 'Inter', sans-serif;
+  margin-top: 4px;
+}
+
+.pendientes {
+  letter-spacing: 0.22px;
+  line-height: 13.5px;
+  text-transform: uppercase;
+}
+
+.adminteachersscreen2 {
+  width: 100%;
+  padding: 20px 0 8px;
+  box-sizing: border-box;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* ==========================================================================
+   LISTA Y DETALLES DE SOLICITUDES
+   ========================================================================== */
+
+.adminteachersscreen3 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px 0 0;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #2c1810;
+}
+
+/* Tarjeta Solicitud Abierta / Desplegada */
+.container7 {
+  align-self: stretch;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+  background-color: #e2cfa8;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.button2 {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  padding: 14px 16px;
+  gap: 12px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  text-align: left;
+}
+
+.container8, .container24 {
+  height: 40px;
+  width: 40px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.container8 { background-color: #5a1224; }
+.container24 { background-color: #22253f; }
+
+.container9 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.paragraph7, .paragraph8 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.paragraph8 {
+  opacity: 0.65;
+  font-size: 11px;
+}
+
+/* Badges de Estado */
+.text4, .text10, .text12 {
+  border-radius: 20px;
+  display: inline-flex;
+  padding: 4px 10px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.text4 { background-color: rgba(201, 168, 76, 0.25); color: #73540e; }
+.text10 { background-color: rgba(46, 89, 57, 0.18); color: #2e5939; }
+.text12 { background-color: rgba(192, 57, 43, 0.18); color: #c0392b; }
+
+.pendiente { line-height: 13.5px; }
+
+/* Despliegue de Datos Internos de la Solicitud */
+.container10 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  padding: 4px 16px 16px;
+  font-size: 12px;
+}
+
+.container11 {
+  align-self: stretch;
+  border-radius: 14px;
+  background-color: rgba(90, 18, 36, 0.06);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.container12, .container13, .container14, 
+.container15, .container16, .container17, 
+.container18, .container19 {
+  display: flex;
+  flex-direction: column;
+}
+
+.container20 {
+  grid-column: 1 / -1;
+}
+
+.paragraph9 {
+  opacity: 0.6;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.organizacin {
+  letter-spacing: 0.2px;
+  line-height: 12px;
+  text-transform: uppercase;
+}
+
+.paragraph10 {
+  width: 100%;
+  display: flex;
+  padding: 2px 0 0;
+  box-sizing: border-box;
+  font-size: 13px;
+}
+
+.dif-municipal-tulancingo {
+  line-height: 16px;
+  font-weight: 600;
+}
+
+.container21 {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 6px 0 0;
+  gap: 6px;
+  font-size: 10px;
+  color: #5a1224;
+}
+
+.text5 {
+  border-radius: 20px;
+  background-color: rgba(90, 18, 36, 0.12);
+  display: flex;
+  padding: 3px 10px;
+}
+
+.proyector {
+  line-height: 15px;
+  font-weight: 500;
+}
+
+/* Botones de Aprobar y Rechazar */
+.container22 {
+  align-self: stretch;
+  display: flex;
+  gap: 12px;
+  padding: 16px 0 0;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 13px;
+  color: #fff;
+}
+
+.button3, .button4 {
+  flex: 1;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  gap: 6px;
+  cursor: pointer;
+  border: none;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.button3 { background-color: #2e5939; }
+.button4 { background-color: #c0392b; }
+
+.button3:hover, .button4:hover {
+  opacity: 0.9;
+}
+
+/* Tarjeta Solicitud Cerrada / En Lista */
+.containermargin {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  padding: 4px 0;
+}
+
+.container23 {
+  align-self: stretch;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  background-color: #e2cfa8;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==========================================================================
+   FOOTER / PIE DE PÁGINA
+   ========================================================================== */
+
+.container35 {
+  position: relative;
+  margin-top: 40px;
+  background-color: #22253f;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 11px;
+  z-index: 5;
+}
+
+.container36 {
+  width: 100%;
+  max-width: 1152px;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 24px;
+  box-sizing: border-box;
+}
+
+.container37 {
+  align-self: stretch;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+}
+
+.container38 {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+}
+
+.paragraph34 {
+  opacity: 0.6;
+  font-size: 10px;
+}
+
+.contacto {
+  letter-spacing: 1px;
+  line-height: 15px;
+  text-transform: uppercase;
+}
+
+.container43 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.paragraphmargin {
+  padding-bottom: 4px;
+  font-size: 20px;
+  color: #c9a84c;
+  font-family: 'Playfair Display', serif;
+}
+
+.ricardo-garibay {
+  line-height: 28px;
+  font-weight: 600;
+}
+
+.paragraph35 { opacity: 0.5; }
+.paragraph36 { opacity: 0.35; }
+
+.container44 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.container45 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 12px;
+}
+
+.link {
+  border-radius: 20px;
+  background-color: #1877f2;
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  gap: 8px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.link2 {
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  background-color: #5a1224;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
