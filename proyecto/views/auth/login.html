@@ -15,14 +15,14 @@
   	<div class="prototipo-sistema-gestin-educ">
     		<div class="body">
       			<div class="container">
-        				<img class="container-icon" alt="">
+        				<img class="container-icon" alt="" src="/static/img/auth/login/container.png">
         				
         				<!-- HEADER -->
         				<div class="header">
           					<div class="button" id="btnInicio" style="cursor: pointer;">
-            						<img class="icon" alt="">
+            						<img class="icon" src="/static/img/auth/login/Icon-6.svg" alt="Inicio">
             						<div class="text">
-              							<div class="inicio">Inicio</div>
+              							<div class="inicio"><a href="../"><button>Inicio</button></a></div>
             						</div>
           					</div>
           					<div class="heading-1">
@@ -206,59 +206,35 @@
 
   	<!-- LÓGICA DE INTERACCIÓN (JAVASCRIPT) -->
   	<script>
-    	document.addEventListener('DOMContentLoaded', () => {
-      		let rolSeleccionado = 'alumno';
-      		const rolesButtons = document.querySelectorAll('.role-btn');
-      		const subtituloAcceso = document.getElementById('subtituloAcceso');
-      		const form = document.getElementById('loginForm');
-      		const inputPassword = document.getElementById('inputPassword');
-      		const togglePassword = document.getElementById('togglePassword');
+  document.addEventListener('DOMContentLoaded', () => {
+    let rolSeleccionado = 'alumno';
+    const rolesButtons = document.querySelectorAll('.role-btn');
+    const subtituloAcceso = document.getElementById('subtituloAcceso');
+    const inputRol = document.getElementById('inputRol');
 
-      		// 1. Selector de Rol (Alumno / Profesor / Admin)
-      		const textosPorRol = {
-        		alumno: 'Portal estudiantil del Centro Cultural',
-        		profesor: 'Portal docente del Centro Cultural',
-        		admin: 'Módulo de administración general'
-      		};
+    const textosPorRol = {
+      alumno: 'Portal estudiantil del Centro Cultural',
+      profesor: 'Portal docente del Centro Cultural',
+      admin: 'Módulo de administración general'
+    };
 
-      		rolesButtons.forEach(btn => {
-        		btn.addEventListener('click', () => {
-          			rolesButtons.forEach(b => b.classList.remove('active-role'));
-          			btn.classList.add('active-role');
-          			
-          			rolSeleccionado = btn.getAttribute('data-role');
-          			subtituloAcceso.textContent = textosPorRol[rolSeleccionado] || 'Portal del Centro Cultural';
-        		});
-      		});
+    rolesButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        rolesButtons.forEach(b => b.classList.remove('active-role'));
+        btn.classList.add('active-role');
+        rolSeleccionado = btn.getAttribute('data-role');
+        subtituloAcceso.textContent = textosPorRol[rolSeleccionado];
+        inputRol.value = rolSeleccionado; // se envía al backend
+      });
+    });
 
-      		// 2. Ocultar / Mostrar Contraseña
-      		togglePassword.addEventListener('click', () => {
-        		const isPassword = inputPassword.getAttribute('type') === 'password';
-        		inputPassword.setAttribute('type', isPassword ? 'text' : 'password');
-      		});
-
-      		// 3. Envío del Formulario
-      		form.addEventListener('submit', (e) => {
-        		e.preventDefault();
-        		const usuario = document.getElementById('inputUsuario').value;
-		})
-        alert('Iniciando sesión como [' + rolSeleccionado.toUpperCase() + ']\nUsuario: ' + usuario);
-      		document.getElementById('btnInicio').addEventListener('click', () => {
-        		alert('Regresando a la página principal...');
-      		});
-
-      		document.getElementById('btnOlvidoPass').addEventListener('click', () => {
-        		alert('Redirigiendo a recuperación de contraseña...');
-      		});
-
-      		document.getElementById('btnRegistro').addEventListener('click', () => {
-        		alert('Redirigiendo al formulario de registro de nuevos estudiantes...');
-      		});
-
-      		document.getElementById('btnFacebook')?.addEventListener('click', () => {
-        		window.open('https://facebook.com', '_blank');
-      		});
-    	});
-  	</script>
+    const togglePassword = document.getElementById('togglePassword');
+    const inputPassword = document.getElementById('inputPassword');
+    togglePassword.addEventListener('click', () => {
+      const isPassword = inputPassword.type === 'password';
+      inputPassword.type = isPassword ? 'text' : 'password';
+    });
+  });
+</script>
 </body>
 </html>
