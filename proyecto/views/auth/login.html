@@ -5,8 +5,7 @@
   	<meta name="viewport" content="initial-scale=1, width=device-width, initial-scale=1.0">
   	
   	<!-- Hoja de Estilos CSS Separada -->
-  	<link rel="stylesheet" href="./index.css" />
-  	
+   	<link rel="stylesheet" href="/static/css/auth/login.css" />
   	<!-- Fuentes -->
   	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
   	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&display=swap" />
@@ -242,10 +241,8 @@
       		form.addEventListener('submit', (e) => {
         		e.preventDefault();
         		const usuario = document.getElementById('inputUsuario').value;
-        		alert(`Iniciando sesión como [${rolSeleccionado.toUpperCase()}]\nUsuario: ${usuario}`);
-      		});
-
-      		// 4. Navegación Secundaria
+		})
+        alert('Iniciando sesión como [' + rolSeleccionado.toUpperCase() + ']\nUsuario: ' + usuario);
       		document.getElementById('btnInicio').addEventListener('click', () => {
         		alert('Regresando a la página principal...');
       		});

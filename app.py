@@ -3,6 +3,8 @@ import web
 
 urls = (
     '/', 'controllers.index.Index',
+    '/login', 'controllers.auth.login.Login',
+    '/auth/login', 'controllers.auth.login.Login',
 )
 app = web.application(urls, globals())
 

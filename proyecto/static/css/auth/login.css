@@ -7,24 +7,32 @@
     padding: 0;
 }
 
+html {
+    /* Base para que rem/em escalen bien en cualquier pantalla */
+    font-size: 100%;
+}
+
 body {
     background-color: #f5efe4;
     font-family: 'Inter', sans-serif;
     color: #fff;
     display: flex;
     justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .prototipo-sistema-gestin-educ {
     width: 100%;
-    min-height: 1040px;
+    min-height: 100vh; /* antes: 1040px fijo */
     position: relative;
     background-color: #f5efe4;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    font-size: 14px;
+    font-size: clamp(12px, 1.5vw, 14px);
     color: #fff;
     font-family: 'Inter', sans-serif;
 }
@@ -40,7 +48,7 @@ body {
 
 .container {
     width: 100%;
-    min-height: 1040px;
+    min-height: 100vh; /* antes: 1040px fijo */
     position: relative;
     background-color: #6e472b;
     flex-shrink: 0;
@@ -53,7 +61,7 @@ body {
     top: 0px;
     left: 0px;
     width: 100%;
-    height: 1040px;
+    height: 100%; /* antes: 1040px fijo, ahora sigue al contenedor */
     object-fit: cover;
     z-index: 0;
 }
@@ -71,9 +79,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0px 24px;
+    padding: 0px clamp(12px, 4vw, 24px);
     gap: 20px;
     color: rgba(255, 255, 255, 0.6);
+    flex-wrap: wrap;
 }
 
 .button {
@@ -86,6 +95,7 @@ body {
     height: 16px;
     width: 16px;
     position: relative;
+    flex-shrink: 0;
 }
 
 .text {
@@ -105,7 +115,7 @@ body {
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
-    font-size: 18px;
+    font-size: clamp(15px, 2.5vw, 18px);
     color: #c9a84c;
     font-family: 'Playfair Display', serif;
 }
@@ -132,7 +142,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 48px 16px;
+    padding: clamp(24px, 6vw, 48px) 16px;
     font-size: 12px;
 }
 
@@ -162,7 +172,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 14px 0px;
+    padding: 14px 4px;
     transition: all 0.2s ease;
 }
 
@@ -197,6 +207,7 @@ body {
     letter-spacing: 0.6px;
     line-height: 16px;
     text-transform: uppercase;
+    font-size: clamp(9px, 2vw, 10px);
 }
 
 /* Cuerpo del Formulario */
@@ -205,7 +216,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 24px 32px;
+    padding: clamp(16px, 5vw, 24px) clamp(16px, 6vw, 32px);
     text-align: left;
     font-size: 10px;
     color: #3d1f0f;
@@ -216,7 +227,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    font-size: 20px;
+    font-size: clamp(17px, 4vw, 20px);
     color: #2c1810;
     font-family: 'Playfair Display', serif;
 }
@@ -286,7 +297,7 @@ body {
     display: flex;
     align-items: center;
     padding: 12px 16px;
-    font-size: 14px;
+    font-size: 16px; /* >=16px evita el zoom automático de iOS en inputs */
     color: rgba(44, 24, 16, 0.5);
 }
 
@@ -321,6 +332,7 @@ body {
     display: flex;
     align-items: center;
     padding: 12px 44px 12px 16px;
+    font-size: 16px; /* evita zoom automático en iOS */
 }
 
 .button5 {
@@ -337,13 +349,15 @@ body {
 /* Controles adicionales */
 .container11 {
     width: 100%;
-    height: 32px;
+    height: auto;
+    min-height: 32px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 16px 0px 0px;
     gap: 20px;
     font-size: 12px;
+    flex-wrap: wrap;
 }
 
 .checkbox {
@@ -353,6 +367,7 @@ body {
     border-radius: 2px;
     background-color: #fff;
     border: 1px solid #767676;
+    flex-shrink: 0;
 }
 
 .container12 {
@@ -427,6 +442,8 @@ body {
     padding: 14px 0px;
     color: #ffffff;
     transition: background-color 0.2s ease;
+    cursor: pointer;
+    border: none;
 }
 
 .button7:hover {
@@ -482,6 +499,8 @@ body {
     font-size: 14px;
     color: #5a1224;
     transition: background-color 0.2s ease;
+    cursor: pointer;
+    background-color: transparent;
 }
 
 .button8:hover {
@@ -505,7 +524,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 32px 24px;
+    padding: clamp(20px, 5vw, 32px) clamp(16px, 4vw, 24px);
     text-align: left;
     font-size: 10px;
 }
@@ -513,7 +532,7 @@ body {
 .container16 {
     align-self: stretch;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* móvil: una columna */
     gap: 32px;
 }
 
@@ -554,12 +573,14 @@ body {
     align-items: center;
     gap: 8px;
     opacity: 0.7;
+    flex-wrap: wrap;
 }
 
 .icon4 {
     height: 13px;
     width: 13px;
     position: relative;
+    flex-shrink: 0;
 }
 
 .containermargin3 {
@@ -591,7 +612,7 @@ body {
     flex-direction: column;
     align-items: flex-start;
     padding: 0px 0px 4px;
-    font-size: 20px;
+    font-size: clamp(17px, 4vw, 20px);
     color: #c9a84c;
     font-family: 'Playfair Display', serif;
 }
@@ -644,6 +665,7 @@ body {
     gap: 12px;
     text-align: left;
     font-size: 12px;
+    flex-wrap: wrap;
 }
 
 .link {
@@ -671,10 +693,72 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
 }
 
 .icon9 {
     height: 15px;
     width: 15px;
     position: relative;
+}
+
+/* ==========================================
+   MEDIA QUERIES
+   ========================================== */
+
+/* Tablet y escritorio pequeño: el footer pasa a 2 columnas */
+@media (min-width: 640px) {
+    .container16 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Escritorio: footer a 3 columnas, más espacio de header */
+@media (min-width: 1024px) {
+    .container16 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .header {
+        padding: 0px 48px;
+    }
+}
+
+/* Móvil pequeño: ajustes finos de espaciado y tipografía */
+@media (max-width: 480px) {
+    .header {
+        height: auto;
+        padding: 10px 12px;
+    }
+
+    .container6 {
+        padding: 16px;
+    }
+
+    .container11 {
+        gap: 10px;
+    }
+
+    .container24 {
+        gap: 8px;
+    }
+
+    .link {
+        padding: 6px 12px;
+    }
+}
+
+/* Pantallas muy angostas: el selector de roles se apila si el texto no cabe */
+@media (max-width: 360px) {
+    .container5 {
+        height: auto;
+    }
+
+    .role-btn {
+        padding: 10px 2px;
+    }
+
+    .alumno {
+        font-size: 8.5px;
+    }
 }
