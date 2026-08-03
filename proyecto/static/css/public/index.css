@@ -82,27 +82,44 @@
 
 .button2 {
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.12);
+    background-color: rgba(255, 255, 255, 0.12); /* fondo semitransparente */
     display: flex;
     align-items: center;
     padding: 8px 12px;
+    transition: background-color 0.3s ease; /* efecto suave */
+}
+
+.button2:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* cambio al pasar el mouse */
 }
 
 .container2 {
     height: 32px;
     width: 32px;
-    border-radius: 33554400px;
+    border-radius: 50%; /* círculo perfecto */
     background-color: rgba(255, 255, 255, 0.2);
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.container2:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* efecto hover */
 }
 
 .icon {
     height: 17px;
     width: 17px;
-    position: relative;
+    fill: #f5c6d0; /* color del ícono si es SVG */
 }
+.inicio_sesion {
+    background: none;      /* elimina el fondo blanco por defecto */
+    border: none;          /* elimina el borde por defecto */
+    padding: 0;            /* quita el padding interno del navegador */
+    cursor: pointer;       /* mantiene el cursor tipo mano */
+}
+
 
 .container3 {
     align-self: stretch;

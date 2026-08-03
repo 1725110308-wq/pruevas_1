@@ -1,5 +1,9 @@
+import os
 import web
-render=web.template.render('proyecto/views')
+
+root_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+render = web.template.render(os.path.join(root_path, 'proyecto', 'views'))
+
 class Index:
     def GET(self):
         return render.index()
